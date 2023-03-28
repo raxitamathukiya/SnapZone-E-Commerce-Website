@@ -1,0 +1,24 @@
+{
+  "name": "busy-cough-2191",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raxitamathukiya/busy-cough-2191.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raxitamathukiya/busy-cough-2191/issues"
+  },
+  "homepage": "https://github.com/raxitamathukiya/busy-cough-2191#readme",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

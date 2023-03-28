@@ -1,0 +1,555 @@
+{
+    "product": [
+      {
+        "id": 1,
+        "title": "Indigo Cotton Men's Casual Shirt ",
+        "price": 495,
+        "image": "https://n4.sdlcdn.com/imgs/k/i/d/230X258_sharpened/Life-Roads-Light-Blue-Cotton-SDL005380691-1-c8bc0.webp",
+        "gender": "men",
+        "rating": 4.0,
+        "brand": "Gritstones",
+         "color":"blue"
+      
+      },
+   {
+        "id": 2,
+        "title": "Multicolor Cotton Men's Casual Shirt  ",
+        "price": 469,
+        "image": "https://n2.sdlcdn.com/imgs/k/h/k/230X258_sharpened/Solemio-White-Cotton-Slim-Fit-SDL906987905-1-61198.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "Gritstones ",
+         "color":"white"
+      
+      },
+  {
+        "id": 3,
+        "title": " Full Sleeves Men's Casual Shirt ",
+        "price": 500,
+        "image": "https://n2.sdlcdn.com/imgs/k/k/v/230X258_sharpened/UrbanMark-Black-Cotton-Regular-Fit-SDL577646785-1-89e87.webp",
+        "gender": "men",
+        "rating": 5.0,
+        "brand": "UrbanMark ",
+         "color":"black"
+      
+      },
+  {
+        "id": 4,
+        "title": "Men's Polo T Shirt  ",
+        "price": 550,
+        "image": "https://n2.sdlcdn.com/imgs/k/l/q/230X258_sharpened/UrbanMark-Red-Cotton-Blend-Regular-SDL679098648-1-73678.webp",
+        "gender": "men",
+        "rating": 5.0,
+        "brand": "Chkokko ",
+         "color":"red"
+      
+      },
+  {
+        "id": 5,
+        "title": "Multicolor Fit Men's T-Shirt  ",
+        "price": 600,
+        "image": "https://n4.sdlcdn.com/imgs/k/h/p/230X258_sharpened/The-Million-Club-Navy-Cotton-SDL418761075-1-2fba9.webp",
+        "gender": "men",
+        "rating": 4.4,
+        "brand": "GESPO ",
+         "color":"blue"
+      
+      },
+  {
+        "id": 6,
+        "title": "White Men's T-Shirt   ",
+        "price": 360,
+        "image": "https://n2.sdlcdn.com/imgs/k/l/n/230X258_sharpened/Bewakoof-White-Cotton-Oversized-Fit-SDL730924910-1-16245.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "Bewakoof ",
+         "color":"white"
+      
+      },
+  {
+        "id": 7,
+        "title": "Green Cotton Women's Fit & Flare Dress  ",
+        "price": 500,
+        "image": "https://n4.sdlcdn.com/imgs/k/m/h/230X258_sharpened/Frionkandy-Green-Cotton-Women-s-SDL277078742-1-0de41.webp",
+        "gender": "women",
+        "rating": 4.1,
+        "brand": "Frionkandy",
+         "color":"green"
+      
+      },
+  {
+        "id": 8,
+        "title":" Red Rayon Women's Gown",
+        "price": 1299,
+        "image": "https://n1.sdlcdn.com/imgs/k/l/f/230X258_sharpened/AMIRAS-INDIAN-ETHNIC-WEAR-Red-SDL102758459-1-edd0e.webp",
+        "gender": "women",
+        "rating": 2.0,
+        "brand": "AIE",
+         "color":"red"
+      
+      },
+  {
+        "id": 9,
+        "title":"Women Maxi Dress",
+        "price": 749,
+        "image": "https://n2.sdlcdn.com/imgs/k/l/u/230X258_sharpened/UrbanMark-Pink-Polyester-Women-s-SDL191354539-1-dcb7e.webp",
+        "gender": "women",
+        "rating": 4.2,
+        "brand": "UrbanMark",
+         "color":"pink"
+      
+      },
+  {
+        "id": 10,
+        "title":"Georgette Women's Gown",
+        "price": 999,
+        "image": "https://n3.sdlcdn.com/imgs/k/m/m/230X258_sharpened/Vastanienterprise-Black-Georgette-Women-s-SDL685204641-1-f9927.webp",
+        "gender": "women",
+        "rating": 2.0,
+        "brand": "Vastanienterprise",
+         "color":"black"
+      
+      },
+  {
+        "id": 11,
+        "title":"Women's Stiletto Heels",
+        "price": 1999,
+        "image": "https://n1.sdlcdn.com/imgs/j/s/r/230X258_sharpened/Do-Bhai-PeachPuff-Stiletto-Heels-SDL446125646-2-c2ab9.webp",
+        "gender": "women",
+        "rating": 4.1,
+        "brand": "PeachPuff",
+         "color":"golden"
+      
+      },
+  {
+        "id": 12,
+        "title":"Women-s-Sandal",
+        "price": 799,
+        "image": "https://n4.sdlcdn.com/imgs/k/k/x/230X258_sharpened/Ajanta-Blue-Women-s-Sandal-SDL048531883-1-2359f.webp",
+        "gender": "women",
+        "rating": 5.0,
+        "brand": "Ajanta",
+         "color":"blue"
+      
+      },
+  {
+        "id": 13,
+        "title":"Block-Heels",
+        "price": 799,
+        "image": "https://n1.sdlcdn.com/imgs/j/r/d/230X258_sharpened/Do-Bhai-Gray-Block-Heels-SDL482140568-1-e2c32.webp",
+        "gender": "women",
+        "rating": 5.0,
+        "brand": "Do-Bhai",
+         "color":"gray"
+      
+      },
+  {
+        "id": 14,
+        "title":"Denim-Slim Men Jeans",
+        "price": 649,
+        "image": "https://n3.sdlcdn.com/imgs/k/n/i/230X258_sharpened/MOUDLIN-Light-Blue-Denim-Slim-SDL054862925-1-cb331.webp",
+        "gender": "men",
+        "rating": 3.6,
+        "brand": "MOUDLIN",
+         "color":"blue"
+      
+      },
+  {
+        "id": 15,
+        "title":"Regular Men Jeans",
+        "price": 725,
+        "image": "https://n4.sdlcdn.com/imgs/k/l/m/230X258_sharpened/UrbanMark-Black-Cotton-Blend-Regular-SDL337311318-1-5d91a.webp",
+        "gender": "men",
+        "rating": 3.8,
+        "brand": "UrbanMark",
+         "color":"black"
+      
+      },
+  {
+        "id": 16,
+        "title":"Denim Men Jeans",
+        "price": 899,
+        "image": "https://n3.sdlcdn.com/imgs/k/k/i/230X258_sharpened/Urban-Mark-Light-Blue-Denim-SDL049172775-1-13b17.webp",
+        "gender": "men",
+        "rating": 4.7,
+        "brand": "UrbanMark",
+         "color":"blue"
+      
+      },
+  {
+        "id": 17,
+        "title":"Slim Men Jeans",
+        "price": 895,
+        "image": "https://n3.sdlcdn.com/imgs/f/f/j/230X258_sharpened/Urbano-Fashion-White-Slim-Jeans-SDL062693641-1-6dbc9.webp",
+        "gender": "men",
+        "rating": 3.0,
+        "brand": "Urbano",
+         "color":"white"
+      
+      },
+  {
+        "id": 18,
+        "title":"Multicolor-Cotton-Regular Men Shirt",
+        "price": 350,
+        "image": "https://n4.sdlcdn.com/imgs/k/i/5/230X258_sharpened/Gritstones-Multicolor-Cotton-Regular-Fit-SDL328705855-1-7fd10.webp",
+        "gender": "men",
+        "rating": 4.0,
+        "brand": "Gritstones",
+         "color":"pink"
+      
+      },
+  {
+        "id": 19,
+        "title":"Slim Fit Men Shirt",
+        "price": 799,
+        "image": "https://n2.sdlcdn.com/imgs/k/l/n/230X258_sharpened/Dennis-Lingo-Grey-100-Cotton-SDL527602472-1-4bbeb.webp",
+        "gender": "men",
+        "rating": 3.7,
+        "brand": "Dennis",
+         "color":"gray"
+      
+      },
+  {
+        "id": 20,
+        "title":"Cotton-Regular-Fit Men Shirt",
+        "price": 575,
+        "image": "https://n4.sdlcdn.com/imgs/k/j/g/230X258_sharpened/YHA-Peach-Cotton-Regular-Fit-SDL805952353-1-330b3.webp",
+        "gender": "men",
+        "rating": 2.5,
+        "brand": "YHA",
+         "color":"peach"
+      
+      },
+  {
+        "id": 21,
+        "title":"Cotton-Regular-Fit Men Shirt",
+        "price": 675,
+        "image": "https://n4.sdlcdn.com/imgs/k/e/j/230X258_sharpened/Life-Roads-100-Percent-Cotton-SDL234340787-1-ec26b.webp",
+        "gender": "men",
+        "rating": 3.0,
+        "brand": "Life-Roads",
+         "color":"peach"
+      
+      },
+  {
+        "id": 22,
+        "title":"cotton-blend-solids Men T-Shirt",
+        "price": 399,
+        "image": "https://www.snapdeal.com/product/gespo-yellow-cotton-blend-solids/677994463753",
+        "gender": "men",
+        "rating": 4.3,
+        "brand": "gespo",
+         "color":"yellow"
+      
+      },
+  {
+        "id": 23,
+        "title":"Slim-Fit Men T-Shirt",
+        "price": 559,
+        "image": "https://n1.sdlcdn.com/imgs/k/e/t/230X258_sharpened/SKYRISE-100-Cotton-Slim-Fit-SDL453935025-1-098cc.webp",
+        "gender": "men",
+        "rating": 4.2,
+        "brand": "SKYRISE",
+         "color":"green"
+      
+      },
+  {
+        "id": 24,
+        "title":"Regular-Fit Men T-Shirt",
+        "price": 419,
+        "image": "https://n2.sdlcdn.com/imgs/k/l/u/230X258_sharpened/Bewakoof-Red-Cotton-Regular-Fit-SDL498955558-1-ff73c.webp",
+        "gender": "men",
+        "rating": 4.0,
+        "brand": "Bewakoof",
+         "color":"red"
+      
+      },
+  {
+        "id": 25,
+        "title":"Cotton-Blend-Regular-Fit Men T-Shirt",
+        "price": 485,
+        "image": "https://n2.sdlcdn.com/imgs/k/e/1/230X258_sharpened/AUSK-Cotton-Blend-Regular-Fit-SDL054852055-1-8bab5.webp",
+        "gender": "men",
+        "rating": 3.5,
+        "brand": "AUSK",
+         "color":"peach"
+      
+      },
+  {
+        "id": 26,
+        "title":"Yellow-Chiffon Women's Gown",
+        "price": 649,
+        "image": "https://n1.sdlcdn.com/imgs/k/n/d/230X258_sharpened/Fabflee-Yellow-Chiffon-Women-s-SDL533281224-1-2a2f4.webp",
+        "gender": "women",
+        "rating": 4.1,
+        "brand": "Fabflee",
+         "color":"yellow"
+      
+      },
+  {
+        "id": 27,
+        "title":"Georgette Women's Gown",
+        "price": 799,
+        "image": "https://n4.sdlcdn.com/imgs/k/m/m/230X258_sharpened/Aika-Red-Georgette-Women-s-SDL121288027-1-d17ec.webp",
+        "gender": "women",
+        "rating": 3.5,
+        "brand": "Aika",
+         "color":"red"
+      
+      },
+  {
+        "id": 28,
+        "title":"Rayonl Women's Gown",
+        "price": 599,
+        "image": "https://n4.sdlcdn.com/imgs/k/m/8/230X258_sharpened/Frionkandy-Grey-Rayon-Women-s-SDL095458043-1-ca02d.webp",
+        "gender": "women",
+        "rating": 4.5,
+        "brand": "Frionkandy",
+         "color":"gray"
+      
+      },
+  
+  {
+        "id": 29,
+        "title":"Chiffon- Women's Gown",
+        "price": 649,
+        "image": "https://n1.sdlcdn.com/imgs/k/f/w/230X258_sharpened/Fabflee-Blue-Chiffon-Gown-SDL035934045-1-01dd9.webp",
+        "gender": "women",
+        "rating": 4.3,
+        "brand": "Fabflee",
+         "color":"blue"
+      
+      },
+  {
+        "id": 30,
+        "title":"Slim Men Jeans",
+        "price": 775,
+        "image": "https://n4.sdlcdn.com/imgs/k/f/2/230X258_sharpened/Urbano-Fashion-Grey-100-Cotton-SDL139395839-1-81239.webp",
+        "gender": "men",
+        "rating": 3.2,
+        "brand": "Urbano",
+         "color":"grey"
+      
+      },
+  {
+        "id": 31,
+        "title":"Regular Men Jeans",
+        "price": 825,
+        "image": "https://n2.sdlcdn.com/imgs/k/h/9/230X258_sharpened/Urbano-Fashion-Light-Blue-100-SDL138760248-1-d0618.webp",
+        "gender": "men",
+        "rating": 3.8,
+        "brand": "Urbano",
+         "color":"blue"
+      
+      },
+  {
+        "id": 32,
+        "title":"Denim Men Jeans",
+        "price": 555,
+        "image": "https://n4.sdlcdn.com/imgs/k/k/5/230X258_sharpened/MOUDLIN-Black-Denim-Slim-Fit-SDL251125609-1-a7cfc.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "MOUDLIN",
+         "color":"black"
+      
+      },
+  {
+        "id": 33,
+        "title":"Blue Slim Men Jeans",
+        "price": 775,
+        "image": "https://n1.sdlcdn.com/imgs/k/f/2/230X258_sharpened/Urbano-Fashion-Light-Blue-Cotton-SDL917616360-1-d312a.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "Urbano",
+         "color":"Blue"
+      
+      },
+  {
+        "id": 34,
+        "title":"Gray-Platforms Heels",
+        "price": 699,
+        "image": "https://n3.sdlcdn.com/imgs/j/t/i/230X258_sharpened/Do-Bhai-Gray-Platforms-Heels-SDL875010597-1-fc7cc.jpeg",
+        "gender": "women",
+        "rating": 4.5,
+        "brand": "Do-Bhai",
+         "color":"gray"
+      
+      },
+  {
+        "id": 35,
+        "title":"Peach Women Sandal",
+        "price": 799,
+        "image": "https://n4.sdlcdn.com/imgs/k/f/f/230X258_sharpened/Trase-Peach-Women-s-Slip-SDL846657427-1-90961.webp",
+        "gender": "women",
+        "rating": 3.5,
+        "brand": "Trase",
+         "color":"peach"
+      
+      },
+  {
+        "id": 36,
+        "title":"Yellow-Block-Heels",
+        "price": 999,
+        "image": "https://n1.sdlcdn.com/imgs/j/x/x/230X258_sharpened/Do-Bhai-Yellow-Block-Heels-SDL826730881-2-67bc0.webp",
+        "gender": "women",
+        "rating": 4.0,
+        "brand": "Do-Bhai",
+         "color":"yellow"
+      
+      },
+  {
+        "id": 37,
+        "title":"Beige-Block-Heels",
+        "price": 699,
+        "image": "https://n3.sdlcdn.com/imgs/i/t/7/230X258_sharpened/Rimezs-Beige-Block-Heels-SDL731878116-1-7f154.jpeg",
+        "gender": "women",
+        "rating": 4.6,
+        "brand": "Rimezs",
+         "color":"yellow"
+      
+      },
+  {
+        "id": 38,
+        "title": "Men's Polo T Shirt  ",
+        "price": 389,
+        "image": "https://n2.sdlcdn.com/imgs/k/n/f/230X258_sharpened/AUSTIVO-Multicolor-Cotton-Blend-Regular-SDL685965265-1-50bed.webp",
+        "gender": "men",
+        "rating": 3.5,
+        "brand": "AUSTIVO ",
+         "color":"gray"
+      
+      },
+  {
+        "id": 39,
+        "title": "Multicolor Fit Men's T-Shirt  ",
+        "price": 359,
+        "image": "https://n1.sdlcdn.com/imgs/k/e/t/230X258_sharpened/AUSTIN-WOOD-Cotton-Blend-Regular-SDL409900546-1-ccc0d.webp",
+        "gender": "men",
+        "rating": 4.0,
+        "brand": "AUSTIN-WOOD ",
+         "color":"yellow"
+      
+      },
+  {
+        "id": 40,
+        "title": "Cotton-Blend-Regular-Fit- Men's T-Shirt   ",
+        "price": 469,
+        "image": "https://n2.sdlcdn.com/imgs/k/e/9/230X258_sharpened/AUSK-Cotton-Blend-Regular-Fit-SDL984649162-1-50f7c.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "AUSK ",
+         "color":"blue"
+      
+      },
+  {
+        "id": 41,
+        "title": "Regular Men's Casual Shirt ",
+        "price": 699,
+        "image": "https://n1.sdlcdn.com/imgs/k/k/k/230X258_sharpened/UrbanMark-Blue-Linen-Regular-Fit-SDL790596106-1-e7e1e.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "UrbanMark",
+         "color":"blue"
+      
+      },
+   {
+        "id": 42,
+        "title": "Men's Casual Shirt  ",
+        "price": 439,
+        "image": "https://n4.sdlcdn.com/imgs/k/m/h/230X258_sharpened/Aika-Purple-Cotton-Blend-Regular-SDL388611469-1-06ebe.webp",
+        "gender": "men",
+        "rating": 4.5,
+        "brand": "Aika ",
+         "color":"purple"
+      
+      },
+  {
+        "id": 43,
+        "title": " Maroon Men's Casual Shirt ",
+        "price": 649,
+        "image": "https://n4.sdlcdn.com/imgs/k/l/e/230X258_sharpened/Dillinger-Maroon-100-Cotton-Slim-SDL104436921-1-96f53.webp",
+        "gender": "men",
+        "rating": 3.4,
+        "brand": "Dillinger",
+         "color":"maroon"
+      
+      },
+  {
+        "id": 44,
+        "title":"Denim Men Jeans",
+        "price": 1025,
+        "image": "https://n3.sdlcdn.com/imgs/k/j/t/230X258_sharpened/Hasasi-Denim-Grey-100-Cotton-SDL341014525-1-12a62.webp",
+        "gender": "men",
+        "rating": 3.0,
+        "brand": "Hasasi",
+         "color":"grey"
+      
+      },
+  {
+        "id": 45,
+        "title":"Regular Men Jeans",
+        "price": 899,
+        "image": "https://n4.sdlcdn.com/imgs/k/k/i/230X258_sharpened/Urban-Mark-Grey-Denim-Regular-SDL613685065-1-e9f08.webp",
+        "gender": "men",
+        "rating": 3.5,
+        "brand": "Urban",
+         "color":"blue"
+      
+      },
+  {
+        "id": 46,
+        "title":"Georgette Women's Gown",
+        "price": 725,
+        "image": "https://n4.sdlcdn.com/imgs/k/f/u/230X258_sharpened/AARSHYA-Blue-Georgette-Gown-SDL842497683-1-cab1c.webp",
+        "gender": "women",
+        "rating": 4.5,
+        "brand": "AARSHYA",
+         "color":"blue"
+      
+      },
+  {
+        "id": 47,
+        "title":"Turquoise Women's Gown",
+        "price": 469,
+        "image": "https://n2.sdlcdn.com/imgs/k/m/y/230X258_sharpened/Frionkandy-Turquoise-Rayon-Women-s-SDL871446225-1-37204.webp",
+        "gender": "women",
+        "rating": 2.5,
+        "brand": "Frionkandy",
+         "color":"blue"
+      
+      },
+  {
+        "id": 48,
+        "title":"Gold-Platforms- Women Sandal",
+        "price": 798,
+        "image": "https://n4.sdlcdn.com/imgs/k/b/b/230X258_sharpened/Shoetopia-Gold-Platforms-Heels-SDL488002753-1-15417.webp",
+        "gender": "women",
+        "rating": 4.0,
+        "brand": "Shoetopia",
+         "color":"gold"
+      
+      },
+  {
+        "id": 49,
+        "title":"Gold-Block-Heels",
+        "price": 575,
+        "image": "https://n3.sdlcdn.com/imgs/k/f/e/230X258_sharpened/Trase-Gold-Women-s-Slip-SDL785502224-1-ea6ae.webp",
+        "gender": "women",
+        "rating": 4.2,
+        "brand": "Trase",
+         "color":"gold"
+      
+      },
+  {
+        "id": 50,
+        "title":"Purple Beige-Block-Heels",
+        "price": 699,
+        "image": "https://n2.sdlcdn.com/imgs/k/k/k/230X258_sharpened/Shoetopia-Purple-Women-s-Slip-SDL614926913-1-9e2d5.webp",
+        "gender": "women",
+        "rating": 4.3,
+        "brand": "Shoetopia",
+         "color":"purple"
+      
+      }
+    ]
+  }
