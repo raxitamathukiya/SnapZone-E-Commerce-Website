@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+</head>
+<body>
+    <div id="cart-container" >
+        <!-- append -->
+      </div>
+</body>
+<script>
+
+let data=JSON.parse(localStorage.getItem("")) || [];
+
+     let cartcontainer=document.getElementById("cart-container");
+
+    
+
+function displayData(data) 
+{
+    cartcontainer.innerHTML=null;
+
+    data.forEach((element)=>{
+
+        let product=document.createElement("div")
+
+       let image=document.createElement("img");
+       image.setAttribute("src",element.image)
+
+        let Title=document.createElement("h4");
+    Title.textContent=element.title;
+
+    // let gender=document.createElement("p");
+    // gender.textContent=element.gender;
+
+     
+    let Price=document.createElement("h5");
+    Price.textContent=  `MRP ₹${element.price}`;
+
+   let quantity=document.createElement("p");
+   quantity.textContent="Qty:-"+ element.quantity
+
+    let Remove=document.createElement("button");
+       Remove.style.backgroundColor="white"
+       Remove.style.border="none"
+       Remove.style.marginLeft="10px"
+       Remove.style.padding="1px"
+
+     Remove.textContent="Remove"
+
+        let Increase=document.createElement("button");
+        Increase.textContent="+"
+        Increase.style.backgroundColor="white"
+        Increase.style.color="black"
+        Increase.style.padding="3px"
+        // Increase.style.borderRadius="100%"
+        // Increase.style.border="none"
+
+
+        let Decrease=document.createElement("button");
+        Decrease.textContent="-"
+Decrease.style.backgroundColor="white"
+        Decrease.style.color="black"
+        Decrease.style.padding="3px"
+        // Decrease.style.borderRadius="100%"
+        // Decrease.style.border="none"
+
+
+        Remove.addEventListener("click",()=>{
+       xdata =xdata.filter((ele)=>{
+          return ele.title!==element.title;
+        })
+        localStorage.setItem("",JSON.stringify());
+        displayData()
+      });
+
+      Increase.addEventListener("click",()=>{
+        element=element.quantity++;
+
+        localStorage.setItem("",JSON.stringify());
+        displayData()
+      });
+      Decrease.addEventListener("click",()=>{
+        if(element.quantity>1){
+          element=element.quantity--;
+        }
+        localStorage.setItem("",JSON.stringify());
+        displayData()
+      })
+
+
+
+    
+      let sum=0;
+      for(let i=0;i<xdata.length;i++)
+      {
+         sum+=xdata[i].price*xdata[i].quantity
+      }
+      let totalprice=document.createElement("h4");
+      totalprice.textContent="Total Price:-"+ sum
+       
+      let paybtn=document.createElement("button");
+      paybtn.textContent="Proceed To Payment"
+      paybtn.style.backgroundColor="red"
+      paybtn.style.color="white";
+      paybtn.style.border="none"
+      paybtn.style.width="50%";
+      paybtn.style.padding="10px"
+      paybtn.style.borderRadius="5px"
+
+     
+
+      paybtn.addEventListener("click",()=>{
+        
+        
+        localStorage.setItem("total",sum)
+
+        
+
+        window.location.href="./payment.html"
+        
+      })
+
+      
+
+
+        
+
+      product.append(image,Title,Price,quantity,Increase,Decrease, Remove,totalprice,paybtn)
+      cartcontainer.append(product)
+    })
+
+}
+displayData()
+</script>
+</html>
