@@ -8,7 +8,9 @@
         "gender": "men",
         "rating": 4.0,
         "brand": "Gritstones",
-         "color":"blue"
+         "color":"blue",
+         "category":"shirt",
+         "flage":"false"
       
       },
    {
@@ -19,7 +21,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "Gritstones ",
-         "color":"white"
+         "color":"white",
+          "category":"shirt",
+           "flage":"false"
       
       },
   {
@@ -30,18 +34,22 @@
         "gender": "men",
         "rating": 5.0,
         "brand": "UrbanMark ",
-         "color":"black"
+         "color":"black",
+          "category":"shirt",
+           "flage":"false"
       
       },
   {
         "id": 4,
-        "title": "Men's Polo T Shirt  ",
+        "title": "Men's Polo T-Shirt  ",
         "price": 550,
         "image": "https://n2.sdlcdn.com/imgs/k/l/q/230X258_sharpened/UrbanMark-Red-Cotton-Blend-Regular-SDL679098648-1-73678.webp",
         "gender": "men",
         "rating": 5.0,
         "brand": "Chkokko ",
-         "color":"red"
+         "color":"red",
+          "category":"T-Shirt",
+           "flage":"false"
       
       },
   {
@@ -52,7 +60,9 @@
         "gender": "men",
         "rating": 4.4,
         "brand": "GESPO ",
-         "color":"blue"
+         "color":"blue",
+           "category":"T-Shirt",
+           "flage":"false"
       
       },
   {
@@ -63,7 +73,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "Bewakoof ",
-         "color":"white"
+         "color":"white",
+          "category":"T-Shirt",
+           "flage":"false"
       
       },
   {
@@ -74,7 +86,9 @@
         "gender": "women",
         "rating": 4.1,
         "brand": "Frionkandy",
-         "color":"green"
+         "color":"green",
+          "category":"one piece",
+           "flage":"false"
       
       },
   {
@@ -85,7 +99,10 @@
         "gender": "women",
         "rating": 2.0,
         "brand": "AIE",
-         "color":"red"
+         "color":"red",
+          "category":"one piece",
+           "flage":"false"
+
       
       },
   {
@@ -96,7 +113,10 @@
         "gender": "women",
         "rating": 4.2,
         "brand": "UrbanMark",
-         "color":"pink"
+         "color":"pink",
+         "category":"one piece",
+           "flage":"false"
+
       
       },
   {
@@ -107,7 +127,10 @@
         "gender": "women",
         "rating": 2.0,
         "brand": "Vastanienterprise",
-         "color":"black"
+         "color":"black",
+        "category":"one piece",
+           "flage":"false"
+
       
       },
   {
@@ -118,7 +141,9 @@
         "gender": "women",
         "rating": 4.1,
         "brand": "PeachPuff",
-         "color":"golden"
+         "color":"golden",
+         "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -129,7 +154,9 @@
         "gender": "women",
         "rating": 5.0,
         "brand": "Ajanta",
-         "color":"blue"
+         "color":"blue",
+         "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -140,7 +167,9 @@
         "gender": "women",
         "rating": 5.0,
         "brand": "Do-Bhai",
-         "color":"gray"
+         "color":"gray",
+         "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -151,7 +180,9 @@
         "gender": "men",
         "rating": 3.6,
         "brand": "MOUDLIN",
-         "color":"blue"
+         "color":"blue",
+         "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -162,7 +193,10 @@
         "gender": "men",
         "rating": 3.8,
         "brand": "UrbanMark",
-         "color":"black"
+         "color":"black",
+          "category":"jeans",
+           "flage":"false"
+      
       
       },
   {
@@ -173,7 +207,10 @@
         "gender": "men",
         "rating": 4.7,
         "brand": "UrbanMark",
-         "color":"blue"
+         "color":"blue",
+          "category":"jeans",
+           "flage":"false"
+      
       
       },
   {
@@ -184,7 +221,10 @@
         "gender": "men",
         "rating": 3.0,
         "brand": "Urbano",
-         "color":"white"
+         "color":"white",
+          "category":"jeans",
+           "flage":"false"
+      
       
       },
   {
@@ -195,7 +235,10 @@
         "gender": "men",
         "rating": 4.0,
         "brand": "Gritstones",
-         "color":"pink"
+         "color":"pink",
+          "category":"shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -206,7 +249,10 @@
         "gender": "men",
         "rating": 3.7,
         "brand": "Dennis",
-         "color":"gray"
+         "color":"gray",
+          "category":"shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -217,7 +263,10 @@
         "gender": "men",
         "rating": 2.5,
         "brand": "YHA",
-         "color":"peach"
+         "color":"peach",
+          "category":"shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -228,7 +277,10 @@
         "gender": "men",
         "rating": 3.0,
         "brand": "Life-Roads",
-         "color":"peach"
+         "color":"peach",
+          "category":"shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -239,7 +291,10 @@
         "gender": "men",
         "rating": 4.3,
         "brand": "gespo",
-         "color":"yellow"
+         "color":"yellow",
+          "category":"T-Shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -250,7 +305,10 @@
         "gender": "men",
         "rating": 4.2,
         "brand": "SKYRISE",
-         "color":"green"
+         "color":"green",
+         "category":"T-Shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -261,7 +319,10 @@
         "gender": "men",
         "rating": 4.0,
         "brand": "Bewakoof",
-         "color":"red"
+         "color":"red",
+         "category":"T-Shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -272,7 +333,10 @@
         "gender": "men",
         "rating": 3.5,
         "brand": "AUSK",
-         "color":"peach"
+         "color":"peach",
+         "category":"T-Shirt",
+           "flage":"false"
+      
       
       },
   {
@@ -283,7 +347,10 @@
         "gender": "women",
         "rating": 4.1,
         "brand": "Fabflee",
-         "color":"yellow"
+         "color":"yellow",
+         "category":"one piece",
+           "flage":"false"
+      
       
       },
   {
@@ -294,7 +361,9 @@
         "gender": "women",
         "rating": 3.5,
         "brand": "Aika",
-         "color":"red"
+         "color":"red",
+         "category":"one piece",
+         "flage":"false"
       
       },
   {
@@ -305,7 +374,9 @@
         "gender": "women",
         "rating": 4.5,
         "brand": "Frionkandy",
-         "color":"gray"
+         "color":"gray",
+         "category":"one piece",
+         "flage":"false"
       
       },
   
@@ -317,7 +388,9 @@
         "gender": "women",
         "rating": 4.3,
         "brand": "Fabflee",
-         "color":"blue"
+         "color":"blue",
+         "category":"one piece",
+         "flage":"false"
       
       },
   {
@@ -328,7 +401,9 @@
         "gender": "men",
         "rating": 3.2,
         "brand": "Urbano",
-         "color":"grey"
+         "color":"grey",
+           "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -339,7 +414,9 @@
         "gender": "men",
         "rating": 3.8,
         "brand": "Urbano",
-         "color":"blue"
+         "color":"blue",
+           "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -350,7 +427,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "MOUDLIN",
-         "color":"black"
+         "color":"black",
+           "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -361,7 +440,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "Urbano",
-         "color":"Blue"
+         "color":"Blue",
+           "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -372,7 +453,9 @@
         "gender": "women",
         "rating": 4.5,
         "brand": "Do-Bhai",
-         "color":"gray"
+         "color":"gray",
+           "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -383,7 +466,9 @@
         "gender": "women",
         "rating": 3.5,
         "brand": "Trase",
-         "color":"peach"
+         "color":"peach",
+           "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -394,7 +479,9 @@
         "gender": "women",
         "rating": 4.0,
         "brand": "Do-Bhai",
-         "color":"yellow"
+         "color":"yellow",
+          "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -405,18 +492,22 @@
         "gender": "women",
         "rating": 4.6,
         "brand": "Rimezs",
-         "color":"yellow"
+         "color":"yellow",
+          "category":"Hells",
+           "flage":"false"
       
       },
   {
         "id": 38,
-        "title": "Men's Polo T Shirt  ",
+        "title": "Men's Polo T-Shirt  ",
         "price": 389,
         "image": "https://n2.sdlcdn.com/imgs/k/n/f/230X258_sharpened/AUSTIVO-Multicolor-Cotton-Blend-Regular-SDL685965265-1-50bed.webp",
         "gender": "men",
         "rating": 3.5,
         "brand": "AUSTIVO ",
-         "color":"gray"
+         "color":"gray",
+          "category":"T-Shirt",
+           "flage":"false"
       
       },
   {
@@ -427,7 +518,9 @@
         "gender": "men",
         "rating": 4.0,
         "brand": "AUSTIN-WOOD ",
-         "color":"yellow"
+         "color":"yellow",
+          "category":"T-Shirt",
+           "flage":"false"
       
       },
   {
@@ -438,7 +531,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "AUSK ",
-         "color":"blue"
+         "color":"blue",
+         "category":"T-Shirt",
+           "flage":"false"
       
       },
   {
@@ -449,7 +544,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "UrbanMark",
-         "color":"blue"
+         "color":"blue",
+         "category":"shirt",
+           "flage":"false"
       
       },
    {
@@ -460,7 +557,9 @@
         "gender": "men",
         "rating": 4.5,
         "brand": "Aika ",
-         "color":"purple"
+         "color":"purple",
+          "category":"shirt",
+           "flage":"false"
       
       },
   {
@@ -471,7 +570,9 @@
         "gender": "men",
         "rating": 3.4,
         "brand": "Dillinger",
-         "color":"maroon"
+         "color":"maroon",
+          "category":"shirt",
+           "flage":"false"
       
       },
   {
@@ -482,7 +583,9 @@
         "gender": "men",
         "rating": 3.0,
         "brand": "Hasasi",
-         "color":"grey"
+         "color":"grey",
+          "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -493,7 +596,9 @@
         "gender": "men",
         "rating": 3.5,
         "brand": "Urban",
-         "color":"blue"
+         "color":"blue",
+          "category":"jeans",
+           "flage":"false"
       
       },
   {
@@ -504,7 +609,9 @@
         "gender": "women",
         "rating": 4.5,
         "brand": "AARSHYA",
-         "color":"blue"
+         "color":"blue",
+          "category":"one piece",
+           "flage":"false"
       
       },
   {
@@ -515,7 +622,9 @@
         "gender": "women",
         "rating": 2.5,
         "brand": "Frionkandy",
-         "color":"blue"
+         "color":"blue",
+         "category":"one piece",
+           "flage":"false"
       
       },
   {
@@ -526,7 +635,9 @@
         "gender": "women",
         "rating": 4.0,
         "brand": "Shoetopia",
-         "color":"gold"
+         "color":"gold",
+         "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -537,7 +648,9 @@
         "gender": "women",
         "rating": 4.2,
         "brand": "Trase",
-         "color":"gold"
+         "color":"gold",
+         "category":"Hells",
+           "flage":"false"
       
       },
   {
@@ -548,8 +661,88 @@
         "gender": "women",
         "rating": 4.3,
         "brand": "Shoetopia",
-         "color":"purple"
+         "color":"purple",
+         "category":"Hells",
+           "flage":"false"
       
-      }
+      },
+       {
+        "id": 51,
+        "title":"Purple-Rayon-Women-Top",
+        "price": 399,
+        "image": "https://n1.sdlcdn.com/imgs/k/i/j/230X258_sharpened/SIPET-Purple-Rayon-Women-s-SDL257585345-1-d53c3.webp",
+        "gender": "women",
+        "rating": 4.0,
+        "brand": "SIPET",
+         "color":"purple",
+         "category":"Top",
+           "flage":"false"
+      
+      },
+      {
+        "id": 52,
+        "title":"Blue-Polyester-Women-Top",
+        "price": 469,
+        "image": "https://n2.sdlcdn.com/imgs/k/k/n/230X258_sharpened/aask-Blue-Polyester-Women-s-SDL374293620-1-1e3b3.webp",
+        "gender": "women",
+        "rating": 3.5,
+        "brand": "aask",
+         "color":"blue",
+         "category":"Top",
+           "flage":"false"
+      
+      },
+      {
+         "id": 53,
+         "title":"Rayon-Regular-Women-Top",
+         "price": 469,
+         "image": "https://n4.sdlcdn.com/imgs/k/f/v/230X258_sharpened/GOD-BLESS-Rayon-Regular-Tops-SDL563878424-1-6c6e4.webp",
+         "gender": "women",
+         "rating": 5.0,
+         "brand": "GOD-BLESS",
+          "color":"black",
+          "category":"Top",
+            "flage":"false"
+       
+       },
+       {
+         "id": 54,
+         "title":"Cotton-Slim-Blue Women pants",
+         "price": 999,
+         "image": "https://n3.sdlcdn.com/imgs/k/e/4/230X258_sharpened/AngelFab-100-Cotton-Slim-Blue-SDL597598076-1-6f190.webp",
+         "gender": "women",
+         "rating": 4.2,
+         "brand": "AngelFab",
+          "color":"blue",
+          "category":"pants",
+            "flage":"false"
+       
+       },
+       {
+         "id": 55,
+         "title":"Cotton-Straight Women pants",
+         "price": 699,
+         "image": "https://n4.sdlcdn.com/imgs/k/l/p/230X258_sharpened/SVARCHI-Pink-Cotton-Straight-Women-SDL544375856-1-8bff9.webp",
+         "gender": "women",
+         "rating": 3.5,
+         "brand": "SVARCHI",
+          "color":"pink",
+          "category":"pants",
+            "flage":"false"
+       
+       },
+       {
+         "id": 56,
+         "title":"Brown-Cotton Women pants",
+         "price": 775,
+         "image": "https://n4.sdlcdn.com/imgs/k/l/q/230X258_sharpened/Smarty-Pants-Brown-Cotton-Skinny-SDL136095729-1-53cc9.webp",
+         "gender": "women",
+         "rating": 3.2,
+         "brand": "Smarty",
+          "color":"brown",
+          "category":"pants",
+            "flage":"false"
+       
+       }
     ]
   }
