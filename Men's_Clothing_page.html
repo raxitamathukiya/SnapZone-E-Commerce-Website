@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapZone : Shop Online for Men & Women Clothing, Shoes, Home Decor Items</title>
+    <link rel="icon" href="./Images/SnapZone_Icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #BOX{
+            width: 95%;
+            margin: auto;
+            display: flex;
+            box-sizing: border-box;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        .box1{
+            width: 20%;
+            padding: 10px; 
+        }
+        .box2{
+            width: 80%;
+            padding: 10px;
+        }
+        .box2 > div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #mid-07 > div{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+        #mid-07 > div > p{
+            font-size: large;
+        }
+        #Mens-Data{
+            width: 100%;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px 10px;
+            padding: 10px;
+        }
+        #Mens-Data > div > img{
+            width: 100%;
+            height: 230px;
+            margin: auto;
+            margin-bottom: 5px;    
+        }
+        #Mens-Data > div{
+            box-shadow: rgba(5, 3, 3, 0.16) 0px 1px 4px;
+            padding: 10px;
+        }
+        #Mens-Data > div:hover{
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+        #Mens-Data > div > :nth-child(2){
+            color: rgb(153, 149, 149);
+        }
+        #Mens-Data > div > h4{
+            color: #000;
+        }
+        #Mens-Data > div > :nth-child(3){
+            color: rgb(153, 149, 149);
+        }
+        .rat{
+           width: 10px;
+           color: #000;
+        }
+        .pridiv{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 0px;
+        }
+        #Mens-Data > div > button{
+            margin: auto;
+            display: block;
+            border: none;
+            padding: 6px;
+            background-color: #e40046;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        #Mens-Data > div > button:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+        /* .addcarddiv{
+            display: flex;
+            justify-content: space-around;
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="BOX">
+        <div class="box1">
+            <div id="mid-07">
+                <h3>- Men's Clothing</h3>
+                <ul>
+                    <li>Men's T-Shirts</li>
+                    <li>Shirts For Men</li>
+                    <li>Jeans For Men</li>
+                </ul>
+                <hr>
+                <div>
+                    <h4>Product Type</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Size</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Colour</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Brand</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Feature</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Fit</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Material</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Price</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Sale</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Sleeve Length</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Sports League</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Sports Team</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+                <div>
+                    <h4>Style</h4>
+                    <p>+</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <hr>
+        <div class="box2">
+            <div>
+                <h1>Men's Clothing</h1>
+                <form class="searchIcon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input placeholder="Search within category" type="text" id="search">
+                </form>
+                <select id="filter">
+                    <option value="">Sort by:</option>
+                    <option value="Price Low To High">Price Low To High</option>
+                    <option value="Price High To Low">Price High To Low</option>
+                  </select>
+            </div>
+            <div id="Mens-Data"></div>
+        </div>
+    </div> 
+</body>
+<script src="./Scripts/Men's_products.js"></script>
+</html>
