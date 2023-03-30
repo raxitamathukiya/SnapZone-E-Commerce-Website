@@ -8,6 +8,23 @@
     <link rel="icon" href="./Images/SnapZone_Icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        .Trending{
+            width: 95%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .Trending > a{
+            text-decoration: none;
+            color: gray;
+            border: 1px solid gray;
+            padding: 5px 14px;
+        }
+        .Trending > a:hover{
+            text-decoration: underline;
+        }
+
         #BOX{
             width: 95%;
             margin: auto;
@@ -16,11 +33,11 @@
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
         .box1{
-            width: 20%;
-            padding: 10px; 
+            width: 18%;
+            padding: 0px 10px; 
         }
         .box2{
-            width: 80%;
+            width: 82%;
             padding: 10px;
         }
         .box2 > div{
@@ -31,44 +48,50 @@
         #mid-07 > div{
             display: flex;
             justify-content: space-between;
-            padding-top: 10px;
+            padding-top: 0px;
+        }
+        #mid-07 > div > h4{
+            color:rgb(110, 109, 109);
         }
         #mid-07 > div > p{
             font-size: large;
+            font-weight: bold;
+            color: rgb(186, 185, 185);
         }
         #Mens-Data{
             width: 100%;
             box-sizing: border-box;
             display: grid;
             grid-template-columns: repeat(4,1fr);
-            gap: 25px 10px;
+            gap: 25px 17px;
             padding: 10px;
         }
         #Mens-Data > div > img{
             width: 100%;
             height: 230px;
             margin: auto;
-            margin-bottom: 5px;    
+            margin-bottom: 5px; 
         }
         #Mens-Data > div{
             box-shadow: rgba(5, 3, 3, 0.16) 0px 1px 4px;
             padding: 10px;
+            transition: transform 0.4s;
         }
         #Mens-Data > div:hover{
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        }
+            /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+            transform: scale(1.08);
+        }   
         #Mens-Data > div > :nth-child(2){
             color: rgb(153, 149, 149);
         }
-        #Mens-Data > div > h4{
-            color: #000;
-        }
         #Mens-Data > div > :nth-child(3){
-            color: rgb(153, 149, 149);
+            color: #000;
+            margin-top: -22px;  
         }
         .rat{
            width: 10px;
            color: #000;
+           margin-top: -10px; 
         }
         .pridiv{
             display: flex;
@@ -76,30 +99,113 @@
             gap: 10px;
             line-height: 0px;
         }
-        #Mens-Data > div > button{
+        #Mens-Data > div > div > button{
             margin: auto;
-            display: block;
             border: none;
             padding: 6px;
             background-color: #e40046;
-            margin-top: 10px;
             margin-bottom: 10px;
             color: #fff;
             font-weight: bold;
             border-radius: 3px;
         }
-        #Mens-Data > div > button:hover{
+        #Mens-Data > div > div > button:hover{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
         }
-        /* .addcarddiv{
+        .addcarddiv{
             display: flex;
             justify-content: space-around;
-        } */
+        }
+        .box2 > div > h2{
+            color: rgb(110, 109, 109);
+        }
+        .box2 > div > h2:hover{
+            color: #e40046;
+        }
+        .searchIcon{
+            display: flex;
+            border: 0.1px solid #000;
+            border-radius: 3px;
+            align-items: center;
+            padding: 9px;
+            padding-right: 40px;
+        }
+        #search{
+            width: 100%;;
+            border: none;
+            outline: 0;
+            font-size: 14px;
+        }
+        #filter{
+            padding: 10px;
+            padding-right: 40px;
+        }
 
+
+
+        .filterSection{
+            background-color: rgb(253, 253, 253);
+            padding: 0px 20px;
+            color: rgb(99, 98, 98);
+            font-weight: 500;
+            border: 1px solid gray;
+        }
+        #filterPrice span{
+            width: 100%;
+            margin-left: 10px;
+        }
+        #filterPrice > div{ 
+            display: flex;
+            align-items: center;
+        }
+        input[type=radio] {
+            border: 10px;
+            width: 10%;
+            height: 2em;
+        }
     </style>
 </head>
 <body>
+    <!-- <header>
+        <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+        <div>
+            <a href="">Impact@Snapzone</a>
+            <a href="" >Gift Cards</a>
+            <a href="" >Help Center</a>
+            <a href="" >Sell On Snapdeal</a>
+            <a href="" >Download App</a>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <a href="./index.html"><img src="./logo/SnapZone_white_Transparent.png" alt=""></a>
+        <input type="text" id="search" placeholder="Search products & brand">
+        <button>Search</button>
+        <a href="" id="cart">
+            <div>
+                <p>Cart</p>
+                <img src="./logo/cart logo.png" alt="">
+            </div>
+        </a>
+        <a href="" id="sign-in">
+            <div>
+                <p>Sign In</p>
+                <img src="./logo/user logo.png" alt="">
+            </div>
+        </a>
+    </nav> -->
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <div class="Trending">
+        <p><i class="fa-solid fa-arrow-trend-up"></i> Trending searches: </p>
+        <a href="#">Men's T-Shirts</a>
+        <a href="#">Shirts For Men</a>
+        <a href="#">Jeans For Men</a>
+        <a href="#">Women's Tops</a>
+        <a href="#">Women's Dresses, Gowns & Jumpsuits</a>
+        <a href="#">Hells</a>
+    </div>
     <div id="BOX">
         <div class="box1">
             <div id="mid-07">
@@ -110,77 +216,115 @@
                     <li>Jeans For Men</li>
                 </ul>
                 <hr>
+
+                <div class="filterSection">
+                    <div id="filterCategory">
+                        <!-- all category here apppend -->
+                    </div><br>
+                    
+                    <div id="filterPrice">
+                        <h5>Price Filter</h5>
+                        <div>
+                            <input type="radio" name="PriceValue" value="ZeroToNinetynine">
+                                <span>Rs. 0 - Rs. 99</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="oneHunderedToOneNininetynine">
+                                <span>Rs. 100 - Rs. 199</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="twoHunderedToTowNininetynine">
+                                <span>Rs. 200 - Rs. 299</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="threeHunderedToThreeNininetynine">
+                                <span>Rs. 300 - Rs. 399</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="fourHunderedToFourNininetynine">
+                                <span>Rs. 400 - Rs. 499</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="fiveHunderedToFiveNininetynine">
+                                <span>Rs. 500 - Rs. 599</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="sixHunderedToSixNininetynine">
+                                <span>Rs. 600 - Rs. 699</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="sevenHunderedToNineNininetynine">
+                                <span>Rs. 700 - Rs. 999</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="PriceValue" value="oneThousandAbove">
+                                <span> Above &nbsp; - Rs. 1000 </span>
+                        </div>
+                    </div><br>
+                </div>
+
+
+
+
+
                 <div>
                     <h4>Product Type</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Size</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Colour</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Brand</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Feature</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Fit</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Material</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Price</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Sale</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Sleeve Length</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Sports League</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Sports Team</h4>
                     <p>+</p>
                 </div>
-                <hr>
                 <div>
                     <h4>Style</h4>
                     <p>+</p>
                 </div>
-                <hr>
             </div>
         </div>
         <hr>
         <div class="box2">
             <div>
-                <h1>Men's Clothing</h1>
+                <h2> Men's Clothing</h2>
                 <form class="searchIcon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input placeholder="Search within category" type="text" id="search">
@@ -191,6 +335,7 @@
                     <option value="Price High To Low">Price High To Low</option>
                   </select>
             </div>
+            <hr>
             <div id="Mens-Data"></div>
         </div>
     </div> 

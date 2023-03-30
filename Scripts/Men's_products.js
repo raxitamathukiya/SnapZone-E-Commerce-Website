@@ -23,6 +23,7 @@ function Display(data){
         let pdiv=document.createElement("div")
         pdiv.setAttribute("class","pridiv")
         let price = document.createElement("s");
+        price.style.color="gray";
         let dprice = document.createElement("h4");
         let rating = document.createElement("p");
         rating.setAttribute("class","rat")
@@ -59,7 +60,8 @@ function Display(data){
             }
         });
         pdiv.append(price,dprice)
-        card.append(image,title,pdiv,rating,buy,add_to_card)
+        addcarddiv.append(buy,add_to_card)
+        card.append(image,title,pdiv,rating,addcarddiv)
         Container.append(card);
        }
     });
