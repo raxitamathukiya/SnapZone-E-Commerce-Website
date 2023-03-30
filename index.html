@@ -6,20 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>styleShop</title>
    <style>
-    /* * {
+    * {
         box-sizing: border-box;
-    } */
+    }
     body{
         margin: 0px;
         padding: 0px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: lighter;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /* font-weight: lighter; */
+
     }
     #navbar{
         display: flex;
+        width: 100%;
         height: 100px;
         background-color: #d90646;
-      padding-right: 25px;
+        padding-right: 25px;
+        position: fixed;
+        z-index: 99999;
+        margin-top: 49px;
+        
     }
     #navbar img{
         height:65%;
@@ -64,8 +70,6 @@
     #navbar #cart{
         font-family: 'Quicksand', sans-serif;
         font-weight: lighter;
-       
-
         text-decoration: none;
         /* margin: auto; */
         margin-left: 140px;
@@ -85,14 +89,20 @@
     #navbar div{
         width:auto;
     }
-  
+   #hidden{
+    height: 170px;
+    background-color: rgb(232, 227, 227);
+   }
     header{
         display: flex;
-        
+        width: 100%;
         align-items: center;
        background-color: #c3043d;
        height:49px;
        color:white;
+        position: fixed;
+        z-index: 99999;
+        margin-top: 0px;
        
     }
     header a{
@@ -130,7 +140,95 @@
     footer div{
         margin: 0px;
     }
+    #container{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 1.5fr 2fr 1.5fr 1fr;
+        width: 90%;
+        margin: auto;
+        /* border: 2px solid; */
+        background-color: rgb(232, 227, 227);
+        gap: 15px;
+        /* margin-top: 200px ; */
+    }
+    #sidebar{
+        margin-left: 20px;
+
+        /* background-color: aqua; */
+         grid-row-start: 1 ;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 910px;
+        /* width: 350px; */
+        
+    }
+    #sidebar #menu{
+        /* width: 70%; */
+        height: 700px;
+        background-color: white;
+        /* border: 2px solid; */
+    }
+    #main{
+        grid-row-start: 1 ;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        
+        height: 400px;
+        margin-bottom: 0px;
+        background-color:white;
+    }
+    #main img{
+        margin-top: 0px;
+        width: 100%;
+        height: 90%;
+    }
+    #main-bar{
+        height: 10%;
+        background-color: white;
+    }
+    #pin{
+        width: 100%;
+        background-color: blueviolet;
+    }
+    #product{
+        margin-top: 0px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background-color: cadetblue;
+    }
+    #rec{
+      
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        height: 500px;
+        /* background-color: beige; */
+        margin-bottom: 0px;
+    }
+    #rec 
     
+    #item{
+        display: flex;
+        background-color: antiquewhite;
+        height: 400px;
+    }
+#barcode{
+    margin-top: 70px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+   
+}
+
+footer a{
+    font-size: 22px;
+    font-weight: bold;
+}
+
     
    </style>
 </head>
@@ -169,15 +267,40 @@
         </div>
        </a>
     </nav>
-    
-    <div id="menu">
+    <div id="hidden"></div>
+    <div id="container">
         <!-- menu and all div -->
+        <div id="sidebar">
+            <div id="menu">slide menu</div>
+            <div id="barcode"> barcode </div>
+        </div>
+        <div id="main">
+            <img src="./logo/SnapZone.jpg" alt="">
+            <div id="main-bar">mainbar</div>
+        </div>
+        <div id="pin">pincode</div>
+        <div id="rec">
+            <h1>Recent</h1>
+          <div id="item">
+              <div > recent item</div>
+            <div > recent item</div>
+            <div > recent item</div>
+            <div > recent item</div>
+            <div > recent item</div>
+
+          </div>
+          
+        </div>
+          
+        <section id="product">
+
+        </section>
     </div>
 
 
     <footer>
        <div>
-        <h3>Men <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></h3>
+        <p> <a href="" > Men</a> <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></p>
     </div>
     <div>
         <h3>Women <span>Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</span></h3>
