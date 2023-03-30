@@ -4,13 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <title>styleShop</title>
+   <style>
+    /* * {
+        box-sizing: border-box;
+    } */
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: lighter;
+    }
+    #navbar{
+        display: flex;
+        height: 100px;
+        background-color: #d90646;
+      padding-right: 25px;
+    }
+    #navbar img{
+        height:65%;
+        margin: 17px;
+        margin-left: 30px;
+    }
+    #search{
+        
+        width: 740px;
+        height: 54px;
+        border: none;
+        /* margin-top: 20px; */
+        margin: auto;
+        margin-left:70px;
+        margin-right: 0px;
+        font-size: 25px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        padding-left: 20px;
        
-    </style>
-</head>
-<body>
+    }
     
-</body>
+    #navbar button{
+        margin-left:0px ;
+        width: 200px;
+        height: 58px;
+        border: none;
+        color: white;
+        font-size: 26px;
+        background-color: black;
+        margin-top: 21px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+    }
+    #navbar div{
+        display: flex;
+        margin-left: 40px;
+        align-items: center;
+        color: white;
+    }
+    #navbar #cart{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: lighter;
+       
 
+        text-decoration: none;
+        /* margin: auto; */
+        margin-left: 140px;
+        font-size: 25px;
+        /* border: 2px solid; */
+    }
+    #navbar #sign-in{
+        font-family: 'Quicksand', sans-serif;
+        font-weight: lighter;
+        
+        text-decoration: none;
+        /* margin-left: 0px; */
+        padding-top: 10px;
+        /* border: 2px solid; */
+        font-size: 25px;
+    }
+    #navbar div{
+        width:auto;
+    }
+  
+    header{
+        display: flex;
+        
+        align-items: center;
+       background-color: #c3043d;
+       height:49px;
+       color:white;
+       
+    }
+    header a{
+        font-size: 20px;
+        margin-left: 20px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: lighter;
+        text-decoration: none;
+        color: white;
+        
+    }
+    header div{
+        
+        margin-left: 670px;
+        width: auto;
+
+        
+    }
+
+  
+    header p{
+        font-size: 20px;
+        margin-left:30px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: lighter;
+    }
+  
+    footer span{
+        font-size: 20px;
+        
+        color: rgb(152, 150, 150);
+        margin-bottom: 0px;
+        
+    }
+    footer div{
+        margin: 0px;
+    }
     
+    
+   </style>
+</head>
+
+<body>
+    <header>
+       
+            <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+        
+       
+      
+        <div>
+            <a href="">Impact@Snapzone</a>
+            <a href="" >Gift Cards</a>
+            <a href="" >Help Center</a>
+            <a href="" >Sell On Snapdeal</a>
+            <a href="" >Download App</a>
+        </div>
+
+
+    </header>
+    <nav id="navbar">
+        <a href="./index.html"><img src="./logo/SnapZone_white_Transparent.png" alt=""></a>
+        <input type="text" id="search" placeholder="Search products & brand">
+        <button>Search</button>
+        <a href="" id="cart">
+            <div>
+            <p>Cart</p>
+            <img src="./logo/cart logo.png" alt="">
+        </div>
+        </a>
+       <a href="" id="sign-in">
+        <div>
+            <p>Sign In</p>
+            <img src="./logo/user logo.png" alt="">
+        </div>
+       </a>
+    </nav>
+    
+    <div id="menu">
+        <!-- menu and all div -->
+    </div>
+
+
+    <footer>
+       <div>
+        <h3>Men <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></h3>
+    </div>
+    <div>
+        <h3>Women <span>Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</span></h3>
+    </div>
+        <h3>Footwear <span>Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</span></h3>
+        <h3>Home & Kitchen: <span>Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</span></h3>
+
+       
+    
+    
+    
+    </footer>
+
+</body>
+</html>
