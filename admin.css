@@ -115,6 +115,7 @@ header {
 .main-container {
   display: flex;
   width: 100vw;
+  
   position: relative;
   top: 70px;
   z-index: 1;
@@ -164,7 +165,7 @@ header {
 }
 .navcontainer {
   height: calc(100vh - 70px);
-  width: 250px;
+  width: 280px;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -221,7 +222,7 @@ header {
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s;
 }
 .box:hover {
   transform: scale(1.08);
@@ -311,8 +312,9 @@ header {
 }
 
 .items {
-  width: 1120px;
+  width: 100%;
   margin-top: 15px;
+ 
 }
 
 .item1 {
