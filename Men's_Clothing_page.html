@@ -8,36 +8,121 @@
     <link rel="icon" href="./Images/SnapZone_Icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            color:white;
+            background-color: #c3043d;
+            justify-content: space-between;
+            padding: 0px 60px;
+            font-size: smaller;
+            line-height: 5px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+            margin-left: 15px;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            background-color: #d90646;
+            justify-content: space-between;
+            padding: 11px 40px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+        .navbar > div{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .navbar > div > a > img{
+            width: 180px;
+        }
+        #search{
+            height: 34px;
+            border: none;
+            font-size: 13px;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+            padding-left: 20px;
+            padding-right: 300px;
+        }
+        .navbar button{
+            height: 38px;
+            border: none;
+            color: white;
+            font-size: 13px;
+            background-color: black;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 0px 30px;
+            align-items: center;
+        }
+        .navbar button  i{
+            font-size: 12px;
+            margin-right: 2px;
+
+        }
+        #cart{
+            gap: 30px;
+        }
+        #cart > a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+        #cart > a > img{
+            width: 35px;
+        }
+
+/* /----------------------------------------------------------- */
+    
         .Trending{
-            width: 95%;
+            width: 92%;
             margin: auto;
             display: flex;
             align-items: center;
             gap: 20px;
+            margin-top: 20px;
         }
         .Trending > a{
             text-decoration: none;
             color: gray;
             border: 1px solid gray;
             padding: 5px 14px;
+            transition: transform 0.4s;
         }
         .Trending > a:hover{
             text-decoration: underline;
+            transform: scale(1.05);
         }
 
         #BOX{
-            width: 95%;
+            width: 92%;
             margin: auto;
             display: flex;
             box-sizing: border-box;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
         .box1{
-            width: 18%;
+            width: 20%;
             padding: 0px 10px; 
         }
         .box2{
-            width: 82%;
+            width: 80%;
             padding: 10px;
         }
         .box2 > div{
@@ -63,51 +148,48 @@
             box-sizing: border-box;
             display: grid;
             grid-template-columns: repeat(4,1fr);
-            gap: 25px 17px;
+            gap: 25px 15px;
             padding: 10px;
         }
         #Mens-Data > div > img{
             width: 100%;
             height: 230px;
-            margin: auto;
-            margin-bottom: 5px; 
+            margin: auto; 
         }
         #Mens-Data > div{
-            box-shadow: rgba(5, 3, 3, 0.16) 0px 1px 4px;
             padding: 10px;
             transition: transform 0.4s;
         }
         #Mens-Data > div:hover{
-            /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
-            transform: scale(1.08);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transform: scale(1.05);
         }   
         #Mens-Data > div > :nth-child(2){
             color: rgb(153, 149, 149);
         }
         #Mens-Data > div > :nth-child(3){
             color: #000;
-            margin-top: -22px;  
+            margin-top: -30px;  
         }
         .rat{
            width: 10px;
            color: #000;
-           margin-top: -10px; 
+           margin-top: -15px; 
+           font-size: 10px;
         }
         .pridiv{
             display: flex;
             align-items: center;
             gap: 10px;
-            line-height: 0px;
         }
         #Mens-Data > div > div > button{
             margin: auto;
             border: none;
-            padding: 6px;
+            padding: 5px 10px;
             background-color: #e40046;
             margin-bottom: 10px;
             color: #fff;
-            font-weight: bold;
-            border-radius: 3px;
+            border-radius: 2px;
         }
         #Mens-Data > div > div > button:hover{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -125,31 +207,36 @@
         }
         .searchIcon{
             display: flex;
-            border: 0.1px solid #000;
             border-radius: 3px;
             align-items: center;
-            padding: 9px;
+            border: 0.5px solid gray;
+            padding: 10px;
             padding-right: 40px;
         }
-        #search{
+        #search2{
             width: 100%;;
             border: none;
             outline: 0;
             font-size: 14px;
         }
         #filter{
-            padding: 10px;
-            padding-right: 40px;
+            padding: 10px 0px;
+            padding-left: 10px;
+            border-radius: 3px;
+            border: 0.1px solid gray;
+        }
+        #select-tag{
+            border: none;
         }
 
-
-
         .filterSection{
-            background-color: rgb(253, 253, 253);
-            padding: 0px 20px;
+            margin: auto;
             color: rgb(99, 98, 98);
             font-weight: 500;
-            border: 1px solid gray;
+            line-height: 8px;
+        }
+        .filterSection h3{
+            color: #000;
         }
         #filterPrice span{
             width: 100%;
@@ -167,34 +254,29 @@
     </style>
 </head>
 <body>
-    <!-- <header>
+    <header>
         <p>Brand Waali Quality, Bazaar Waali Deal!</p>
         <div>
-            <a href="">Impact@Snapzone</a>
-            <a href="" >Gift Cards</a>
-            <a href="" >Help Center</a>
-            <a href="" >Sell On Snapdeal</a>
-            <a href="" >Download App</a>
+            <a href="#">Impact@Snapzone</a>
+            <a href="#" >Gift Cards</a>
+            <a href="#" >Help Center</a>
+            <a href="#" >Sell On Snapdeal</a>
+            <a href="#" >Download App</a>
         </div>
     </header>
-
-    <nav id="navbar">
-        <a href="./index.html"><img src="./logo/SnapZone_white_Transparent.png" alt=""></a>
-        <input type="text" id="search" placeholder="Search products & brand">
-        <button>Search</button>
-        <a href="" id="cart">
-            <div>
-                <p>Cart</p>
-                <img src="./logo/cart logo.png" alt="">
-            </div>
-        </a>
-        <a href="" id="sign-in">
-            <div>
-                <p>Sign In</p>
-                <img src="./logo/user logo.png" alt="">
-            </div>
-        </a>
-    </nav> -->
+    <nav class="navbar">
+        <div>
+            <a href="./index.html"><img src="./Images/SnapZone_white_Transparent.png" alt="error"></a>
+        </div>
+        <div>
+            <input type="text" id="search" placeholder="Search products & brand">
+            <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </div>
+        <div id="cart">
+                <a href="#">Cart <img src="./Images/cart logo.png" alt=""></a>
+                <a href="#">Sign In<img src="./Images/user logo.png" alt=""></a>
+        </div>
+    </nav>
 
     <!-- ------------------------------------------------------------------------------- -->
     <div class="Trending">
@@ -223,50 +305,48 @@
                     </div><br>
                     
                     <div id="filterPrice">
-                        <h5>Price Filter</h5>
+                        <h3>Price</h3>
+                        <hr>
                         <div>
-                            <input type="radio" name="PriceValue" value="ZeroToNinetynine">
+                            <input type="radio" name="PriceValue" value="ZeroToNinetynine" id="one">
                                 <span>Rs. 0 - Rs. 99</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="oneHunderedToOneNininetynine">
+                            <input type="radio" name="PriceValue" value="oneHunderedToOneNininetynine" id="two">
                                 <span>Rs. 100 - Rs. 199</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="twoHunderedToTowNininetynine">
+                            <input type="radio" name="PriceValue" value="twoHunderedToTowNininetynine" id="three">
                                 <span>Rs. 200 - Rs. 299</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="threeHunderedToThreeNininetynine">
+                            <input type="radio" name="PriceValue" value="threeHunderedToThreeNininetynine" id="four">
                                 <span>Rs. 300 - Rs. 399</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="fourHunderedToFourNininetynine">
+                            <input type="radio" name="PriceValue" value="fourHunderedToFourNininetynine" id="five">
                                 <span>Rs. 400 - Rs. 499</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="fiveHunderedToFiveNininetynine">
+                            <input type="radio" name="PriceValue" value="fiveHunderedToFiveNininetynine" id="six">
                                 <span>Rs. 500 - Rs. 599</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="sixHunderedToSixNininetynine">
+                            <input type="radio" name="PriceValue" value="sixHunderedToSixNininetynine" id="seven">
                                 <span>Rs. 600 - Rs. 699</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="sevenHunderedToNineNininetynine">
+                            <input type="radio" name="PriceValue" value="sevenHunderedToNineNininetynine" id="eight">
                                 <span>Rs. 700 - Rs. 999</span>
                         </div>
                         <div>
-                            <input type="radio" name="PriceValue" value="oneThousandAbove">
+                            <input type="radio" name="PriceValue" value="oneThousandAbove" id="nine">
                                 <span> Above &nbsp; - Rs. 1000 </span>
                         </div>
                     </div><br>
                 </div>
 
-
-
-
-
+    <!-- --------------------------------------------------------------------------------- -->
                 <div>
                     <h4>Product Type</h4>
                     <p>+</p>
@@ -327,13 +407,16 @@
                 <h2> Men's Clothing</h2>
                 <form class="searchIcon">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input placeholder="Search within category" type="text" id="search">
+                    <input placeholder="Search within category" type="text" id="search2">
                 </form>
-                <select id="filter">
-                    <option value="">Sort by:</option>
-                    <option value="Price Low To High">Price Low To High</option>
-                    <option value="Price High To Low">Price High To Low</option>
-                  </select>
+                <div id="filter">
+                    <span>Sort by :</span>
+                    <select name="" id="select-tag">
+                        <option value=""></option>
+                        <option value="Price Low To High">Price Low To High</option>
+                        <option value="Price High To Low">Price High To Low</option>
+                    </select>
+                </div>
             </div>
             <hr>
             <div id="Mens-Data"></div>
