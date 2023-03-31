@@ -8,72 +8,294 @@
     <title>Document</title>
 
     <style>
+        body {
+            background-color: #FAFAFA;
+        }
+
+        p {
+            color: 78909C;
+        }
+
+        .modal-sign-in {
+            width: 45%;
+            height: 270px;
+            margin: auto;
+            margin-top: 10%;
+            padding: 4%;
+            padding-top: 4%;
+            padding-bottom: 2%;
+            background-color: #EDF1F4;
+            border-radius: 5px;
+            display: flex;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        }
+
+
+        .modal-content-sign-in {
+            width: 50%;
+            height: 340px;
+            margin-top: -12%;
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+
+        .sign_up_content input {
+            width: 90%;
+            height: 25px;
+            padding-left: 15px;
+            /* font-size: 11px; */
+            border: 1px solid gray;
+
+        }
+
+        .signIn_image {
+            width: 100%;
+        }
+
+        #create-account {
+            width: 98%;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            background-color: #E40046;
+            color: white;
+            margin-bottom: 7%;
+
+        }
+
+        .location-wishlist-bell {
+            width: 45%;
+            margin-right: 5%;
+        }
+
+        #signInModal>div>div>div>img {
+            width: 100%;
+            padding-top: 20%;
+
+
+        }
+
+        .location-wishlist-bell>div {
+            display: flex;
+
+            margin-bottom: 10%;
+        }
+
+
+        #content {
+
+            margin-left: 3%;
+            width: 80%;
+
+        }
+
+        #google {
+            width: 100%;
+            border: 1px solid green;
+            text-align: center;
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+        }
+
         .sign_up_content {
             width: 40%;
             background-color: #fefefe;
             margin: auto;
             padding: 20px;
-
             text-align: center;
             border-radius: 25px;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
         }
 
-        .sign_up_content input {
-            width: 60%;
-            height: 30px;
+        .modal-content-sign-in input {
+            width: 90%;
+            height: 25px;
             padding-left: 15px;
-            font-size: 20px;
-            border-radius: 8px;
             border: 1px solid gray;
+            font-size: 11px;
             margin-bottom: 3%;
-
-            font-size: ;
-
+            border: 1px solid gray;
 
         }
 
-        #create-account {
-            width: 50%;
-            height: 50px;
-            /* margin-left: 15%; */
-            border-radius: 10px;
-            font-size: 20px;
-            border: none;
-            background-color: #D32F2F;
-            color: white;
-            margin-top: 3%;
-            margin-bottom: 7%;
+
+        /* <!-       Modal -->  */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .modal-content:hover {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            margin-top: 5%;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 20%;
+            color: #FF1744;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+
+
+        /* Media query medium screen */
+        @media screen and (max-width:740px) {
+            .modal-sign-in {
+                width: 60%;
+                height: 300px;
+            }
+
+        }
+
+        /* Media query medium screen */
+
+        @media screen and (max-width:500px) {
+            .location-wishlist-bell {
+                display: none;
+            }
+
+            .modal-content-sign-in {
+                width: 100%;
+                padding-bottom: 5%;
+
+
+            }
+
+            #create-account {
+                height: 20px;
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 11px;
+            }
+
+            .modal-content-sign-in input {
+
+                width: 90%;
+                height: 20px;
+                font-size: 11px;
+                margin-bottom: 2%;
+            }
+
 
         }
     </style>
 </head>
 
 <body>
-    <!-- <div id="trial">
-
-    </div> -->
 
 
-    <div class="modal-content-sign-up">
+    <div id="signInModal" class="modal-sign-in">
 
+        <div class="location-wishlist-bell">
+
+            <div>
+
+                <div style="width:20%"><img src="./loginImage/location.png" alt=""></div>
+                <div id="content">
+                    <h4 style="font-size:11px">MANAGE YOUR ORDERS</h4>
+                    <p style="font-size:11px; margin-top: -12px;">Track orders, manage cancellations & returns.</p>
+                </div>
+
+            </div>
+
+            <div>
+                <div style="width:20%;"> <img src="./loginImage/wishlist.png" alt=""></div>
+
+
+                <div id="content">
+                    <h4 style="font-size:11px">SHORTLIST ITEMS YOU LOVE</h4>
+                    <p style="font-size:11px ;margin-top: -12px">Keep items you love on a watchlist.</p>
+                </div>
+
+            </div>
+            <div>
+                <div style="width:20%"><img src="./loginImage/bell.png" alt=""> </div>
+                <div id="content">
+                    <h4 style="font-size:11px">AWESOME OFFERS UPDATES FOR YOU</h4>
+                    <p style="font-size:11px;margin-top: -12px"> Be first to know about great offers and save.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modal-content-sign-in">
+
+
+
+
+            <header style="font-size:18 px"> Login/Sign Up On Snapzone</header>
+            <p style="font-size:11px">Please provide your Mobile Number or Email to Login/ Sign Up on Snapdeal</p>
+
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter your email ">
+            <input type="number" id="mobile-number" placeholder="Enter your mobile number">
+            <input type="email" id="password" placeholder="Enter your password">
+            <input type="email" id="confirm" placeholder="confirm your password">
+            <button id="create-account">Register</button>
+            <p style="margin:auto; padding-left:10%">Already have an account <a href="./sign-in.html">Login</a> </p>
+
+
+        </div>
 
 
     </div>
 
-    <div class="sign_up_content">
 
-        <h1>Login /Sign Up On Snapzone</h1>
-        <input type="text" id="name" placeholder="Enter your name">
-        <input type="email" id="email" placeholder="Enter your email ">
-        <input type="number" id="mobile-number" placeholder="Enter your mobile number">
-        <input type="email" id="password" placeholder="Enter your password">
-        <input type="email" id="confirm" placeholder="confirm your password">
-        <button id="create-account">Create an Account</button>
-        <p>Already have an account <a href="">Login</a> </p>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <h3 id="warning">some Text</h3>
+        </div>
+
     </div>
-
 
 </body>
 <script>
@@ -92,8 +314,15 @@
     let CreateAccocunt = document.getElementById("create-account")
 
 
+    let warning = document.getElementById("warning")
 
-    let Customers = JSON.parse(localStorage.getItem("costumerDetails")) || []
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+
+
+    let Customers = JSON.parse(localStorage.getItem("user")) || []
 
     CreateAccocunt.addEventListener(("click"), () => {
         let name = Name.value
@@ -105,7 +334,9 @@
         if (name != "" && email != "" && mobile != "" && password != "" && confirm != "") {
             if (password !== confirm) {
 
-                alert("both password are not same!");
+                warning.textContent = "both password are not same!"
+                modal.style.display = "block";
+
                 return;
 
             }
@@ -113,8 +344,10 @@
 
             for (let i = 0; i < Customers.length; i++) {
                 if (Customers[i].email == email) {
-                    alert("user already registered !");
-                    return;
+                    warning.textContent = "user already registered !"
+                    modal.style.display = "block";
+
+                    return
                 }
             }
 
@@ -127,16 +360,36 @@
             Password.innerHTML = ""
             Confirm.innerHTML = ""
 
-            localStorage.setItem("costumerDetails", JSON.stringify(Customers))
-            alert("Signed up successfully")
+            localStorage.setItem("user", JSON.stringify(Customers))
+
+
+            warning.textContent = "Signed up successfully"
+            modal.style.display = "block";
             // window.location = "product.html"
         }
 
         else {
-            alert("Please fill all the details !")
+            warning.textContent = "Please fill all the details !"
+            modal.style.display = "block";
+
         }
 
     })
+
+
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
 
 </script>

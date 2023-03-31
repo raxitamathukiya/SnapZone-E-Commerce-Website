@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #FAFAFA;
+        }
+
+        p {
+            color: 78909C;
+        }
+
+        .modal-sign-in {
+            width: 45%;
+            height: 270px;
+            margin: auto;
+            margin-top: 10%;
+            padding: 4%;
+            padding-top: 4%;
+            padding-bottom: 2%;
+            background-color: #EDF1F4;
+            border-radius: 5px;
+            display: flex;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        }
+
+
+        .modal-content-sign-in {
+            width: 50%;
+            height: 340px;
+            margin-top: -12%;
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+
+        .sign_in_content input {
+            width: 90%;
+            height: 25px;
+            padding-left: 15px;
+            font-size: 11px;
+            margin-bottom: 6%;
+            border: 1px solid gray;
+
+        }
+
+        .signIn_image {
+            width: 100%;
+        }
+
+        #login {
+            width: 98%;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            background-color: #E40046;
+            color: white;
+            margin-bottom: 6%;
+
+        }
+
+        .location-wishlist-bell {
+            width: 45%;
+            margin-right: 5%;
+        }
+
+        #signInModal>div>div>div>img {
+            width: 100%;
+            padding-top: 20%;
+
+
+        }
+
+
+        .location-wishlist-bell>div {
+            display: flex;
+            margin-bottom: 10%;
+        }
+
+
+        #content {
+
+            margin-left: 3%;
+            width: 80%;
+
+        }
+
+        #google {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+        }
+
+        #signInModal>div>div>div:nth-child(7)>img {
+            width: 10%;
+            height: 50%;
+            margin-top: 5%;
+            padding-top: 0%;
+            margin-left: 10px;
+
+        }
+
+
+
+
+
+        /* modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .modal-content:hover {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+
+
+
+
+
+        /* Media query medium screen */
+        @media screen and (max-width:740px) {
+            .modal-sign-in {
+                width: 60%;
+                height: 300px;
+            }
+
+            .modal-content-sign-in {
+                height: 320px;
+            }
+
+            #signInModal>div>div>div:nth-child(7)>img {
+                width: 13%;
+                height: 50%;
+                margin-top: 8%;
+                padding-top: 0px;
+                margin-left: 10px;
+            }
+
+        }
+
+        /* Media query medium screen */
+
+        @media screen and (max-width:500px) {
+            .location-wishlist-bell {
+                display: none;
+            }
+
+            .modal-content-sign-in {
+                width: 100%;
+                padding-bottom: 5%;
+
+            }
+
+            #create-account {
+                height: 20px;
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 11px;
+            }
+
+            .modal-content-sign-in input {
+
+                width: 90%;
+                height: 20px;
+                font-size: 11px;
+                margin-bottom: 5%;
+            }
+
+            #signInModal>div>div>div:nth-child(7)>img {
+                width: 10%;
+                height: 50%;
+                padding: 0px;
+
+                margin-top: 5%;
+                margin-left: 10px;
+            }
+
+
+
+        }
+
+
+
+        /* Modal Content */
+
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            margin-top: 5%;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+            color: #FF1744;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="signInModal" class="modal-sign-in">
+
+
+
+        <div class="location-wishlist-bell">
+
+            <div>
+
+                <div style="width:20%"><img src="./loginImage/location.png" alt=""></div>
+                <div id="content">
+                    <h4 style="font-size:11px">MANAGE YOUR ORDERS</h4>
+                    <p style="font-size:11px; margin-top: -12px;">Track orders, manage cancellations & returns.</p>
+                </div>
+
+            </div>
+
+            <div>
+                <div style="width:20%;"> <img src="./loginImage/wishlist.png" alt=""></div>
+
+
+                <div id="content">
+                    <h4 style="font-size:11px">SHORTLIST ITEMS YOU LOVE</h4>
+                    <p style="font-size:11px ;margin-top: -12px">Keep items you love on a watchlist.</p>
+                </div>
+
+            </div>
+            <div>
+                <div style="width:20%"><img src="./loginImage/bell.png" alt=""> </div>
+                <div id="content">
+                    <h4 style="font-size:11px">AWESOME OFFERS UPDATES FOR YOU</h4>
+                    <p style="font-size:11px;margin-top: -12px"> Be first to know about great offers and save.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modal-content-sign-in">
+
+
+            <div class="sign_in_content">
+
+                <header style="font-size:18 px"> Login/Sign Up On Snapzone</header>
+                <p style="font-size:11px">Please provide your Mobile Number or Email to Login/ Sign Up on Snapdeal</p>
+
+                <input type="text" id="email-number" placeholder="Mobile Number/Email">
+
+                <input type="text" id="password" placeholder="Enter password">
+
+                <button id="login">Sign In</button>
+                <div style="text-align: center;">
+                    <p style="font-size:12px">or Login Using</p>
+                </div>
+
+                <div id="google">
+                    <img id="googleImg"
+                        src="data:image/png;base64,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"
+                        alt="">
+                    <p style="margin-left:22%">Google</p>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <h3 id="warning">some Text</h3>
+            <a id="register" href="">Register here !</a>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script>
+
+
+    let username = document.getElementById("email-number")
+    let password = document.getElementById("password")
+
+
+
+    let signBtn = document.getElementById("login")
+
+    let user = JSON.parse(localStorage.getItem("user")) || []
+
+
+    let warning = document.getElementById("warning")
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+
+
+
+    signBtn.addEventListener("click", () => {
+
+        if (username.value == "admin" && password.value == "admin") {
+            warning.textContent = "Admin login successfully"
+            modal.style.display = "block";
+            window.location.href = ""
+        }
+        let flag = false
+        for (let i = 0; i < user.length; i++) {
+            if (username.value == user[i].email || username.value == user[i].number) {
+                flag = true
+                break
+            }
+        }
+        if (flag == false) {
+
+            warning.textContent = "Make sure you have an account!"
+            document.getElementById("register").href = "./sign-up.html";
+            modal.style.display = "block";
+        }
+    })
+
+
+
+
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+</script>
+
+
+
+
+</html>
