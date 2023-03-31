@@ -4,112 +4,283 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Men's_Clothing_page.html">
+    <link rel="stylesheet" href="./Scripts/Men's_products.js">
     <title>Cart Page</title>
+    <style>
+      body{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            color:white;
+            background-color: #c3043d;
+            justify-content: space-between;
+            padding: 0px 60px;
+            font-size: smaller;
+            line-height: 5px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+            margin-left: 15px;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            background-color: #d90646;
+            justify-content: space-between;
+            padding: 11px 40px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+        .navbar > div{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .navbar > div > a > img{
+            width: 180px;
+        }
+        #search{
+            height: 34px;
+            border: none;
+            font-size: 13px;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+            padding-left: 20px;
+            padding-right: 300px;
+        }
+        .navbar button{
+            height: 38px;
+            border: none;
+            color: white;
+            font-size: 13px;
+            background-color: black;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 0px 30px;
+            align-items: center;
+        }
+        .navbar button  i{
+            font-size: 12px;
+            margin-right: 2px;
+
+        }
+        #cart{
+            gap: 30px;
+        }
+        #cart > a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+        #cart > a > img{
+            width: 35px;
+        }
+    
+     #cart-container{
+      margin-top: 30px;
+     }
+     
+
+     
+    
+      
+      
+    
+
+    </style>
 </head>
 <body>
+  <header>
+    <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+    <div>
+        <a href="#">Impact@Snapzone</a>
+        <a href="#" >Gift Cards</a>
+        <a href="#" >Help Center</a>
+        <a href="#" >Sell On Snapdeal</a>
+        <a href="#" >Download App</a>
+    </div>
+</header>
+<nav class="navbar">
+    <div>
+        <a href="./index.html"><img src="./Images/SnapZone_white_Transparent.png" alt="error"></a>
+    </div>
+    <div>
+        <input type="text" id="search" placeholder="Search products & brand">
+        <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    </div>
+    <div id="cart">
+            <a href="#">Cart <img src="./Images/cart logo.png" alt=""></a>
+            <a href="#">Sign In<img src="./Images/user logo.png" alt=""></a>
+    </div>
+</nav>
+
+
+
+
+
+
     <div id="cart-container" >
         <!-- append -->
       </div>
 </body>
 <script>
 
-let data = JSON.parse(localStorage.getItem("card-data")) || [];
+let ProductData = JSON.parse(localStorage.getItem("card-data")) || [];
 
      let cartcontainer=document.getElementById("cart-container");
 
-    
+  
 
 function displayData(data) 
 {
     cartcontainer.innerHTML=null;
 
-    data.forEach((element)=>{
+    data.forEach((element,index)=>{
 
         let product=document.createElement("div")
-
-       let image=document.createElement("img");
+        
+        product.style.width="80%"
+        product.style.display="flex";
+        product.style.justifyContent="space-between"
+        product.style.margin="auto"
+        product.style.boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"
+        product.style.alignItems="center"
+        product.style.padding="15px"
+        
+        let div1=document.createElement("div")
+        div1.style.width="20%"
+        div1.style.display="flex"
+    
+      
+        let image=document.createElement("img");
        image.setAttribute("src",element.image)
+       image.style.width="100px"
+        
+       let imgdiv=document.createElement("div")
 
-        let Title=document.createElement("h4");
-    Title.textContent=element.title;
 
-    // let gender=document.createElement("p");
-    // gender.textContent=element.gender;
+       let title = document.createElement("p");
+       title.textContent = element.title;
+        
+        let titlediv=document.createElement("div");
+        titlediv.style.marginLeft="15px"
+      
 
-     
+        
+        let div2=document.createElement("div");
+        div2.style.width="20%"
+        
+
+       let div3=document.createElement("div");
+        div3.style.width="40%"
+      
+        
+  
     let Price=document.createElement("h5");
     Price.textContent=  `MRP ₹${element.price}`;
 
+    
+
    let quantity=document.createElement("p");
-   quantity.textContent="Qty:-"+ element.quantity
+   quantity.textContent="Order Qty:-"+ element.quantity
 
     let Remove=document.createElement("button");
-       Remove.style.backgroundColor="white"
-       Remove.style.border="none"
+       Remove.style.backgroundColor="rgb(51,51,51)"
+       Remove.style.color="white"
+       Remove.style.padding="20px"
+       Remove.style.borderRadius="5px"
+       Remove.style.width="150px"
+        Remove.style.border="none"
        Remove.style.marginLeft="10px"
-       Remove.style.padding="1px"
+       Remove.textContent="Remove"
 
-     Remove.textContent="Remove"
-
-        let Increase=document.createElement("button");
+       
+       
+       let Increase=document.createElement("button");
         Increase.textContent="+"
         Increase.style.backgroundColor="white"
         Increase.style.color="black"
         Increase.style.padding="3px"
-        // Increase.style.borderRadius="100%"
-        // Increase.style.border="none"
+       
+        
 
 
         let Decrease=document.createElement("button");
         Decrease.textContent="-"
-Decrease.style.backgroundColor="white"
+        Decrease.style.backgroundColor="white"
         Decrease.style.color="black"
         Decrease.style.padding="3px"
-        // Decrease.style.borderRadius="100%"
-        // Decrease.style.border="none"
+        Decrease.style.marginLeft="3px"
+        
+        
 
 
         Remove.addEventListener("click",()=>{
-       xdata =xdata.filter((ele)=>{
+       ProductData =ProductData.filter((ele)=>{
           return ele.title!==element.title;
         })
-        localStorage.setItem("",JSON.stringify(data));
-        displayData()
+        localStorage.setItem("card-data",JSON.stringify(ProductData));
+        displayData(ProductData)
       });
 
+     
+     
       Increase.addEventListener("click",()=>{
         element=element.quantity++;
 
-        localStorage.setItem("",JSON.stringify(data));
-        displayData()
+        localStorage.setItem("card-data",JSON.stringify(ProductData));
+        displayData(ProductData)
       });
+     
+     
+     
       Decrease.addEventListener("click",()=>{
         if(element.quantity>1){
           element=element.quantity--;
         }
-        localStorage.setItem("",JSON.stringify(data));
-        displayData()
+        localStorage.setItem("card-data",JSON.stringify(ProductData));
+        displayData(ProductData)
       })
 
-
-
-    
+     
+  
       let sum=0;
-      for(let i=0;i<xdata.length;i++)
-      {
-         sum+=xdata[i].price*xdata[i].quantity
-      }
-      let totalprice=document.createElement("h4");
-      totalprice.textContent="Total Price:-"+ sum
+      sum=element.price*element.quantity
+      
+      let totalprice=document.createElement("h3");
+      totalprice.textContent="You Pay:-"+" ₹"+ sum
+
+
+
+      
+      
+      let paragraph=document.createElement("p");
+      paragraph.textContent="(Including delivery and other charges.)"
        
+     
+     
+     
       let paybtn=document.createElement("button");
-      paybtn.textContent="Proceed To Payment"
-      paybtn.style.backgroundColor="red"
+      paybtn.textContent="PROCEED TO CHECKOUT"
+      paybtn.style.backgroundColor="rgb(228,0,70)"
       paybtn.style.color="white";
       paybtn.style.border="none"
-      paybtn.style.width="50%";
-      paybtn.style.padding="10px"
+      paybtn.style.width="250px";
+      paybtn.style.padding="20px"
       paybtn.style.borderRadius="5px"
+      paybtn.style.marginLeft="10px"
 
      
 
@@ -120,20 +291,28 @@ Decrease.style.backgroundColor="white"
 
         
 
-        window.location.href="./payment.html"
+        // window.location.href="./payment.html"
         
       })
 
       
-
+     
 
         
-
-      product.append(image,Title,Price,quantity,Increase,Decrease, Remove,totalprice,paybtn)
+      imgdiv.append(image);
+      titlediv.append(title,Price);
+      div1.append(imgdiv,titlediv);
+      div2.append(quantity,Increase,Decrease,totalprice,paragraph);
+      div3.append(paybtn,Remove)
+      product.append(div1,div2,div3)
       cartcontainer.append(product)
     })
 
 }
-displayData(data)
+displayData(ProductData)
+
+
+
+
 </script>
 </html>
