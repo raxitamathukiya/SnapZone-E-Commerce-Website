@@ -68,11 +68,20 @@
        
         font-weight: 200px;
   color: white;
+  margin-right: 50px;
   
       }
       .editform{
        
         margin-right: 25px;
+      }
+      input{
+        border-radius: 10px;
+        width: 90%;
+        height: 35px;
+      }
+      ::placeholder{
+        text-align: center;
       }
     </style>
   </head>
@@ -125,10 +134,12 @@
       <div class="navcontainer">
         <nav class="nav">
           <div class="nav-upper-options">
-            <div class="nav-option option1">
+            <!-- <div class="nav-option option1">
              
-            <button class="add" id="update"><b>Update Product</b></button>
-            </div>
+           
+          
+            </div> -->
+           
           <div class="editform">
             <form action="">
               <label for="">Id:</label><br>
@@ -150,7 +161,38 @@
               <label for="">Gender:</label>
               <input type="text" placeholder="Enter Product Category" id="gender"><br>
             </form>
+
+          
           </div>
+          <button class="add" id="update"><b>Update Product</b></button>
+          <div class="editform">
+            <form action="">
+              <label for="">Id:</label><br>
+              <input type="text" placeholder="Enter Product Id" id="eid"><br>
+              <label for="">Img:</label><br>
+              <input type="text" placeholder="Enter Product Img Url" id="eimgurl"><br>
+              <label for="">Title:</label><br>
+              <input type="text" placeholder="Enter Product Title" id="etitle"><br>
+              <label for="">Brand:</label>
+              <input type="text" placeholder="Enter Product Brand" id="ebrand"><br>
+              <label for="">Price:</label><br>
+              <input type="text" placeholder="Enter Product Price" id="eprice"><br>
+              <label for="">Rating:</label>
+              <input type="text" placeholder="Enter Product Rating" id="erating"><br>
+              <label for="">Color:</label>
+              <input type="text" placeholder="Enter Product Color" id="ecolor"><br>
+              <label for="">Category:</label>
+              <input type="text" placeholder="Enter Product Category" id="ecategory"><br>
+              <label for="">Gender:</label>
+              <input type="text" placeholder="Enter Product Gender" id="egender"><br>
+             
+            </form>
+
+          
+          </div>
+
+          <button class="add" id="addproduct"><b>Add Product</b></button>
+         
           </div>
         </nav>
       </div>
