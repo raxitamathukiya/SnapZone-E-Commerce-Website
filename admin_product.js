@@ -9,6 +9,17 @@ let updatecolor=document.getElementById("color")
 let updaterating=document.getElementById("rating")
 let updategender=document.getElementById("gender")
 let updatebtn=document.getElementById("update")
+let edit=document.getElementById("addproduct")
+let editid=document.getElementById("eid")
+let edittitle=document.getElementById("etitle")
+let editimg=document.getElementById("eimgurl")
+let editbrand=document.getElementById("ebrand")
+let editcategory=document.getElementById("ecategory")
+let editprice=document.getElementById("eprice")
+let editcolor=document.getElementById("ecolor")
+let editrating=document.getElementById("erating")
+let editgender=document.getElementById("egender")
+
 fetchdata()
 async function fetchdata(){
     try {
@@ -128,3 +139,44 @@ function populateEditForms(currentId) {
   }
  
   })
+edit.addEventListener("click",async()=>{
+    try {
+      let id=editid.value
+    let title=edittitle.value
+    let image=editimg.value
+  let brand=editbrand.value
+  let category=editcategory.value
+  let price=editprice.value
+  let color=editcolor.value
+  let rating=editrating.value
+  let gender=editgender.value
+
+  let obj={
+    id:id,
+    title:title,
+    image:image,
+    brand:brand,
+    category:category,
+    price:price,
+    color:color,
+    rating:rating,
+    gender:gender,
+    flag:"false"
+  }
+  console.log(obj)
+  let res=await fetch("https://snapzone-api.onrender.com/product",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(obj)
+  })
+  let  data=await res.json()
+  fetchdata()
+
+    } catch (error) {
+      console.log(error)
+    }
+  
+})
+
