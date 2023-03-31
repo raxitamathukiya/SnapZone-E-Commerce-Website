@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>styleShop</title>
    <style>
     * {
@@ -12,6 +13,7 @@
     body{
         margin: 0px;
         padding: 0px;
+        background-color: #faf5f5f8;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         /* font-weight: lighter; */
 
@@ -19,44 +21,45 @@
     #navbar{
         display: flex;
         width: 100%;
-        height: 100px;
+        height: 65px;
         background-color: #d90646;
         padding-right: 25px;
         position: fixed;
         z-index: 99999;
-        margin-top: 49px;
+        margin-top: 28px;
         
     }
     #navbar img{
         height:65%;
-        margin: 17px;
-        margin-left: 30px;
+        /* margin: 5%; */
+        margin-left: 100px;
+        margin-top: 10px;
     }
     #search{
         
-        width: 740px;
-        height: 54px;
+        width: 40%  ;
+        height: 35px;
         border: none;
         /* margin-top: 20px; */
         margin: auto;
-        margin-left:70px;
+        margin-left:80px;
         margin-right: 0px;
-        font-size: 25px;
-        border-bottom-left-radius: 5px;
-        border-top-left-radius: 5px;
+        font-size: 20px;
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
         padding-left: 20px;
        
     }
     
     #navbar button{
         margin-left:0px ;
-        width: 200px;
-        height: 58px;
+        width: 10%;
+        height: 36px;
         border: none;
         color: white;
-        font-size: 26px;
-        background-color: black;
-        margin-top: 21px;
+        font-size: 17px;
+        background-color: rgb(51, 49, 49);
+        margin-top: 15px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         
@@ -72,41 +75,54 @@
         font-weight: lighter;
         text-decoration: none;
         /* margin: auto; */
-        margin-left: 140px;
-        font-size: 25px;
+        padding-right: 33px;
+        padding-top: 9px;
+        margin-left: 7%;
+        font-size: 16px;
         /* border: 2px solid; */
+    }
+    #navbar #cart img{
+        width: 35%;
+        margin-left: 10px;
+
     }
     #navbar #sign-in{
         font-family: 'Quicksand', sans-serif;
         font-weight: lighter;
-        
+        width: 15%;
         text-decoration: none;
-        /* margin-left: 0px; */
-        padding-top: 10px;
+        padding-top: 8px;
+        
         /* border: 2px solid; */
-        font-size: 25px;
+        font-size: 16px;
+    }
+    #sign-in img{
+        margin-left: 13%;
+        
     }
     #navbar div{
         width:auto;
+       
     }
    #hidden{
-    height: 170px;
-    background-color: rgb(232, 227, 227);
+    height: 109px;
+    background-color: none;
    }
     header{
+        box-sizing: border-box;
         display: flex;
         width: 100%;
         align-items: center;
        background-color: #c3043d;
-       height:49px;
+       height:30px;
        color:white;
         position: fixed;
         z-index: 99999;
-        margin-top: 0px;
+        /* margin-top: 0px; */
        
     }
     header a{
-        font-size: 20px;
+        font-size: 12px;
         margin-left: 20px;
         font-family: 'Quicksand', sans-serif;
         font-weight: lighter;
@@ -116,7 +132,7 @@
     }
     header div{
         
-        margin-left: 670px;
+        margin-left: 37%;
         width: auto;
 
         
@@ -124,8 +140,9 @@
 
   
     header p{
-        font-size: 20px;
-        margin-left:30px;
+        font-size: 13px;
+        margin-left:5%;
+        margin-top: 15px;
         font-family: 'Quicksand', sans-serif;
         font-weight: lighter;
     }
@@ -142,12 +159,14 @@
     }
     #container{
         display: grid;
-        grid-template-columns: repeat(5,1fr);
-        grid-template-rows: 1.5fr 2fr 1.5fr 1fr;
+        /* grid-template-columns: repeat(5,1fr); */
+        grid-template-columns: 0.8fr 1fr 1fr 1fr 0.9fr;
+        grid-template-rows: 0.5fr 1fr;
         width: 90%;
         margin: auto;
-        /* border: 2px solid; */
-        background-color: rgb(232, 227, 227);
+        padding-right: 15px;
+        border: 2px solid;
+        height: 800px;
         gap: 15px;
         /* margin-top: 200px ; */
     }
@@ -159,13 +178,13 @@
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2;
-        height: 910px;
+        height: 748px;
         /* width: 350px; */
         
     }
     #sidebar #menu{
         /* width: 70%; */
-        height: 700px;
+        height: 650px;
         background-color: white;
         /* border: 2px solid; */
     }
@@ -175,58 +194,175 @@
         grid-column-start: 2;
         grid-column-end: 5;
         
-        height: 400px;
+        height: 320px;
+        /* border: 2px solid; */
         margin-bottom: 0px;
         background-color:white;
     }
     #main img{
         margin-top: 0px;
         width: 100%;
-        height: 90%;
+        height: 319px;
     }
-    #main-bar{
-        height: 10%;
-        background-color: white;
-    }
+  
     #pin{
-        width: 100%;
+        grid-column-start: 5;
+        grid-column-end: 6;
+        height: 319px;
         background-color: blueviolet;
+
     }
-    #product{
-        margin-top: 0px;
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        background-color: cadetblue;
-    }
+   
     #rec{
       
         grid-row-start: 2;
         grid-row-end: 3;
         grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-end: 6;
         height: 500px;
         /* background-color: beige; */
         margin-bottom: 0px;
+        
     }
-    #rec 
+  
     
     #item{
         display: flex;
-        background-color: antiquewhite;
-        height: 400px;
+        /* margin: auto; */
+        
+        background-color: white;
+        height: 350px;
+        /* border: 2px solid; */
     }
+    
+    #item .image{
+        width: 100%;
+        height: 70%;
+        margin: auto;
+        padding-left: 23px;
+        padding-top: 20px;
+        /* border: 2px solid; */
+    }
+    #item .image img{
+        width: 90%;
+        height: 95%;
+       
+
+    }
+    #item .detail{
+        width: 95%;
+        height: 30%;
+        padding: 10px;
+        /* border: 2px solid; */
+        margin: auto;
+        font-size: small;
+       
+    }
+    .detail .des{
+        margin-top: -5px; 
+        color: #aeaaaa;
+    }
+   
 #barcode{
-    margin-top: 70px;
+    margin-top: 30px;
     grid-column-start: 1;
     grid-column-end: 2;
    
+}
+#barcode img{
+
+    width: 100%;
+    height: 100%;
 }
 
 footer a{
     font-size: 22px;
     font-weight: bold;
+}
+
+/*  slider */
+
+/* #product{
+margin: 20px;
+border: 2px solid;
+height: 300px;
+    display: grid;
+} */
+
+.slider{
+    
+    height: 300px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+   
+}
+
+.slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+.slide-track .slide{
+    height: 269px;
+    width:100%;
+    display: flex; 
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+    
+}
+
+.slide-track .slide img{
+    width: 100%;
+    
+    transition: transform 1s;
+}
+
+.slide-track .slide img:hover{
+    transform: translateZ(20px);
+}
+/* gradient shadows */
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right, rgba(255,255,255,1 ) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+    margin-left: -14px;
+    margin-right: -80px;
+}
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
 }
 
     
@@ -268,36 +404,176 @@ footer a{
        </a>
     </nav>
     <div id="hidden"></div>
+    <!-- --------------------------------container----------------------------------------------- -->
     <div id="container">
-        <!-- menu and all div -->
+        
         <div id="sidebar">
             <div id="menu">slide menu</div>
-            <div id="barcode"> barcode </div>
+            <div id="barcode"> 
+            <img src="logo/qr-code.png" alt=""> 
+            </div>
         </div>
+        
         <div id="main">
-            <img src="./logo/SnapZone.jpg" alt="">
-            <div id="main-bar">mainbar</div>
+            <!-- boot strap start -->
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="main slider/img1.jpg" class="d-block w-100" alt="...">
+                   
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="main slider/img2.jpg" class="d-block w-100" alt="...">
+                   
+                  </div>
+                  <div class="carousel-item">
+                    <img src="main slider/kit_img.jpg" class="d-block w-100" alt="...">
+                    
+                  </div>
+                 
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            <!-- bootstrap  end -->
+           
         </div>
-        <div id="pin">pincode</div>
+      
+        <div id="pin">pincode
+
+        </div>
+        
         <div id="rec">
             <h1>Recent</h1>
           <div id="item">
-              <div > recent item</div>
-            <div > recent item</div>
-            <div > recent item</div>
-            <div > recent item</div>
-            <div > recent item</div>
+            <div > 
+               <div class="image">
+                <img src="main slider/shirt-1.webp" alt="">
+               </div>
+               <div  class="detail">
+               <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                <p>Price: 2000</p>
+               
+               </div>
+                
+            </div>
+            <div > 
+                <div class="image">
+                 <img src="main slider/shirt1.webp" alt="">
+                </div>
+                <div class="detail">
+                 <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                 <p>Price: 2000</p>
+                
+                </div>
+                 
+             </div> 
+             <div > 
+                <div class="image">
+                 <img src="main slider/shoes-1.webp" alt="">
+                </div>
+                <div  class="detail">
+                 <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                 <p>Price: 2000</p>
+                
+                </div>
+                 
+             </div>
+             <div > 
+                <div class="image">
+                 <img src="main slider/shirt-2.webp" alt="">
+                </div>
+                <div  class="detail">
+             <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                 <p>Price: 2000</p>
+                 
+               
+                </div>
+                 
+             </div>
 
           </div>
           
         </div>
           
-        <section id="product">
+       
+    </div>
+    <!-- ----------------------------------------------------------------- -->
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="main slider/shirt2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-5.avif" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-3.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt-4.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt-3.webp" alt="">
+            </div>
 
-        </section>
+
+            <div class="slide">
+                <img src="main slider/shirt2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-5.avif" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/tshirt-3.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt-4.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="main slider/shirt-3.webp" alt="">
+            </div>
+        </div>
     </div>
 
-
+<!-- -------------------------------------------------------------------- -->
     <footer>
        <div>
         <p> <a href="" > Men</a> <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></p>
@@ -313,6 +589,7 @@ footer a{
     
     
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
