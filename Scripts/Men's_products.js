@@ -8,6 +8,7 @@ async function FetchData(){
         //console.log(request);
         Display(request);
         filterData2(request);
+        menData(request);
     }catch(error){
         console.log(error);
     }
@@ -69,6 +70,18 @@ function Display(data){
        }
     });
 }
+function menData(data){
+    let trend= document.getElementById("trend")
+    trend.addEventListener("click",()=>{
+        data= data.filter((e)=>{
+            if(e.category== "T-Shirt"){
+                return e
+            }
+        })
+        Display(data)
+    })
+}
+
 
 function checkOrder(product){
     for(let x=0; x<ProductData.length; x++){
