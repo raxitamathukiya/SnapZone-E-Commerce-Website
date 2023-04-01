@@ -8,7 +8,7 @@ async function FetchData(){
         //console.log(request);
         Display(request);
         filterData2(request);
-        menData(request);
+        WomensData(request);
         filtercolor(request);
     }catch(error){
         console.log(error);
@@ -21,7 +21,7 @@ function Display(data){
     Container.innerHTML = "";
 
     data.forEach((product) => {
-       if(product.gender=="men"){
+       if(product.gender=="women"){
 
         let card = document.createElement("div");
         let title = document.createElement("p");
@@ -85,31 +85,31 @@ function checkOrder(product){
 
 //---------------------------------------------- Category Data -----------------------------------------------
 
-function menData(data){
-    let trend= document.getElementById("trend")
-    trend.addEventListener("click",()=>{
+function WomensData(data){
+    let Tops= document.getElementById("Tops")
+    Tops.addEventListener("click",()=>{
         data= data.filter((e)=>{
-            if(e.category== "T-Shirt"){
+            if(e.category== "Top"){
                 return e
             }
         })
         Display(data)
     })
 
-    let shirt = document.getElementById("shirts")
-    shirt.addEventListener("click",()=>{
+    let One_Piece = document.getElementById("One_Piece")
+    One_Piece.addEventListener("click",()=>{
         data= data.filter((e)=>{
-            if(e.category== "shirt"){
+            if(e.category== "one piece"){
                 return e
             }
         })
         Display(data)
     })
 
-    let Jeans = document.getElementById("Jeans")
-    Jeans.addEventListener("click",()=>{
+    let Pants = document.getElementById("Pants")
+    Pants.addEventListener("click",()=>{
         data= data.filter((e)=>{
-            if(e.category== "jeans"){
+            if(e.category== "pants"){
                 return e
             }
         })
@@ -117,40 +117,20 @@ function menData(data){
     })
 
     
-    let Sweatshirt = document.getElementById("Sweatshirt")
-    Sweatshirt.addEventListener("click",()=>{
+    let Hells = document.getElementById("Hells")
+    Hells.addEventListener("click",()=>{
         data= data.filter((e)=>{
-            if(e.category== "Sweatshirt"){
+            if(e.category== "Hells"){
                 return e
             }
         })
         Display(data)
     })
 
-    let Shoes = document.getElementById("Shoes")
-    Shoes.addEventListener("click",()=>{
+    let Earrings = document.getElementById("Earrings")
+    Earrings.addEventListener("click",()=>{
         data= data.filter((e)=>{
-            if(e.category== "shoes"){
-                return e
-            }
-        })
-        Display(data)
-    })
-
-    let Sunglasses = document.getElementById("Sunglasses")
-    Sunglasses.addEventListener("click",()=>{
-        data= data.filter((e)=>{
-            if(e.category== "sunglasses"){
-                return e
-            }
-        })
-        Display(data)
-    })
-
-    let Watchs = document.getElementById("Watchs")
-    Watchs.addEventListener("click",()=>{
-        data= data.filter((e)=>{
-            if(e.category== "watch"){
+            if(e.category== "Earrings"){
                 return e
             }
         })
