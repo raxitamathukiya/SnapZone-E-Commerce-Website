@@ -361,6 +361,91 @@
             width: 10%;
             height: 2em;
         }
+
+
+        @media screen and (max-width: 1050px){
+            #search{
+                font-size: 13px;
+                padding-left: 20px;
+                padding-right: 150px;
+            }
+            .navbar button{
+                padding: 0px 20px;
+            }
+            #Sweatshirt, #Sunglasses{
+                display: none;
+            }
+            .Trending{
+                gap: 10px;
+            }
+            #Mens-Data{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+            #filterPrice > div{ 
+                padding-left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 850px){
+            #search{
+                font-size: 13px;
+                padding-left: 10px;
+                padding-right: 0px;
+            }
+            .navbar button{
+                padding: 0px 10px;
+            }
+            header a:nth-child(1),  header a:nth-child(2), #Shoes{
+                display: none;
+            }
+            #Mens-Data{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
+            .filterSection{
+                font-weight: 100;
+                color: #000;
+            }
+        }
+        @media screen and (max-width: 600px){
+            header{
+                justify-content: center;
+            }
+            .navbar > div > a > img{
+                width: 150px;
+            }
+            #search, #Jeans, #Watchs, header a, .navbar button, #paragraph, #copyright1{
+                display: none;
+            }
+            #Mens-Data{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+            }
+            #filter{
+                display: none;
+            }
+            .box1{
+                width: 45%;
+                padding: 0px 10px; 
+            }
+            #filterColor > div{ 
+                padding-left: 0px;
+            }
+            input[type=radio]{
+                border: 10px;
+                width: 7%;
+                height: 2em;
+            }
+            #filterPrice span{
+                width: 100%;
+                margin-left: 2px;
+            }
+            .filterSection{
+                font-size: small;
+            }
+        }
+
     </style>
 </head>
 <body>
