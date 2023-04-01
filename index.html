@@ -78,6 +78,7 @@
         padding-right: 33px;
         padding-top: 9px;
         margin-left: 7%;
+        
         font-size: 16px;
         /* border: 2px solid; */
     }
@@ -85,6 +86,9 @@
         width: 35%;
         margin-left: 10px;
 
+    }
+    #navbar #cart p{
+        margin-top: 12px;
     }
     #navbar #sign-in{
         font-family: 'Quicksand', sans-serif;
@@ -95,6 +99,9 @@
         
         /* border: 2px solid; */
         font-size: 16px;
+    }
+    #navbar #sign-in p{
+        margin-top: 12px;
     }
     #sign-in img{
         margin-left: 13%;
@@ -147,16 +154,7 @@
         font-weight: lighter;
     }
   
-    footer span{
-        font-size: 20px;
-        
-        color: rgb(152, 150, 150);
-        margin-bottom: 0px;
-        
-    }
-    footer div{
-        margin: 0px;
-    }
+   
     .heading {
         color:rgb(162, 157, 157);
         font-size: 25px;
@@ -362,10 +360,59 @@
     height: 100%;
 }
 
-footer a{
+/* footer a{
     font-size: 22px;
     font-weight: bold;
-}
+} */
+/* footer span{
+        font-size: 20px;
+        
+        color: rgb(152, 150, 150);
+        margin-bottom: 0px;
+        
+    }
+    footer div{
+        margin: 0px;
+    } */
+/* --------------------footer------------------------- */
+
+footer{
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            padding-top: 50px;
+            padding: 50px 50px 0px 50px;
+            /* background-color: #faf5f5f8;
+            border-top: 1px solid #faf5f5f8; */
+            font-size: small;
+        }
+        footer > div > p{
+            margin-top: -15px;
+        }
+        footer > div > p > a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        footer > div > p > a:hover{
+            text-decoration: underline;
+            color: #c3043d;
+        }
+        #paragraph{
+            text-align: justify;
+        }
+        #copyright1{
+            margin-top: 40px;
+            display: flex;
+            /* background-color: white;
+            width: 100%; */
+            justify-content: space-between;
+        }
+
+/* ----------------------footer end------------------- */
+
+
+
 
 .slider{
     
@@ -496,6 +543,65 @@ footer a{
     height: 100%;
     margin-left: -6px;
 
+}
+
+.anchor{
+    
+    display: flex;
+   background-color: white;
+}
+.anchor .link{
+    width: 300px;
+    background-color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.link a{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #aeaaaa;
+}
+.link p{
+    font-size: 16px;
+}
+.link input{
+    margin-right: -5px;
+}
+#subBtn{
+    color: white;
+    background-color: rgb(63, 62, 62);
+    margin-bottom: 20px;
+    border: none;
+    height: 32px;
+    font-size: 14px;
+}
+
+.last{
+    display: flex;
+    background-color: white;
+    height: 130px;
+    border-top: 1px solid rgb(177, 172, 172);
+    border-bottom: 1px solid rgb(177, 172, 172);
+}
+.last .payment{
+    width: 30%;
+    margin: auto;
+}
+.last .payment img{
+    width: 100%;
+}
+.last .social-media{
+    width: 40%;
+    margin: auto;
+}
+.last .social-media img{
+    width: 7%;
+    margin-left: -5px;
+}
+.last p{
+    font-size: 16px;
+    color: rgb(186, 181, 181);
 }
    </style>
 </head>
@@ -766,7 +872,7 @@ footer a{
 
 <div class="anchor">
     <div class="link">
-        <h3>POLICY INFO</h3>
+        <p>POLICY INFO</p>
         <a href="">Privacy Policy</a>
         <a href="">Terms Of Sale</a>
         <a href="">Terms of Use</a>
@@ -775,7 +881,7 @@ footer a{
     </div>
 
     <div class="link">
-        <h3>COMPANY</h3>
+        <p>COMPANY</p>
         <a href="">Impact@Snapdeal</a>
         <a href="">Careers</a>
         <a href="">Blogs</a>
@@ -784,7 +890,7 @@ footer a{
     </div>
 
     <div class="link">
-        <h3>SNAPZONE BUSINESS</h3>
+        <p>SNAPZONE BUSINESS</p>
         <a href="">Shopping App</a>
         <a href="">Sell on Snapdeal</a>
         <a href="">Media Enquiries</a>
@@ -792,19 +898,43 @@ footer a{
     </div>
 
     <div class="link">
-        <h3>POPULAR LINKS</h3>
+        <p>POPULAR LINKS</p>
         <a href="">Lehenga</a>
         <a href="">Kid's Clothing</a>
         <a href="">Sarees</a>
         <a href="">Winter Wear</a>
         
     </div>
+    <div class="link">
+        <p>SUBSCRIBE</p>
+        <input type="text"  placeholder="Your emil address">
+        <button id="subBtn">SUBSCRIBE</button>
+        <p>Register now to get updates on promotions andcoupons. Or Download App </p>
+    </div>
+
+</div>
+
+<div class="last">
+    <div class="payment">
+        <p>PAYMENT</p>
+        <img src="logo/payment.png" alt="">
+    </div>
+    <div class="social-media">
+        <p>CONNCET</p>
+        <a href=""> <img src="logo/fb" alt=""> </a>
+        <a href=""> <img src="logo/twitter.png" alt=""> </a>
+        <a href=""> <img src="logo/insta.png" alt=""> </a>
+        <a href=""> <img src="logo/linked in.png" alt=""> </a>
+        <a href=""> <img src="logo/youTube.png" alt=""> </a>
+        <a href=""> <img src="logo/telegram.png" alt=""> </a>
+        <a href=""> <img src="logo/whatsapp.png" alt=""> </a>
+    </div>
 
 </div>
 
 <!-- --------------------------------------------------------------------------------- -->
 
-    <footer>
+    <!-- <footer>
        <div>
         <p> <a href="" > Men</a> <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></p>
     </div>
@@ -814,11 +944,30 @@ footer a{
         <h3>Footwear <span>Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</span></h3>
         <h3>Home & Kitchen: <span>Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</span></h3>
 
-       
-    
-    
-    
+    </footer> -->
+
+    <footer>
+        <div>
+            <p><a href="./Men's_Clothing_page.html">Men</a> : Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</p>
+            <p><a href="#">Women</a> : Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</p>
+            <p><a href="#">Footwear</a> : Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</p>
+            <p><a href="#">Home & Kitchen</a> : Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</p>
+            <p><a href="#">Watch</a> : Watch For Men / Womens Watches / Smart Watch / Boys Watch / Girls Watch</p>
+            <p><a href="#">Home Furnishing</a> : Bed Sheet / Mosquito Net / Mattress / Curtains / Sofa Cover / Blanket / Pillow / Carpet / Apron / Quilt / Floor Mat / Towel / Pillow Cover</p>
+            <p><a href="#">Electronics</a> : Bluetooth Speakers / Headphones / Earphone / Ceiling Fan / Geysers / Trimmer / Hair Straightner / Hair Dryer / Water Purifier / Mixer Grinder / Gas Stove / Electric Kettle / Computer Mouse / Computer Keyboard / USB & HDMI Cables / Computer Antivirus</p>
+            <p><a href="#">Mobiles Accessories</a> : Mobile Covers / Leather Mobile Covers / Printed Back Covers / Tempered Glass</p>
+            <div id="paragraph">
+                <p>
+                    Snapdeal is India's leading pure-play value Ecommerce platform. Founded in 2010 by Kunal Bahl and Rohit Bansal, Snapdeal is one of the top four online lifestyle shopping destinations of India. Snapdeal brings together a wide assortment of good quality and value- priced merchandise on its platform. Snapdeal's vision is to enable the shoppers of Bharat to experience the joy of living their aspirations through reliable, value-for-money shopping. With a personalized, multilingual interface and cutting edge technology, Snapdeal has simplified the shopping experience for its value-conscious buyers by showcasing the most relevant products- products that are a good functional fit with their needs and of a quality that lasts- thereby delivering true value to its customers. With its commitment to high service standards, Snapdeal suppliers operate under a well structured ecosystem that enables them to offer great quality products at affordable prices. With majority of the value-seeking, middle-income, price-conscious buyers coming from the non-metros, Snapdeal’s logistics networks powered by third party logistics cover more than 96% of India’s pin codes enabling order deliveries to more than 2500 towns and cities and expanding. Further, Snapdeal's mission is to become India’s value lifestyle omni-channel leader. We are excited about continuing to build a complete ecosystem around value commerce, where we can serve Bharat consumers wherever they are on their offline to online shopping journey. Snapdeal is part of the AceVector Group and one of India’s best-known e-commerce companies with an exclusive focus on the value segment.
+                </p>
+            </div>
+            <div id="copyright1">
+                <p>Copyright © 2021, Snapdeal Limited. All Rights Reserved</p>
+                <p>Made for Bharat ❤️</p> 
+            </div>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
