@@ -19,13 +19,22 @@ let editprice=document.getElementById("eprice")
 let editcolor=document.getElementById("ecolor")
 let editrating=document.getElementById("erating")
 let editgender=document.getElementById("egender")
-
+let paggination=document.getElementById("paggination")
 fetchdata()
-async function fetchdata(){
+async function fetchdata(pagenumber){
     try {
-        let res=await fetch("https://snapzone-api.onrender.com/product")
+      let res1=await fetch(`https://snapzone-api.onrender.com/product`)
+      let data1 =await res1.json()
+      console.log(data1.length) 
+        let res=await fetch(`https://snapzone-api.onrender.com/product?_limit=12&_page=${pagenumber}`)
+        let totalbutton=Math.ceil(data1.length/12)
+        paggination.innerHTML=""
+       for(let i=1;i<=totalbutton;i++){
+         paggination.append(pagginationbtn(i))
+       }
+       
         let data =await res.json()
-        console.log(data) 
+        console.log(data.length) 
         display(data)
     } catch (error) {
         console.log(error)
@@ -46,6 +55,8 @@ function display(data){
         p.innerText=element.title
         let h=document.createElement("h3")
         h.innerText="Rs."+element.price
+        let bdiv=document.createElement("div")
+        bdiv.setAttribute("class","butdiv")
         let button1=document.createElement("a")
         button1.setAttribute("class","card-link")
        
@@ -76,14 +87,15 @@ function display(data){
                         }
                     })
                     let data=await res.json()
-                   display(data)
+                    alert(`${element.title} Product is Delete`)
+                  fetchdata()
                    
                 } catch (error) {
                     console.log(error)
                 }
         })
-
-        div.append(img,p,h,button1,button2)
+        bdiv.append(button1,button2)
+        div.append(img,p,h,bdiv)
         mdiv.append(div)
     });
 }
@@ -133,7 +145,9 @@ function populateEditForms(currentId) {
           body:JSON.stringify(obj)
         })
         let data=await res.json()
+        alert(`${obj.title} is Update`)
         fetchdata()
+      
   } catch (error) {
     console.log(error)
   }
@@ -173,10 +187,29 @@ edit.addEventListener("click",async()=>{
   })
   let  data=await res.json()
   fetchdata()
+  alert("New Product added")
 
     } catch (error) {
       console.log(error)
     }
   
 })
+
+function pagginationbtn(n){
+ 
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","pagination-button")
+  btn.setAttribute("data-page-number",n)
+   btn.setAttribute("data-id",n)
+    btn.innerText=n
+
+  btn.addEventListener("click",(e)=>{
+     let page=e.target.dataset.id
+    // console.log(page)
+    fetchdata(page)
+  })
+  return btn
+
+}
 
