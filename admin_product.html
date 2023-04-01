@@ -20,15 +20,17 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 20px 0px;
+       
       }
       .incard{
-      
+        border-radius: 10px;
         width: 80%;
         margin: auto;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
       .incard img{
         width: 100%;
+        border-radius: 10px;
 
       }
       .edit{
@@ -44,18 +46,23 @@
       }
       .del{
           width: 60px;
-          height: 20px;
+          height: 28px;
           background-color: rgb(90, 8, 8);
           margin-left: 20px;
           border-radius: 10px;
           color: white;
           border: none;
+          padding: 1px 0px 1px 2px;
+          /* margin-bottom: 20px; */
+        
+
       }
       .incard p{
         text-align: center;
       }
       .incard h3{
         text-align: center;
+        margin-bottom: 10px;
       }
       .ilogo{
         width: 200px;
@@ -83,6 +90,45 @@
       ::placeholder{
         text-align: center;
       }
+      .card-link{
+        text-decoration: none;
+        background-color: #3f0097;
+        color: white;
+        border-radius: 10px;
+        padding: 1px 14px 1px 14px;
+        /* margin-left: 60px;
+        margin-bottom: 40px; */
+      }
+      #paggination{
+          
+          width: 40%;
+          margin: auto;
+          margin-top: 40px;
+         
+          display: flex;
+          align-items: center;
+      }
+      #paggination button{
+        margin: auto;
+          width: 14%;
+          margin-left: 10px;
+          border-radius: 10px;
+          border: none;
+          background-color: #3f0097;
+          color: white;
+         padding: 10px 10px 10px 10px;
+      }
+      .butdiv{
+        display: flex;
+        width: 60%;
+        
+        margin: auto;
+        align-items: center;
+        margin-bottom: 30px;
+        
+      }
+
+
     </style>
   </head>
 
@@ -91,7 +137,7 @@
     <header>
       <div class="logosec">
         <!-- <div class="logo">SnapZone</div> -->
-        <a href="#"><img src="./Images/SnapZone_black_Transparent.png" alt="error" class="ilogo"></a>
+        <a href="admin.html"><img src="./Images/SnapZone_black_Transparent.png" alt="error" class="ilogo"></a>
         <img
           src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
           class="icn menuicn"
@@ -126,7 +172,7 @@
           />
        
         </div>
-        <h2>Raxita</h2>
+        <h2>Admin</h2>
       </div>
     </header>
 
@@ -134,11 +180,7 @@
       <div class="navcontainer">
         <nav class="nav">
           <div class="nav-upper-options">
-            <!-- <div class="nav-option option1">
-             
            
-          
-            </div> -->
            
           <div class="editform">
             <form action="">
@@ -269,7 +311,7 @@
               <!-- <div class="item1">
                 
               </div> -->
-
+              <div id="paggination"></div>
             </div>
           </div>
         </div>
