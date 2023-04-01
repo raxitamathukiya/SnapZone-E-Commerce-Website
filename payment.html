@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+
+        #container{
+            width: 60%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            margin-left: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            
+        }
+  h2{
+    background-color:rgb(51,51,51);
+    color: white;
+    padding: 10px;
+    
+  }
+
+        form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-left: 20px;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+input {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: rgb(228,0,70);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(228,0,70);
+}
+
+    </style>
+
+
+</head>
+<body>
+    <div  id="container">
+        <h2>Delivery Address</h2>
+        <form id="address-form">
+            
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="fullname">
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required placeholder="Address">
+            
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required placeholder="city">
+            
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required placeholder="state">
+            
+            <label for="Pincode">Pin Code</label>
+            <input type="text" id="Pincode" name="Pincode" required placeholder="pincode">
+
+            <label for="MobileNumber">Mobile Number</label>
+            <input type="text" id="MobileNumber" name="MobileNumber" required placeholder="10 digit mobile number">
+            
+            
+            <button type="submit">Submit</button>
+          </form>
+          
+
+    </div>
+
+</body>
+<script>
+    const form = document.getElementById('address-form');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const fullname = document.getElementById('fullname').value;
+  const address = document.getElementById('address').value;
+  const city = document.getElementById('city').value;
+  const state = document.getElementById('state').value;
+  const pincode = document.getElementById('Pincode').value;
+  const mobilenumber = document.getElementById('MobileNumber').value;
+  
+  
+  
+  console.log(fullname, address, city, state, pincode,mobilenumber);
+});
+</script>
+</html>
