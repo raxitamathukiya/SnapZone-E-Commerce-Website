@@ -157,36 +157,91 @@
     footer div{
         margin: 0px;
     }
+    .heading {
+        color:rgb(162, 157, 157);
+        font-size: 25px;
+        margin-left: 80px;
+        margin-top: 25px;
+    }
+    .rec-head{
+        color:rgb(162, 157, 157);
+        font-size: 25px;
+        
+        margin-top: 10px;
+    }
     #container{
         display: grid;
-        /* grid-template-columns: repeat(5,1fr); */
         grid-template-columns: 0.8fr 1fr 1fr 1fr 0.9fr;
         grid-template-rows: 0.5fr 1fr;
         width: 90%;
         margin: auto;
         padding-right: 15px;
-        border: 2px solid;
         height: 800px;
         gap: 15px;
-        /* margin-top: 200px ; */
+        margin-bottom: -40px ;
     }
     #sidebar{
         margin-left: 20px;
-
-        /* background-color: aqua; */
          grid-row-start: 1 ;
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2;
         height: 748px;
-        /* width: 350px; */
         
     }
     #sidebar #menu{
-        /* width: 70%; */
+        padding-top: 10px;
         height: 650px;
         background-color: white;
-        /* border: 2px solid; */
+       
+    }
+    #sidebar #menu .menu-head{
+        font-size: 15px;
+        margin-top: 12PX;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        color: rgb(161, 157, 157);
+    }
+    .catelogo{
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        text-align: left;
+        background-color: white;
+        border: none;
+        color: rgb(161, 157, 157);
+    }
+    .catelogo img{
+        height: 100%;
+    }
+    .catelogo:hover{
+        background: #f5f1f1;
+        border-left: 2px solid red;
+    }
+    .more{
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+       
+        background-color: white;
+        border: none;
+        color: rgb(161, 157, 157);
+        text-align: left;
+    }
+    .more:hover{
+        background: #f5f1f1;
+        border-left: 2px solid red;
+    }
+    .recent-search{
+        
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+        height: 30px;
+        border: none;
+        color: rgb(161, 157, 157);
+        background-color: white;
+        
     }
     #main{
         grid-row-start: 1 ;
@@ -209,10 +264,47 @@
         grid-column-start: 5;
         grid-column-end: 6;
         height: 319px;
-        background-color: blueviolet;
+        background-color: white;
+        border-radius: 4px;
+    }
+    #pin img{
+        width: 100%;
+        height: 70%;
+        
+    }
+    #pin div{
+       
+        width: 100%;
+        height: 30%;
 
     }
-   
+    #pin #inp{
+      
+        margin-left: 6px;
+        margin-bottom: 10px;
+        height: 40px;
+        width:95%
+        
+    }
+    #pin #submit{
+        width: 60%;
+        height: 35px;
+        border: none;
+        margin-left: 5px;
+        background-color: rgb(62, 60, 60);
+        color: white;
+        border-radius: 3px;
+        font-size: 15px;
+    }
+    #pin #next{
+        width: 33%;
+        height: 35px;
+        border-radius: 3px;
+        font-size: 15px;
+        border: none;
+        color: rgb(161, 157, 157);
+        background-color: #faf5f5f8;
+    }
     #rec{
       
         grid-row-start: 2;
@@ -220,19 +312,15 @@
         grid-column-start: 2;
         grid-column-end: 6;
         height: 500px;
-        /* background-color: beige; */
         margin-bottom: 0px;
         
     }
-  
+   
     
     #item{
         display: flex;
-        /* margin: auto; */
-        
         background-color: white;
         height: 350px;
-        /* border: 2px solid; */
     }
     
     #item .image{
@@ -241,7 +329,7 @@
         margin: auto;
         padding-left: 23px;
         padding-top: 20px;
-        /* border: 2px solid; */
+       
     }
     #item .image img{
         width: 90%;
@@ -253,7 +341,6 @@
         width: 95%;
         height: 30%;
         padding: 10px;
-        /* border: 2px solid; */
         margin: auto;
         font-size: small;
        
@@ -279,15 +366,6 @@ footer a{
     font-size: 22px;
     font-weight: bold;
 }
-
-/*  slider */
-
-/* #product{
-margin: 20px;
-border: 2px solid;
-height: 300px;
-    display: grid;
-} */
 
 .slider{
     
@@ -365,7 +443,60 @@ height: 300px;
     transform: rotateZ(180deg);
 }
 
+
+/* ----------------second part--------------------- */
+#second{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 450px;
+    background-color: white;
+}
+#second img{
+    height: 100%;
+    width: 100%;
+}
+
+#download-app{
+    padding-top: 100px; 
+    width: 400px;
+    margin-left: 100px;
+    margin-right: 30px;
+}
+#download-app button img{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+} 
+#download-app button{
+    border: none;
+    width: 130px;
+    background-color: white;
+    margin-top: 20px;
     
+}
+/* --------------------------third part--------------------- */
+
+.third{
+    display: flex;
+    height: 200px;
+    margin-top: 50px;
+   background-color: white;
+   border-top: 1px solid rgb(177, 172, 172);
+    border-bottom: 1px solid rgb(177, 172, 172);
+}
+.third div{
+   padding-left: 120px;
+   
+}
+.third img{
+    border-left: 1px solid rgb(177, 172, 172);
+    border-right: 1px solid rgb(177, 172, 172);
+    width: 24%;
+    height: 100%;
+    margin-left: -6px;
+
+}
    </style>
 </head>
 
@@ -408,7 +539,29 @@ height: 300px;
     <div id="container">
         
         <div id="sidebar">
-            <div id="menu">slide menu</div>
+            <div id="menu">
+                <p class="menu-head">TOP CATEGORY</p>
+                <button class="catelogo"> <img src="logo/Men fashion.png" alt=""> Men's Fashion</button>
+                <button class="catelogo"> <img src="logo/women fashion.png" alt=""> Women's Fashion</button>
+                <button class="catelogo"> <img src="logo/home & kitchen.png" alt="">Home & Kitchen</button>
+                <button class="catelogo"> <img src="logo/kids.png" alt="">Toy's & Kid's</button>
+                <button class="catelogo"> <img src="logo/bueaty.png" alt="">Beauty & Health</button>
+                <p class="menu-head">MORE CATEGORIES</p>
+                <button class="more">Automotives</button>
+                <button class="more">Mobile & Accessories</button>
+                <button class="more">Electronics</button>
+                <button class="more">Sports,Fitness& Outdoor</button>
+                <button class="more">Computer& Gaming</button>
+                <button class="more">Books,Media& Music</button>
+                <button class="more">Hobbies</button>
+                <p class="menu-head">TRENDING SEARCHS</p>
+                <button class="recent-search">Kitchen</button>
+                <button class="recent-search">Shoes for men</button>
+                <button class="recent-search">Suits</button>
+                <button class="recent-search">Wallets</button>
+            </div>
+
+
             <div id="barcode"> 
             <img src="logo/qr-code.png" alt=""> 
             </div>
@@ -433,7 +586,7 @@ height: 300px;
                    
                   </div>
                   <div class="carousel-item">
-                    <img src="main slider/kit_img.jpg" class="d-block w-100" alt="...">
+                    <img src="main slider/full_img.jpg" class="d-block w-100" alt="...">
                     
                   </div>
                  
@@ -452,12 +605,17 @@ height: 300px;
            
         </div>
       
-        <div id="pin">pincode
-
+        <div id="pin">
+            <img src="logo/location.jpg" alt="">
+           <div>
+            <input type="text" id="inp" placeholder="Enter pincode">
+            <button id="submit">SUBMIT</button>
+            <button id="next">NEXT</button>
+           </div>
         </div>
         
         <div id="rec">
-            <h1>Recent</h1>
+            <p class="rec-head">Fresh Arrivals</p>
           <div id="item">
             <div > 
                <div class="image">
@@ -512,6 +670,7 @@ height: 300px;
        
     </div>
     <!-- ----------------------------------------------------------------- -->
+    <p class="heading">Trending Products</p>
     <div class="slider">
         <div class="slide-track">
             <div class="slide">
@@ -574,6 +733,77 @@ height: 300px;
     </div>
 
 <!-- -------------------------------------------------------------------- -->
+
+<div id="second">
+   <div>
+    <img src="logo/app-store img.png" alt="">
+   </div>
+
+   <div id="download-app">
+    <h1>Download Snapzone App Now</h1>
+    <p>Fast, Simple & Delightful</p>
+    <p>All it takes is 30 seconds to Downloads</p>
+    <button> <img src="logo/iOS app store.png" alt=""> </button>
+    <button> <img src="logo/Android app.png" alt=""> </button>
+   </div>
+    
+<div>
+    <img src="logo/app-store left-img.png" alt="">
+</div>
+
+</div>
+
+<!-- --------------------------------third part------------------------------------- -->
+
+<div class="third">
+    <div>
+        <a href=""> <img src="logo/secure pay.png" alt=""> </a>
+        <a href=""> <img src="logo/trustpay.png" alt=""> </a>
+        <a href=""> <img src="logo/help center.png" alt=""> </a>
+        <a href=""> <img src="logo/shop_on_the_go.png" alt=""> </a>
+    </div>
+</div>
+
+<div class="anchor">
+    <div class="link">
+        <h3>POLICY INFO</h3>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms Of Sale</a>
+        <a href="">Terms of Use</a>
+        <a href="">Report Abuse & Takedown Policy</a>
+        <a href="">FAQ</a>
+    </div>
+
+    <div class="link">
+        <h3>COMPANY</h3>
+        <a href="">Impact@Snapdeal</a>
+        <a href="">Careers</a>
+        <a href="">Blogs</a>
+        <a href="">Sitemap</a>
+        <a href="">Contact Us</a>
+    </div>
+
+    <div class="link">
+        <h3>SNAPZONE BUSINESS</h3>
+        <a href="">Shopping App</a>
+        <a href="">Sell on Snapdeal</a>
+        <a href="">Media Enquiries</a>
+      
+    </div>
+
+    <div class="link">
+        <h3>POPULAR LINKS</h3>
+        <a href="">Lehenga</a>
+        <a href="">Kid's Clothing</a>
+        <a href="">Sarees</a>
+        <a href="">Winter Wear</a>
+        
+    </div>
+
+</div>
+
+<!-- --------------------------------------------------------------------------------- -->
+
     <footer>
        <div>
         <p> <a href="" > Men</a> <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></p>
@@ -593,3 +823,7 @@ height: 300px;
 
 </body>
 </html>
+<!--  pending work -->
+<!-- 1  footer link -->
+<!-- cart & sign in -->
+<!-- social media -->
