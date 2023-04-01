@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contanier {
+            border: 1px solid teal;
+            width: 50%;
+            margin: auto;
+            margin-top: 130px;
+            padding: 5%;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+
+        }
+
+        table {
+            width: 100%;
+            ;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        #billBar {
+            display: flex;
+            width: 100%;
+
+        }
+
+        .image {
+            width: 30%;
+        }
+
+        p,
+        h3,
+        h4 {
+            padding: 3px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div id="contanier">
+        <div id="billBar">
+            <div>
+                <img class="image" src="./loginImage/SnapZone.jpg" alt="">
+            </div>
+        </div>
+        <hr>
+
+        <h4>Address :</h4>
+        <Address> 123 ABC Street </Address>
+        <Address> Delhi</Address>
+        <Address>India</Address>
+        <br>
+
+
+
+
+
+        <table id="recipt">
+            <tr>
+                <th>Sr. No.</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+
+            <tbody id="elements">
+
+                <!-- append item bill here -->
+
+            </tbody>
+
+        </table>
+        <h3>Total cart price : <span id="cartTotal">0 Rs.</span></h3>
+        <h3>Total cart price with discount: <span id="discountTotal">0 Rs.</span></h3>
+        <span id="discount">please shop above 10000 Rs. to get discount of 20% </span>
+        <div>
+            <h3>Signature valid :</h3>
+            <h4>Digitally signed by eyeSFX authorities</h4>
+            <h4>Date: <span id="date"></span></h4>
+            <h4>Location: Delhi</h4>
+
+        </div>
+        <hr>
+
+
+    </div>
+
+
+</body>
+
+<script>
+    let Tbody = document.getElementById("elements")
+    let Wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+
+    let Total = document.getElementById("cartTotal");
+    let discountTotal = document.getElementById("discountTotal")
+    let discount = document.getElementById("discount")
+
+
+    const D = new Date();
+    document.getElementById("date").innerHTML = D
+    function showData(data) {
+        let Serial = 1
+        data.forEach((element, index) => {
+
+            let row = document.createElement("tr")
+
+            let Sr = document.createElement("td")
+            let Name = document.createElement("td")
+            let Category = document.createElement("td")
+            let Price = document.createElement("td")
+
+            Sr.innerText = Serial
+            Name.innerText = element.name
+            Category.innerText = element.gender
+            Price.innerText = element.price
+
+            let sum = 0;
+            for (let i = 0; i < Wishlist.length; i++) {
+                sum += Wishlist[i].price
+            }
+            Total.innerText = sum + " Rs."
+            if (sum > 10000) {
+                discountTotal.innerText = (Math.floor(sum * 0.80)) + " Rs."
+                Total.innerText = sum + " Rs."
+                discount.innerText = "20 % discount has been applied"
+
+            }
+
+
+            row.append(Sr, Name, Category, Price)
+            Tbody.append(row)
+            Serial++
+
+
+        })
+    }
+    showData(Wishlist)
+
+
+    let Final = document.createElement("tr")
+
+    let first = document.createElement("td")
+
+    let total = document.createElement("td")
+    let gender = document.createElement("td")
+    let price = document.createElement("td")
+
+    first.innerText = ""
+    total.innerText = "Total"
+    gender.innerText = "-"
+    price.innerText = Total.innerText
+
+    Final.append(first, total, gender, price)
+    Tbody.append(Final)
+</script>
+
+</html>
