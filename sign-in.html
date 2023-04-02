@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>SnapZone : Shop Online for Men & Women Clothing, Shoes, Home Decor Items</title>
+    <link rel="icon" href="./Images/SnapZone_Icon.png">
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+            font-size: small;
+        }
+
         body {
             background-color: #FAFAFA;
         }
@@ -354,29 +362,39 @@
 
 
     signBtn.addEventListener("click", () => {
+        // console.log(user)
 
         if (username.value == "admin" && password.value == "admin") {
             warning.textContent = "Admin login successfully"
             modal.style.display = "block";
-            window.location.href = ""
+            window.location.href = "./admin.html"
         }
+
         let flag = false
+
         for (let i = 0; i < user.length; i++) {
-            if (username.value == user[i].email || username.value == user[i].number) {
+            if ((username.value == user[i].email || username.value == user[i].mobile) && password.value == user[i].password) {
+                console.log(username.value, password.value)
                 flag = true
                 break
             }
         }
-        if (flag == false) {
+        if (flag == true) {
+            warning.textContent = "Login successfully";
+            modal.style.display = "block";
+
+            setTimeout(() => {
+                window.location.href = "./index.html"
+            }, 2000)
+        }
+
+        else if (flag == false) {
 
             warning.textContent = "Make sure you have an account!"
             document.getElementById("register").href = "./sign-up.html";
             modal.style.display = "block";
         }
     })
-
-
-
 
 
 

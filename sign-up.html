@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SnapZone : Shop Online for Men & Women Clothing, Shoes, Home Decor Items</title>
+    <link rel="icon" href="./Images/SnapZone_Icon.png">
 
     <style>
         body {
@@ -174,6 +175,8 @@
             cursor: pointer;
         }
 
+        /* modal */
+
 
 
 
@@ -322,7 +325,7 @@
 
 
 
-    let Customers = JSON.parse(localStorage.getItem("user")) || []
+    let Customers = JSON.parse(localStorage.getItem("user")) || [] ///all user details
 
     CreateAccocunt.addEventListener(("click"), () => {
         let name = Name.value
@@ -365,7 +368,7 @@
 
             warning.textContent = "Signed up successfully"
             modal.style.display = "block";
-            // window.location = "product.html"
+            window.location.href = "./index.html"
         }
 
         else {
