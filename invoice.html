@@ -5,16 +5,228 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SnapZone : Shop Online for Men & Women Clothing, Shoes, Home Decor Items</title>
+    <link rel="icon" href="./Images/SnapZone_Icon.png">
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+            font-size: small;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            color: white;
+            background-color: #c3043d;
+            justify-content: space-between;
+            padding: 0px 60px;
+            font-size: smaller;
+            line-height: 5px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            margin-left: 15px;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            background-color: #d90646;
+            justify-content: space-between;
+            padding: 11px 40px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+
+        .navbar>div {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar>div>a>img {
+            width: 180px;
+        }
+
+        #search {
+            height: 34px;
+            border: none;
+            font-size: 13px;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+            padding-left: 20px;
+            padding-right: 300px;
+        }
+
+        .navbar button {
+            height: 38px;
+            border: none;
+            color: white;
+            font-size: 13px;
+            background-color: black;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 0px 30px;
+            align-items: center;
+        }
+
+        .navbar button i {
+            font-size: 12px;
+            margin-right: 2px;
+
+        }
+
+        #cart {
+            gap: 30px;
+        }
+
+        #cart>a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        #cart>a>img {
+            width: 35px;
+        }
+
+        /* nav baar */
+        @media screen and (max-width: 1050px) {
+            #search {
+                font-size: 13px;
+                padding-left: 20px;
+                padding-right: 150px;
+            }
+
+            .navbar button {
+                padding: 0px 20px;
+            }
+
+            #Sweatshirt,
+            #Sunglasses {
+                display: none;
+            }
+
+            .Trending {
+                gap: 10px;
+            }
+
+            #Mens-Data {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            #filterPrice>div {
+                padding-left: 0px;
+            }
+        }
+
+        @media screen and (max-width: 850px) {
+            #search {
+                font-size: 13px;
+                padding-left: 10px;
+                padding-right: 0px;
+            }
+
+            .navbar button {
+                padding: 0px 10px;
+            }
+
+            header a:nth-child(1),
+            header a:nth-child(2),
+            #Shoes {
+                display: none;
+            }
+
+            #Mens-Data {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filterSection {
+                font-weight: 100;
+                color: #000;
+            }
+        }
+
+        @media screen and (max-width: 635px) {
+            header {
+                justify-content: center;
+            }
+
+            .navbar>div>a>img {
+                width: 150px;
+            }
+
+            #search,
+            #Jeans,
+            #Watchs,
+            header a,
+            .navbar button,
+            #paragraph,
+            #copyright1 {
+                display: none;
+            }
+
+            #Mens-Data {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            #filter {
+                display: none;
+            }
+
+            .box1 {
+                width: 45%;
+                padding: 0px 10px;
+            }
+
+            #filterColor>div {
+                padding-left: 0px;
+            }
+
+            input[type=radio] {
+                border: 10px;
+                width: 7%;
+                height: 2em;
+            }
+
+            #filterPrice span {
+                width: 100%;
+                margin-left: 2px;
+            }
+
+            .filterSection {
+                font-size: small;
+            }
+
+            h5 {
+                font-size: 10px;
+            }
+        }
+
+        /*  media query */
+
+
         #contanier {
-            border: 1px solid teal;
+            border: 1px solid #d90646;
             width: 50%;
             margin: auto;
-            margin-top: 130px;
+            margin-top: 50px;
             padding: 5%;
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-
 
         }
 
@@ -39,6 +251,7 @@
 
         .image {
             width: 30%;
+            background-color: #d90646;
         }
 
         p,
@@ -46,11 +259,38 @@
         h4 {
             padding: 3px;
             margin: 0px;
+
         }
     </style>
 </head>
 
 <body>
+
+    <header>
+        <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+        <div>
+            <a href="#">Impact@Snapzone</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Help Center</a>
+            <a href="#">Sell On Snapdeal</a>
+            <a href="#">Download App</a>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div>
+            <a href="./index.html"><img src="./Images/SnapZone_white_Transparent.png" alt="error"></a>
+        </div>
+        <div>
+            <input type="text" id="search" placeholder="Search products & brand">
+            <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </div>
+        <div id="cart">
+            <a href="./cart.html">Cart <img src="./Images/cart logo.png" alt=""></a>
+            <a href="./index.html">Sign Out<img src="./Images/user logo.png" alt=""></a>
+        </div>
+    </nav>
+
+    <!--  navbaar -->
 
 
 
@@ -58,7 +298,7 @@
     <div id="contanier">
         <div id="billBar">
             <div>
-                <img class="image" src="./loginImage/SnapZone.jpg" alt="">
+                <img class="image" src="logo/SnapZone_white_Transparent.png" alt="">
             </div>
         </div>
         <hr>
@@ -78,6 +318,7 @@
                 <th>Sr. No.</th>
                 <th>Name</th>
                 <th>Category</th>
+                <th>Quantity</th>
                 <th>Price</th>
             </tr>
 
@@ -88,14 +329,15 @@
             </tbody>
 
         </table>
-        <h3>Total cart price : <span id="cartTotal">0 Rs.</span></h3>
-        <h3>Total cart price with discount: <span id="discountTotal">0 Rs.</span></h3>
-        <span id="discount">please shop above 10000 Rs. to get discount of 20% </span>
+        <h4>Total cart price : <span id="cartTotal">0 Rs.</span></h4>
+        <h4>Total cart price with discount: <span id="discountTotal">0 Rs.</span></h4>
+
+        <p>please shop above 10000 Rs. to get discount of 20%</p>
         <div>
-            <h3>Signature valid :</h3>
-            <h4>Digitally signed by eyeSFX authorities</h4>
-            <h4>Date: <span id="date"></span></h4>
-            <h4>Location: Delhi</h4>
+            <h4 style="margin-bottom: -15px;">Signature valid :</h4>
+            <h5 style="margin-bottom: -15px;">Digitally signed by SnapZone authorities</h5>
+            <h5 style="margin-bottom: -15px;">Date: <span id="date"></span></h5>
+            <h5> Location: Delhi</h5>
 
         </div>
         <hr>
@@ -108,7 +350,10 @@
 
 <script>
     let Tbody = document.getElementById("elements")
-    let Wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+
+    // let Wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+
+    let ProductData = JSON.parse(localStorage.getItem("card-data")) || [];
 
     let Total = document.getElementById("cartTotal");
     let discountTotal = document.getElementById("discountTotal")
@@ -116,6 +361,7 @@
 
 
     const D = new Date();
+
     document.getElementById("date").innerHTML = D
     function showData(data) {
         let Serial = 1
@@ -126,16 +372,18 @@
             let Sr = document.createElement("td")
             let Name = document.createElement("td")
             let Category = document.createElement("td")
+            let Quantity = document.createElement("td")
             let Price = document.createElement("td")
 
             Sr.innerText = Serial
-            Name.innerText = element.name
+            Name.innerText = element.title
             Category.innerText = element.gender
+            Quantity.innerText = element.quantity;
             Price.innerText = element.price
 
             let sum = 0;
-            for (let i = 0; i < Wishlist.length; i++) {
-                sum += Wishlist[i].price
+            for (let i = 0; i < ProductData.length; i++) {
+                sum += ProductData[i].price
             }
             Total.innerText = sum + " Rs."
             if (sum > 10000) {
@@ -145,15 +393,13 @@
 
             }
 
-
-            row.append(Sr, Name, Category, Price)
+            row.append(Sr, Name, Category, Quantity, Price)
             Tbody.append(row)
             Serial++
 
-
         })
     }
-    showData(Wishlist)
+    showData(ProductData)
 
 
     let Final = document.createElement("tr")
@@ -162,6 +408,7 @@
 
     let total = document.createElement("td")
     let gender = document.createElement("td")
+    let quantity = document.createElement("td")
     let price = document.createElement("td")
 
     first.innerText = ""
@@ -169,7 +416,7 @@
     gender.innerText = "-"
     price.innerText = Total.innerText
 
-    Final.append(first, total, gender, price)
+    Final.append(first, total, gender, quantity, price)
     Tbody.append(Final)
 </script>
 
