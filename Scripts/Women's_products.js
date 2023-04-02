@@ -2,6 +2,11 @@ let ProductData = JSON.parse(localStorage.getItem("card-data")) || [];
 let Container = document.getElementById("Mens-Data");
 
 let logggedIn = localStorage.getItem("loggedIn") || false;
+let sign_in = document.getElementById("sign-in");
+if(logggedIn!== false){
+    sign_in.innerText = "Sign Out"
+    sign_in.href="index.html";
+}
 
 async function FetchData(){
     try{
