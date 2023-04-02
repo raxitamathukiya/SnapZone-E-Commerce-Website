@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnapZone : Shop Online for Men & Women Clothing, Shoes, Home Decor Items</title>
     <link rel="icon" href="./Images/SnapZone_Icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-        *{
+
+        * {
             font-family: "Poppins", sans-serif;
             font-size: small;
         }
-        body{
+
+        body {
             margin: 0px;
             padding: 0px;
         }
-        header{
+
+        header {
             width: 100%;
             display: flex;
             box-sizing: border-box;
             align-items: center;
-            color:white;
+            color: white;
             background-color: #c3043d;
             justify-content: space-between;
             padding: 0px 60px;
@@ -31,12 +37,14 @@
             /* position: fixed;
             z-index: 99999; */
         }
-        header a{
+
+        header a {
             text-decoration: none;
             color: white;
             margin-left: 15px;
         }
-        .navbar{
+
+        .navbar {
             width: 100%;
             display: flex;
             box-sizing: border-box;
@@ -46,15 +54,18 @@
             /* position: fixed;
             z-index: 99999; */
         }
-        .navbar > div{
+
+        .navbar>div {
             display: flex;
             align-items: center;
             color: white;
         }
-        .navbar > div > a > img{
+
+        .navbar>div>a>img {
             width: 180px;
         }
-        #search{
+
+        #search {
             height: 34px;
             border: none;
             font-size: 13px;
@@ -63,7 +74,8 @@
             padding-left: 20px;
             padding-right: 300px;
         }
-        .navbar button{
+
+        .navbar button {
             height: 38px;
             border: none;
             color: white;
@@ -74,28 +86,32 @@
             padding: 0px 30px;
             align-items: center;
         }
-        .navbar button  i{
+
+        .navbar button i {
             font-size: 12px;
             margin-right: 2px;
 
         }
-        #cart{
+
+        #cart {
             gap: 30px;
         }
-        #cart > a{
+
+        #cart>a {
             display: flex;
             align-items: center;
             text-decoration: none;
             color: #fff;
             font-weight: 500;
         }
-        #cart > a > img{
+
+        #cart>a>img {
             width: 35px;
         }
 
-/* /------------------------------------------------------------------------------------------------ */
+        /* /------------------------------------------------------------------------------------------------ */
 
-        footer{
+        footer {
             width: 100%;
             margin: auto;
             box-sizing: border-box;
@@ -105,29 +121,35 @@
             border-top: 1px solid rgb(207, 202, 202);
             font-size: small;
         }
-        footer > div > p{
+
+        footer>div>p {
             margin-top: -15px;
         }
-        footer > div > p > a{
+
+        footer>div>p>a {
             text-decoration: none;
             color: black;
             font-weight: bold;
         }
-        footer > div > p > a:hover{
+
+        footer>div>p>a:hover {
             text-decoration: underline;
             color: #c3043d;
         }
-        #paragraph{
+
+        #paragraph {
             text-align: justify;
         }
-        #copyright1{
+
+        #copyright1 {
             margin-top: 40px;
             display: flex;
             justify-content: space-between;
         }
-/* ---------------------------------------------------------------------------------------------- */
-    
-        .Trending{
+
+        /* ---------------------------------------------------------------------------------------------- */
+
+        .Trending {
             width: 92%;
             margin: auto;
             display: flex;
@@ -135,91 +157,108 @@
             gap: 20px;
             margin-top: 20px;
         }
-        .Trending > button{
+
+        .Trending>button {
             border: none;
             color: gray;
             border: 1px solid rgb(161, 160, 160);
             padding: 5px 14px;
             transition: transform 0.4s;
         }
-        .Trending > button:hover{
+
+        .Trending>button:hover {
             text-decoration: underline;
             transform: scale(1.05);
         }
 
-        #BOX{
+        #BOX {
             width: 92%;
             margin: auto;
             display: flex;
             box-sizing: border-box;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
-        .box1{
+
+        .box1 {
             width: 20%;
-            padding: 0px 10px; 
+            padding: 0px 10px;
         }
-        .box2{
+
+        .box2 {
             width: 80%;
             padding: 10px;
         }
-        .box2 > div{
+
+        .box2>div {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        #mid-07 > div{
+
+        #mid-07>div {
             display: flex;
             justify-content: space-between;
             padding-top: 0px;
         }
-        #mid-07 > div > h4{
-            color:rgb(110, 109, 109);
+
+        #mid-07>div>h4 {
+            color: rgb(110, 109, 109);
         }
-        #mid-07 > div > p{
+
+        #mid-07>div>p {
             font-size: large;
             font-weight: bold;
             color: rgb(186, 185, 185);
         }
-        #Mens-Data{
+
+        #Mens-Data {
             width: 100%;
             box-sizing: border-box;
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 25px 15px;
             padding: 10px;
         }
-        #Mens-Data > div > img{
+
+        #Mens-Data>div>img {
             width: 100%;
             height: 230px;
-            margin: auto; 
+            margin: auto;
         }
-        #Mens-Data > div{
+
+        #Mens-Data>div {
             padding: 10px;
             transition: transform 0.4s;
         }
-        #Mens-Data > div:hover{
+
+        #Mens-Data>div:hover {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             transform: scale(1.05);
-        }   
-        #Mens-Data > div > :nth-child(2){
+        }
+
+        #Mens-Data>div> :nth-child(2) {
             color: rgb(153, 149, 149);
         }
-        #Mens-Data > div > :nth-child(3){
+
+        #Mens-Data>div> :nth-child(3) {
             color: #000;
-            margin-top: -30px;  
+            margin-top: -30px;
         }
-        .rat{
-           width: 10px;
-           color: #000;
-           margin-top: -15px; 
-           font-size: 10px;
+
+        .rat {
+            width: 10px;
+            color: #000;
+            margin-top: -15px;
+            font-size: 10px;
         }
-        .pridiv{
+
+        .pridiv {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        #Mens-Data > div > div > button{
+
+        #Mens-Data>div>div>button {
             margin: auto;
             border: none;
             padding: 3px 6px;
@@ -228,21 +267,26 @@
             color: #fff;
             border-radius: 2px;
         }
-        #Mens-Data > div > div > button:hover{
+
+        #Mens-Data>div>div>button:hover {
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
         }
-        .addcarddiv{
+
+        .addcarddiv {
             display: flex;
             justify-content: space-around;
         }
-        .box2 > div > h2{
+
+        .box2>div>h2 {
             color: rgb(110, 109, 109);
         }
-        .box2 > div > h2:hover{
+
+        .box2>div>h2:hover {
             color: #e40046;
         }
-        .searchIcon{
+
+        .searchIcon {
             display: flex;
             border-radius: 3px;
             align-items: center;
@@ -250,213 +294,267 @@
             padding: 10px;
             padding-right: 40px;
         }
-        #search2{
-            width: 100%;;
+
+        #search2 {
+            width: 100%;
+            ;
             border: none;
             outline: 0;
             font-size: 14px;
         }
-        #filter{
+
+        #filter {
             padding: 10px 0px;
             padding-left: 10px;
             border-radius: 3px;
             border: 0.1px solid gray;
         }
-        #select-tag{
+
+        #select-tag {
             border: none;
         }
 
-        #ColorSection{
+        #ColorSection {
             margin: auto;
             color: rgb(99, 98, 98);
             font-weight: 500;
             line-height: 8px;
-            
+
         }
-        #ColorSection h3{
+
+        #ColorSection h3 {
             color: #000;
         }
-        #filterColor{
+
+        #filterColor {
             width: 100%;
             margin-left: 10px;
         }
-        #filterColor > div{ 
+
+        #filterColor>div {
             display: flex;
             padding-left: 20px;
             align-items: center;
         }
-        #filterColor > div > div{
+
+        #filterColor>div>div {
             width: 10px;
             height: 10px;
             border: 1px solid black;
             margin-left: 4px;
             border-radius: 2px;
         }
-        #gray{
-            background-color: gray; 
+
+        #gray {
+            background-color: gray;
         }
-        #blue{
+
+        #blue {
             background-color: blue;
         }
-        #red{
+
+        #red {
             background-color: red;
         }
-        #white{
+
+        #white {
             background-color: #fff;
         }
-        #black{
+
+        #black {
             background-color: #000;
         }
-        #green{
+
+        #green {
             background-color: green;
         }
-        #pink{
+
+        #pink {
             background-color: pink;
         }
-        #Golden{
+
+        #Golden {
             background-color: goldenrod;
         }
-        #peach{
+
+        #peach {
             background-color: peachpuff;
         }
-        #yellow{
+
+        #yellow {
             background-color: yellow;
         }
-        #purple{
+
+        #purple {
             background-color: purple;
         }
-        #maroon{
+
+        #maroon {
             background-color: maroon;
         }
-        #gold{
+
+        #gold {
             background-color: gold;
         }
-        #Brown{
+
+        #Brown {
             background-color: brown;
         }
 
 
 
 
-        .filterSection{
+        .filterSection {
             margin: auto;
             color: rgb(99, 98, 98);
             font-weight: 500;
             line-height: 8px;
         }
-        .filterSection h3{
+
+        .filterSection h3 {
             color: #000;
         }
-        #filterPrice span{
+
+        #filterPrice span {
             width: 100%;
             margin-left: 10px;
         }
-        #filterPrice > div{ 
+
+        #filterPrice>div {
             display: flex;
             padding-left: 20px;
             align-items: center;
         }
-        input[type=radio]{
+
+        input[type=radio] {
             border: 10px;
             width: 10%;
             height: 2em;
         }
 
 
-        @media screen and (max-width: 1050px){
-            #search{
+        @media screen and (max-width: 1050px) {
+            #search {
                 font-size: 13px;
                 padding-left: 20px;
                 padding-right: 150px;
             }
-            .navbar button{
+
+            .navbar button {
                 padding: 0px 20px;
             }
-            #Sweatshirt, #Sunglasses{
+
+            #Sweatshirt,
+            #Sunglasses {
                 display: none;
             }
-            .Trending{
+
+            .Trending {
                 gap: 10px;
             }
-            #Mens-Data{
+
+            #Mens-Data {
                 display: grid;
-                grid-template-columns: repeat(3,1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
-            #filterPrice > div{ 
+
+            #filterPrice>div {
                 padding-left: 0px;
             }
         }
 
-        @media screen and (max-width: 850px){
-            #search{
+        @media screen and (max-width: 850px) {
+            #search {
                 font-size: 13px;
                 padding-left: 10px;
                 padding-right: 0px;
             }
-            .navbar button{
+
+            .navbar button {
                 padding: 0px 10px;
             }
-            header a:nth-child(1),  header a:nth-child(2), #Shoes{
+
+            header a:nth-child(1),
+            header a:nth-child(2),
+            #Shoes {
                 display: none;
             }
-            #Mens-Data{
+
+            #Mens-Data {
                 display: grid;
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
-            .filterSection{
+
+            .filterSection {
                 font-weight: 100;
                 color: #000;
             }
         }
-        @media screen and (max-width: 600px){
-            header{
+
+        @media screen and (max-width: 600px) {
+            header {
                 justify-content: center;
             }
-            .navbar > div > a > img{
+
+            .navbar>div>a>img {
                 width: 150px;
             }
-            #search, #Jeans, #Watchs, header a, .navbar button, #paragraph, #copyright1{
+
+            #search,
+            #Jeans,
+            #Watchs,
+            header a,
+            .navbar button,
+            #paragraph,
+            #copyright1 {
                 display: none;
             }
-            #Mens-Data{
+
+            #Mens-Data {
                 display: grid;
-                grid-template-columns: repeat(1,1fr);
+                grid-template-columns: repeat(1, 1fr);
             }
-            #filter{
+
+            #filter {
                 display: none;
             }
-            .box1{
+
+            .box1 {
                 width: 45%;
-                padding: 0px 10px; 
+                padding: 0px 10px;
             }
-            #filterColor > div{ 
+
+            #filterColor>div {
                 padding-left: 0px;
             }
-            input[type=radio]{
+
+            input[type=radio] {
                 border: 10px;
                 width: 7%;
                 height: 2em;
             }
-            #filterPrice span{
+
+            #filterPrice span {
                 width: 100%;
                 margin-left: 2px;
             }
-            .filterSection{
+
+            .filterSection {
                 font-size: small;
             }
         }
-
     </style>
 </head>
+
 <body>
     <header>
         <p>Brand Waali Quality, Bazaar Waali Deal!</p>
         <div>
             <a href="#">Impact@Snapzone</a>
-            <a href="#" >Gift Cards</a>
-            <a href="#" >Help Center</a>
-            <a href="#" >Sell On Snapdeal</a>
-            <a href="#" >Download App</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Help Center</a>
+            <a href="#">Sell On Snapdeal</a>
+            <a href="#">Download App</a>
         </div>
     </header>
     <nav class="navbar">
@@ -468,8 +566,8 @@
             <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </div>
         <div id="cart">
-                <a href="./cart.html">Cart <img src="./Images/cart logo.png" alt=""></a>
-                <a href="./sign-in.html">Sign In<img src="./Images/user logo.png" alt=""></a>
+            <a href="./cart.html">Cart <img src="./Images/cart logo.png" alt=""></a>
+            <a href="./sign-in.html">Sign In<img src="./Images/user logo.png" alt=""></a>
         </div>
     </nav>
 
@@ -582,44 +680,44 @@
                         <hr>
                         <div>
                             <input type="radio" name="PriceValue" value="ZeroToNinetynine" id="one">
-                                <span>Rs. 0 - Rs. 99</span>
+                            <span>Rs. 0 - Rs. 99</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="oneHunderedToOneNininetynine" id="two">
-                                <span>Rs. 100 - Rs. 199</span>
+                            <span>Rs. 100 - Rs. 199</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="twoHunderedToTowNininetynine" id="three">
-                                <span>Rs. 200 - Rs. 299</span>
+                            <span>Rs. 200 - Rs. 299</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="threeHunderedToThreeNininetynine" id="four">
-                                <span>Rs. 300 - Rs. 399</span>
+                            <span>Rs. 300 - Rs. 399</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="fourHunderedToFourNininetynine" id="five">
-                                <span>Rs. 400 - Rs. 499</span>
+                            <span>Rs. 400 - Rs. 499</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="fiveHunderedToFiveNininetynine" id="six">
-                                <span>Rs. 500 - Rs. 599</span>
+                            <span>Rs. 500 - Rs. 599</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="sixHunderedToSixNininetynine" id="seven">
-                                <span>Rs. 600 - Rs. 699</span>
+                            <span>Rs. 600 - Rs. 699</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="sevenHunderedToNineNininetynine" id="eight">
-                                <span>Rs. 700 - Rs. 999</span>
+                            <span>Rs. 700 - Rs. 999</span>
                         </div>
                         <div>
                             <input type="radio" name="PriceValue" value="oneThousandAbove" id="nine">
-                                <span> Above &nbsp; - Rs. 1000 </span>
+                            <span> Above &nbsp; - Rs. 1000 </span>
                         </div>
                     </div><br>
                 </div>
 
-    <!-- --------------------------------------------------------------------------------- -->
+                <!-- --------------------------------------------------------------------------------- -->
                 <div>
                     <h4>Product Type</h4>
                     <p>+</p>
@@ -694,7 +792,7 @@
             <hr>
             <div id="Mens-Data"></div>
         </div>
-    </div> 
+    </div>
 
     <!-- ---------------------------------------------------------------------- -->
 
@@ -714,20 +812,41 @@
             <p><a href="#">Footwear</a> : Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</p>
             <p><a href="#">Home & Kitchen</a> : Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</p>
             <p><a href="#">Watch</a> : Watch For Men / Womens Watches / Smart Watch / Boys Watch / Girls Watch</p>
-            <p><a href="#">Home Furnishing</a> : Bed Sheet / Mosquito Net / Mattress / Curtains / Sofa Cover / Blanket / Pillow / Carpet / Apron / Quilt / Floor Mat / Towel / Pillow Cover</p>
-            <p><a href="#">Electronics</a> : Bluetooth Speakers / Headphones / Earphone / Ceiling Fan / Geysers / Trimmer / Hair Straightner / Hair Dryer / Water Purifier / Mixer Grinder / Gas Stove / Electric Kettle / Computer Mouse / Computer Keyboard / USB & HDMI Cables / Computer Antivirus</p>
-            <p><a href="#">Mobiles Accessories</a> : Mobile Covers / Leather Mobile Covers / Printed Back Covers / Tempered Glass</p>
+            <p><a href="#">Home Furnishing</a> : Bed Sheet / Mosquito Net / Mattress / Curtains / Sofa Cover / Blanket /
+                Pillow / Carpet / Apron / Quilt / Floor Mat / Towel / Pillow Cover</p>
+            <p><a href="#">Electronics</a> : Bluetooth Speakers / Headphones / Earphone / Ceiling Fan / Geysers /
+                Trimmer / Hair Straightner / Hair Dryer / Water Purifier / Mixer Grinder / Gas Stove / Electric Kettle /
+                Computer Mouse / Computer Keyboard / USB & HDMI Cables / Computer Antivirus</p>
+            <p><a href="#">Mobiles Accessories</a> : Mobile Covers / Leather Mobile Covers / Printed Back Covers /
+                Tempered Glass</p>
             <div id="paragraph">
                 <p>
-                    Snapdeal is India's leading pure-play value Ecommerce platform. Founded in 2010 by Kunal Bahl and Rohit Bansal, Snapdeal is one of the top four online lifestyle shopping destinations of India. Snapdeal brings together a wide assortment of good quality and value- priced merchandise on its platform. Snapdeal's vision is to enable the shoppers of Bharat to experience the joy of living their aspirations through reliable, value-for-money shopping. With a personalized, multilingual interface and cutting edge technology, Snapdeal has simplified the shopping experience for its value-conscious buyers by showcasing the most relevant products- products that are a good functional fit with their needs and of a quality that lasts- thereby delivering true value to its customers. With its commitment to high service standards, Snapdeal suppliers operate under a well structured ecosystem that enables them to offer great quality products at affordable prices. With majority of the value-seeking, middle-income, price-conscious buyers coming from the non-metros, Snapdeal’s logistics networks powered by third party logistics cover more than 96% of India’s pin codes enabling order deliveries to more than 2500 towns and cities and expanding. Further, Snapdeal's mission is to become India’s value lifestyle omni-channel leader. We are excited about continuing to build a complete ecosystem around value commerce, where we can serve Bharat consumers wherever they are on their offline to online shopping journey. Snapdeal is part of the AceVector Group and one of India’s best-known e-commerce companies with an exclusive focus on the value segment.
+                    Snapdeal is India's leading pure-play value Ecommerce platform. Founded in 2010 by Kunal Bahl and
+                    Rohit Bansal, Snapdeal is one of the top four online lifestyle shopping destinations of India.
+                    Snapdeal brings together a wide assortment of good quality and value- priced merchandise on its
+                    platform. Snapdeal's vision is to enable the shoppers of Bharat to experience the joy of living
+                    their aspirations through reliable, value-for-money shopping. With a personalized, multilingual
+                    interface and cutting edge technology, Snapdeal has simplified the shopping experience for its
+                    value-conscious buyers by showcasing the most relevant products- products that are a good functional
+                    fit with their needs and of a quality that lasts- thereby delivering true value to its customers.
+                    With its commitment to high service standards, Snapdeal suppliers operate under a well structured
+                    ecosystem that enables them to offer great quality products at affordable prices. With majority of
+                    the value-seeking, middle-income, price-conscious buyers coming from the non-metros, Snapdeal’s
+                    logistics networks powered by third party logistics cover more than 96% of India’s pin codes
+                    enabling order deliveries to more than 2500 towns and cities and expanding. Further, Snapdeal's
+                    mission is to become India’s value lifestyle omni-channel leader. We are excited about continuing to
+                    build a complete ecosystem around value commerce, where we can serve Bharat consumers wherever they
+                    are on their offline to online shopping journey. Snapdeal is part of the AceVector Group and one of
+                    India’s best-known e-commerce companies with an exclusive focus on the value segment.
                 </p>
             </div>
             <div id="copyright1">
                 <p>Copyright © 2021, Snapdeal Limited. All Rights Reserved</p>
-                <p>Made for Bharat ❤️</p> 
+                <p>Made for Bharat ❤️</p>
             </div>
         </div>
     </footer>
 </body>
 <script src="./Scripts/Men's_products.js"></script>
+
 </html>
