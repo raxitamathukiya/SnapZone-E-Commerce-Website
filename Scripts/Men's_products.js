@@ -24,6 +24,21 @@ async function FetchData(){
 }
 FetchData();
 
+// form.addEventListener("submit",(e) => {
+//     e.preventDefault();
+//     let searchData = form.search.value;
+
+//     let filters = request.filter((element) =>{
+//         if(element.title.toUpperCase().includes(searchData.toUpperCase()) === true){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     })
+//     Display(filters);
+//     console.log(filters)
+// }) 
+
 function Display(data) {
     // e.preventDefault()
     Container.innerHTML = "";
