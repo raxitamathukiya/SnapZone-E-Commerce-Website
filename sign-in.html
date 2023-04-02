@@ -377,30 +377,31 @@
             window.location.href = "./admin.html"
         }
 
-        let flag = false
+        else {
+            let flag = false
 
-        for (let i = 0; i < user.length; i++) {
-            if ((username.value == user[i].email || username.value == user[i].mobile) && password.value == user[i].password) {
-                console.log(username.value, password.value)
-                flag = true
-                break
+            for (let i = 0; i < user.length; i++) {
+                if ((username.value == user[i].email || username.value == user[i].mobile) && password.value == user[i].password) {
+                    console.log(username.value, password.value)
+                    flag = true
+                    break
+                }
             }
-        }
-        if (flag == true) {
-            warning.textContent = "Login successfully";
-            localStorage.setItem("loggedIn", JSON.parse(true))
-            modal.style.display = "block";
+            if (flag == true) {
+                warning.textContent = "Login successfully";
+                localStorage.setItem("loggedIn", JSON.parse(true))
+                modal.style.display = "block";
 
-            setTimeout(() => {
-                window.location.href = "./cart.html"
-            }, 2000)
-        }
+                setTimeout(() => {
+                    window.location.href = "./cart.html"
+                }, 2000)
+            }
 
-        else if (flag == false) {
-
-            warning.textContent = "Make sure you have an account!"
-            document.getElementById("register").href = "./sign-up.html";
-            modal.style.display = "block";
+            else if (flag == false) {
+                warning.textContent = "Make sure you have an account!"
+                document.getElementById("register").href = "./sign-up.html";
+                modal.style.display = "block";
+            }
         }
     })
 
