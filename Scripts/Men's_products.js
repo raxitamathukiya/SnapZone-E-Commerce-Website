@@ -1,8 +1,10 @@
 let ProductData = JSON.parse(localStorage.getItem("card-data")) || [];
 let Container = document.getElementById("Mens-Data");
 
-async function FetchData() {
-    try {
+let logggedIn = localStorage.getItem("loggedIn") || false;
+
+async function FetchData(){
+    try{
         let request = await fetch("https://snapzone-api.onrender.com/product");
         request = await request.json();
         //console.log(request);
@@ -41,6 +43,23 @@ function Display(data) {
             //console.log(data)
             add_to_card.textContent = "Add To Cart";
             buy.textContent = "Buy Now";
+
+            buy.addEventListener("click",() =>{
+                console.log(logggedIn)
+            if (logggedIn == false) {
+                alert("Make sure you have logged in!")
+                ProductData.push({ ...product, quantity: 1 });
+                localStorage.setItem("card-data", JSON.stringify(ProductData))
+
+                window.location.href = "sign-in.html"
+                return
+            }
+            else{
+
+                window.location.href = "payment.html"
+            }
+        });
+
             title.textContent = product.title;
             image.src = product.image;
             let disprice = (product.price * 15) / 100;
@@ -55,21 +74,33 @@ function Display(data) {
             }
             // rating.textContent =bag;
             rating.append(bag)
+            
+            add_to_card.addEventListener("click",() =>{
+                console.log(logggedIn)
 
-            add_to_card.addEventListener("click", () => {
-                if (checkOrder(product)) {
-                    alert("Product Already in Card");
-                } else {
+                if (logggedIn == false) {
+                    alert("Make sure you have logged in!")
                     ProductData.push({ ...product, quantity: 1 });
                     localStorage.setItem("card-data", JSON.stringify(ProductData))
-                    alert("Product Added");
+
+                    window.location.href = "sign-in.html"
+                    return
                 }
-            });
-            pdiv.append(price, dprice)
-            addcarddiv.append(buy, add_to_card)
-            card.append(image, title, pdiv, rating, addcarddiv)
-            Container.append(card);
-        }
+
+                
+            else if(checkOrder(product)){
+            alert("Product Already in Card");
+            }else{
+            ProductData.push({...product,quantity:1});
+            localStorage.setItem("card-data",JSON.stringify(ProductData))
+            alert("Product Added");
+            }
+        });
+        pdiv.append(price,dprice)
+        addcarddiv.append(buy,add_to_card)
+        card.append(image,title,pdiv,rating,addcarddiv)
+        Container.append(card);
+       }
     });
 }
 

@@ -4,65 +4,248 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
+    <link rel="icon" href="./Images/SnapZone_Icon.png">
+    <title>SnapZone : Payment Page</title>
     <style>
+       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        *{
+            font-family: "Poppins", sans-serif;
+            font-size: small;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            color:white;
+            background-color: #c3043d;
+            justify-content: space-between;
+            padding: 0px 60px;
+            font-size: smaller;
+            line-height: 5px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+            margin-left: 15px;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            box-sizing: border-box;
+            background-color: #d90646;
+            justify-content: space-between;
+            padding: 11px 40px;
+            /* position: fixed;
+            z-index: 99999; */
+        }
+        .navbar > div{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .navbar > div > a > img{
+            width: 180px;
+        }
+        #search{
+            height: 34px;
+            border: none;
+            font-size: 13px;
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+            padding-left: 20px;
+            padding-right: 300px;
+        }
+        .navbar button{
+            height: 38px;
+            border: none;
+            color: white;
+            font-size: 13px;
+            background-color: black;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 0px 30px;
+            align-items: center;
+        }
+        .navbar button  i{
+            font-size: 12px;
+            margin-right: 2px;
+
+        }
+        #cart{
+            gap: 30px;
+        }
+        #cart > a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+        #cart > a > img{
+            width: 35px;
+        }
+
+
 
         #container{
-            width: 60%;
+            width: 35%;
+            margin: auto;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            margin-left: 20px;
+            /* margin-left: 20px; */
             padding: 30px;
-            margin-top: 30px;
-            
+            margin-top: 30px; 
+            margin-bottom: 30px;
         }
-  h2{
-    background-color:rgb(51,51,51);
-    color: white;
-    padding: 10px;
-    
-  }
-
+        h2{
+          background-color:rgb(51,51,51);
+          color: white;
+          padding: 10px;
+          
+        }
         form {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin-left: 20px;
-}
+          display: flex;
+          flex-direction: column;
+          width: 400px;
+          margin-left: 20px;
+        }
 
-label {
-  margin-top: 10px;
-  font-size: 16px;
-}
+        label {
+          margin-top: 10px;
+          font-size: 16px;
+        }
 
-input {
-  padding: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
+        input {
+          padding: 5px;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          padding-left: 3%;
+        }
 
-button[type="submit"] {
-  background-color: rgb(228,0,70);
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-}
+        button[type="submit"] {
+          background-color: rgb(228,0,70);
+          color: white;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          margin-top: 10px;
+        }
 
-button[type="submit"]:hover {
-  background-color: rgb(228,0,70);
-}
+        button[type="submit"]:hover {
+          background-color: rgb(228,0,70);
+        }
 
+
+/* /------------------------------------------------------------------------------------------------ */
+
+        footer{
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            padding-top: 50px;
+            padding: 50px 50px 0px 50px;
+            background-color: #faf5f5f8;
+            border-top: 1px solid rgb(207, 202, 202);
+            font-size: small;
+        }
+        footer > div > p{
+            margin-top: -15px;
+        }
+        footer > div > p > a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        footer > div > p > a:hover{
+            text-decoration: underline;
+            color: #c3043d;
+        }
+        #paragraph{
+            text-align: justify;
+        }
+        #copyright1{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+/* ---------------------------------------------------------------------------------------------- */
+        @media screen and (max-width: 1050px){
+            #search{
+                font-size: 13px;
+                padding-left: 20px;
+                padding-right: 150px;
+            }
+            .navbar button{
+                padding: 0px 20px;
+            }
+        }
+
+        @media screen and (max-width: 850px){
+            #search{
+                font-size: 13px;
+                padding-left: 10px;
+                padding-right: 0px;
+            }
+            .navbar button{
+                padding: 0px 10px;
+            }
+            header a:nth-child(1),  header a:nth-child(2){
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            header{
+                justify-content: center;
+            }
+            .navbar > div > a > img{
+                width: 150px;
+            }
+            #search, header a, .navbar button, #paragraph, #copyright1{
+                display: none;
+            }
+        }
     </style>
 
 
 </head>
 <body>
+      <header>
+        <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+        <div>
+            <a href="#">Impact@Snapzone</a>
+            <a href="#" >Gift Cards</a>
+            <a href="#" >Help Center</a>
+            <a href="#" >Sell On Snapdeal</a>
+            <a href="#" >Download App</a>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div>
+            <a href="./index.html"><img src="./Images/SnapZone_white_Transparent.png" alt="error"></a>
+        </div>
+        <div>
+            <input type="text" id="search" placeholder="Search products & brand">
+            <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </div>
+        <div id="cart">
+                <a href="./cart.html">Cart <img src="./Images/cart logo.png" alt=""></a>
+                <a href="./sign-in.html">Sign In<img src="./Images/user logo.png" alt=""></a>
+        </div>
+    </nav>
+
+
     <div  id="container">
         <h2>Delivery Address</h2>
         <form id="address-form">
@@ -92,6 +275,28 @@ button[type="submit"]:hover {
 
     </div>
 
+    <footer>
+      <div>
+          <p><a href="./Men's_Clothing_page.html">Men</a> : Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</p>
+          <p><a href="./Women's_Clothing_page.html">Women</a> : Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</p>
+          <p><a href="#">Footwear</a> : Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</p>
+          <p><a href="#">Home & Kitchen</a> : Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</p>
+          <p><a href="#">Watch</a> : Watch For Men / Womens Watches / Smart Watch / Boys Watch / Girls Watch</p>
+          <p><a href="#">Home Furnishing</a> : Bed Sheet / Mosquito Net / Mattress / Curtains / Sofa Cover / Blanket / Pillow / Carpet / Apron / Quilt / Floor Mat / Towel / Pillow Cover</p>
+          <p><a href="#">Electronics</a> : Bluetooth Speakers / Headphones / Earphone / Ceiling Fan / Geysers / Trimmer / Hair Straightner / Hair Dryer / Water Purifier / Mixer Grinder / Gas Stove / Electric Kettle / Computer Mouse / Computer Keyboard / USB & HDMI Cables / Computer Antivirus</p>
+          <p><a href="#">Mobiles Accessories</a> : Mobile Covers / Leather Mobile Covers / Printed Back Covers / Tempered Glass</p>
+          <div id="paragraph">
+              <p>
+                  Snapdeal is India's leading pure-play value Ecommerce platform. Founded in 2010 by Kunal Bahl and Rohit Bansal, Snapdeal is one of the top four online lifestyle shopping destinations of India. Snapdeal brings together a wide assortment of good quality and value- priced merchandise on its platform. Snapdeal's vision is to enable the shoppers of Bharat to experience the joy of living their aspirations through reliable, value-for-money shopping. With a personalized, multilingual interface and cutting edge technology, Snapdeal has simplified the shopping experience for its value-conscious buyers by showcasing the most relevant products- products that are a good functional fit with their needs and of a quality that lasts- thereby delivering true value to its customers. With its commitment to high service standards, Snapdeal suppliers operate under a well structured ecosystem that enables them to offer great quality products at affordable prices. With majority of the value-seeking, middle-income, price-conscious buyers coming from the non-metros, Snapdeal’s logistics networks powered by third party logistics cover more than 96% of India’s pin codes enabling order deliveries to more than 2500 towns and cities and expanding. Further, Snapdeal's mission is to become India’s value lifestyle omni-channel leader. We are excited about continuing to build a complete ecosystem around value commerce, where we can serve Bharat consumers wherever they are on their offline to online shopping journey. Snapdeal is part of the AceVector Group and one of India’s best-known e-commerce companies with an exclusive focus on the value segment.
+              </p>
+          </div>
+          <div id="copyright1">
+              <p>Copyright © 2021, Snapdeal Limited. All Rights Reserved</p>
+              <p>Made for Bharat ❤️</p> 
+          </div>
+      </div>
+  </footer>
+
 </body>
 <script>
     const form = document.getElementById('address-form');
@@ -109,6 +314,7 @@ form.addEventListener('submit', function(event) {
   
   
   console.log(fullname, address, city, state, pincode,mobilenumber);
+  window.location.href="invoice.html"
 });
 </script>
 </html>
