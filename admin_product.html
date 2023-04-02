@@ -9,6 +9,7 @@
 				initial-scale=1.0"
     />
     <title>Admin Dashboard</title>
+   
     <link rel="stylesheet" href="admin.css" />
     <link rel="stylesheet" href="admin_responsive.css" /> 
      <script
@@ -129,6 +130,88 @@
       }
 
 
+      /* =================================== */
+      .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            margin-top: 30px;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            
+
+        }
+
+        .modal-content:hover {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            width: 35%;
+            background-color: #fefefe;
+            margin: auto;
+            /* margin-top: 5%; */
+            padding: 20px;
+            border: 1px solid #888;
+            color: #3f0097;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+
+
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #3f0097;
+            text-decoration: bold;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* modal  */
+
+
+
+        /* edit from */
+
+        .editform {
+            margin-left: 25px;
+        }
+
+        input {
+            border-radius: 5px;
+            width: 90%;
+            height: 20px;
+            padding-left: 5%;
+        }
+
+        .add {
+            width: 70%;
+            background-color:  #3f0097;
+            border: none;
+            border-radius: 5px;
+            height: 45px;
+            font-weight: 200px;
+            color: white;
+            margin-top: 2%;
+            margin-left: 12.5%;
+        }
+
+      /* =============================================== */
     </style>
   </head>
 
@@ -175,15 +258,27 @@
         <h2>Admin</h2>
       </div>
     </header>
-
     <div class="main-container">
       <div class="navcontainer">
         <nav class="nav">
           <div class="nav-upper-options">
            
            
-          <div class="editform">
-            <form action="">
+    
+
+<!-- ========================================================= -->
+<!-- <button id="showModal">
+  show modal
+</button> -->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="editform" id="editform">
+          <form action="">
               <label for="">Id:</label><br>
               <input type="text" placeholder="Enter Product Id" id="pid"><br>
               <label for="">Img:</label><br>
@@ -202,11 +297,25 @@
               <input type="text" placeholder="Enter Product Category" id="category"><br>
               <label for="">Gender:</label>
               <input type="text" placeholder="Enter Product Category" id="gender"><br>
-            </form>
+          </form>
 
-          
-          </div>
           <button class="add" id="update"><b>Update Product</b></button>
+      </div>
+
+    
+
+  </div>
+
+</div>
+
+<!-- ======================================= -->
+
+
+
+
+
+<button class="add" id="addproduct"><b>Add Product</b></button>
+
           <div class="editform">
             <form action="">
               <label for="">Id:</label><br>
@@ -233,7 +342,7 @@
           
           </div>
 
-          <button class="add" id="addproduct"><b>Add Product</b></button>
+         
          
           </div>
         </nav>
@@ -322,4 +431,9 @@
     <script src="admin_product.js"></script>
    
   </body>
+
+  <script>
+
+    
+  </script>
 </html>
