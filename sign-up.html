@@ -368,7 +368,9 @@
 
             warning.textContent = "Signed up successfully"
             modal.style.display = "block";
-            window.location.href = "./index.html"
+            setTimeout(() => {
+                window.location.href = "./sign-in.html"
+            }, 2000);
         }
 
         else {
