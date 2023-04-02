@@ -379,7 +379,7 @@
             Name.innerText = element.title
             Category.innerText = element.gender
             Quantity.innerText = element.quantity;
-            Price.innerText = element.price
+            Price.innerText = element.price * element.quantity;
 
             let sum = 0;
             for (let i = 0; i < ProductData.length; i++) {
