@@ -20,6 +20,13 @@ let editcolor=document.getElementById("ecolor")
 let editrating=document.getElementById("erating")
 let editgender=document.getElementById("egender")
 let paggination=document.getElementById("paggination")
+
+
+
+let box=document.getElementById("editform")
+
+
+
 fetchdata()
 async function fetchdata(pagenumber){
     try {
@@ -59,10 +66,10 @@ function display(data){
         bdiv.setAttribute("class","butdiv")
         let button1=document.createElement("a")
         button1.setAttribute("class","card-link")
-       
         button1.setAttribute("href","#")
         button1.setAttribute("data-id",element.id)
         button1.innerText="Edit"
+        button1.setAttribute("id", "showModal")
         let button2=document.createElement("button")
         button2.setAttribute("class","del")
         button2.innerText="Delete"
@@ -76,7 +83,16 @@ function display(data){
                populateEditForms(currentId);
               });
             }
+          modal.style.display = "block";
+
         })
+
+        // ====================
+      //   button1.onclick = function () {
+      //     modal.style.display = "block";
+      // }
+
+        // ===================================
         button2.addEventListener("click",async(e)=>{
             e.preventDefault()
                 try {
@@ -151,6 +167,9 @@ function populateEditForms(currentId) {
   } catch (error) {
     console.log(error)
   }
+  setTimeout(() => {
+    modal.style.display="none"
+  },);
  
   })
 edit.addEventListener("click",async()=>{
@@ -211,5 +230,24 @@ function pagginationbtn(n){
   })
   return btn
 
+}
+
+
+
+
+// ===================================
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
