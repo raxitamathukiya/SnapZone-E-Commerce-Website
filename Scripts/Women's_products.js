@@ -1,6 +1,8 @@
 let ProductData = JSON.parse(localStorage.getItem("card-data")) || [];
 let Container = document.getElementById("Mens-Data");
 
+let logggedIn = localStorage.getItem("loggedIn") || false;
+
 async function FetchData(){
     try{
         let request = await fetch("https://snapzone-api.onrender.com/product");
@@ -57,7 +59,18 @@ function Display(data){
             rating.append(bag)
             
             add_to_card.addEventListener("click",() =>{
-            if(checkOrder(product)){
+                console.log(logggedIn)
+
+                if (logggedIn == false) {
+                    alert("Make sure you have logged in!")
+                    ProductData.push({ ...product, quantity: 1 });
+                    localStorage.setItem("card-data", JSON.stringify(ProductData))
+
+                    window.location.href = "sign-in.html"
+                    return
+                }
+
+            else if(checkOrder(product)){
             alert("Product Already in Card");
             }else{
             ProductData.push({...product,quantity:1});

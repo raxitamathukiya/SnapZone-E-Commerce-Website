@@ -4,383 +4,327 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapZone : Shop Online for Men & Women Clothing, Shoes, Home Decor Items</title>
+    <link rel="icon" href="./Images/SnapZone_Icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>styleShop</title>
    <style>
-    * {
-        box-sizing: border-box;
+     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        *{
+            font-family: "Poppins", sans-serif;
+            font-size: small;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: #faf5f5f8;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            /* font-weight: lighter; */
+        }
+        #navbar{
+            display: flex;
+            width: 100%;
+            height: 65px;
+            background-color: #d90646;
+            padding-right: 25px;
+            position: fixed;
+            z-index: 99999;
+            margin-top: 28px;
+        }
+        #navbar img{
+            height:65%;
+            /* margin: 5%; */
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+        #search{
+            width: 40%  ;
+            height: 35px;
+            border: none;
+            /* margin-top: 20px; */
+            margin: auto;
+            margin-left:80px;
+            margin-right: 0px;
+            font-size: 20px;
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+            padding-left: 20px;
+        
+        }
+        #navbar button{
+            margin-left:0px ;
+            width: 10%;
+            height: 36px;
+            border: none;
+            color: white;
+            font-size: 17px;
+            background-color: rgb(51, 49, 49);
+            margin-top: 15px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;  
+        }
+        #navbar div{
+            display: flex;
+            margin-left: 40px;
+            align-items: center;
+            color: white;
+        }
+        #navbar #cart{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: lighter;
+            text-decoration: none;
+            /* margin: auto; */
+            padding-right: 33px;
+            padding-top: 9px;
+            margin-left: 7%;
+            font-size: 16px;
+            /* border: 2px solid; */
+        }
+        #navbar #cart img{
+            width: 35%;
+            margin-left: 10px;
+        }
+        #navbar #cart p{
+            margin-top: 12px;
+        }
+        #navbar #sign-in{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: lighter;
+            width: 15%;
+            text-decoration: none;
+            padding-top: 8px;
+            /* border: 2px solid; */
+            font-size: 16px;
+        }
+        #navbar #sign-in p{
+            margin-top: 12px;
+        }
+        #sign-in img{
+            margin-left: 13%;
+            
+        }
+        #navbar div{
+            width:auto;
+        
+        }
+    #hidden{
+        height: 109px;
+        background-color: none;
     }
-    body{
-        margin: 0px;
-        padding: 0px;
-        background-color: #faf5f5f8;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        /* font-weight: lighter; */
+        header{
+            box-sizing: border-box;
+            display: flex;
+            width: 100%;
+            align-items: center;
+        background-color: #c3043d;
+        height:30px;
+        color:white;
+            position: fixed;
+            z-index: 99999;
+            /* margin-top: 0px; */ 
+        }
+        header a{
+            font-size: 12px;
+            margin-left: 20px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: lighter;
+            text-decoration: none;
+            color: white; 
+        }
+        header div{
+            margin-left: 37%;
+            width: auto;
+        }
+        header p{
+            font-size: 13px;
+            margin-left:5%;
+            margin-top: 15px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: lighter;
+        }
+        .heading {
+            color:rgb(162, 157, 157);
+            font-size: 25px;
+            margin-left: 80px;
+            margin-top: 25px;
+        }
+        .rec-head{
+            color:rgb(162, 157, 157);
+            font-size: 25px;
+            
+            margin-top: 10px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 0.8fr 1fr 1fr 1fr 0.9fr;
+            grid-template-rows: 0.5fr 1fr;
+            width: 90%;
+            margin: auto;
+            padding-right: 15px;
+            height: 800px;
+            gap: 15px;
+            margin-bottom: -40px ;
+        }
+        #sidebar{
+            margin-left: 20px;
+            grid-row-start: 1 ;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            height: 748px;   
+        }
+        #sidebar #menu{
+            padding-top: 10px;
+            height: 650px;
+            background-color: white; 
+        }
+        #sidebar #menu .menu-head{
+            margin-top: 12PX;
+            margin-left: 13px;
+            margin-bottom: 10px;
+            color: rgb(161, 157, 157);
+        }
+        .catelogo{
+            width: 100%;
+            height: 35px;
+            font-size: 15px;
+            text-align: left;
+            background-color: white;
+            border: none;
+            color: rgb(161, 157, 157);
+        }
+        .catelogo img{
+            height: 100%;
+        }
+        .catelogo:hover{
+            background: #f5f1f1;
+            border-left: 2px solid red;
+        }
+        .more{
+            width: 100%;
+            height: 30px;
+            font-size: 14px;
+            background-color: white;
+            border: none;
+            color: rgb(161, 157, 157);
+            text-align: left;
+        }
+        .more:hover{
+            background: #f5f1f1;
+            border-left: 2px solid red;
+        }
+        .recent-search{
+            font-size: 14px;
+            text-align: left;
+            width: 100%;
+            height: 30px;
+            border: none;
+            color: rgb(161, 157, 157);
+            background-color: white; 
+        }
+        #main{
+            grid-row-start: 1 ;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 5;
+            height: 320px;
+            /* border: 2px solid; */
+            margin-bottom: 0px;
+            background-color:white;
+        }
+        #main img{
+            margin-top: 0px;
+            width: 100%;
+            height: 319px;
+        }
+        #pin{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            height: 319px;
+            background-color: white;
+            border-radius: 4px;
+        }
+        #pin img{
+            width: 100%;
+            height: 70%; 
+        }
+        #pin div{
+            width: 100%;
+            height: 30%;
 
-    }
-    #navbar{
-        display: flex;
-        width: 100%;
-        height: 65px;
-        background-color: #d90646;
-        padding-right: 25px;
-        position: fixed;
-        z-index: 99999;
-        margin-top: 28px;
-        
-    }
-    #navbar img{
-        height:65%;
-        /* margin: 5%; */
-        margin-left: 100px;
-        margin-top: 10px;
-    }
-    #search{
-        
-        width: 40%  ;
-        height: 35px;
-        border: none;
-        /* margin-top: 20px; */
-        margin: auto;
-        margin-left:80px;
-        margin-right: 0px;
-        font-size: 20px;
-        border-bottom-left-radius: 2px;
-        border-top-left-radius: 2px;
-        padding-left: 20px;
-       
-    }
-    
-    #navbar button{
-        margin-left:0px ;
-        width: 10%;
-        height: 36px;
-        border: none;
-        color: white;
-        font-size: 17px;
-        background-color: rgb(51, 49, 49);
-        margin-top: 15px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        
-    }
-    #navbar div{
-        display: flex;
-        margin-left: 40px;
-        align-items: center;
-        color: white;
-    }
-    #navbar #cart{
-        font-family: 'Quicksand', sans-serif;
-        font-weight: lighter;
-        text-decoration: none;
-        /* margin: auto; */
-        padding-right: 33px;
-        padding-top: 9px;
-        margin-left: 7%;
-        
-        font-size: 16px;
-        /* border: 2px solid; */
-    }
-    #navbar #cart img{
-        width: 35%;
-        margin-left: 10px;
-
-    }
-    #navbar #cart p{
-        margin-top: 12px;
-    }
-    #navbar #sign-in{
-        font-family: 'Quicksand', sans-serif;
-        font-weight: lighter;
-        width: 15%;
-        text-decoration: none;
-        padding-top: 8px;
-        
-        /* border: 2px solid; */
-        font-size: 16px;
-    }
-    #navbar #sign-in p{
-        margin-top: 12px;
-    }
-    #sign-in img{
-        margin-left: 13%;
-        
-    }
-    #navbar div{
-        width:auto;
-       
-    }
-   #hidden{
-    height: 109px;
-    background-color: none;
-   }
-    header{
-        box-sizing: border-box;
-        display: flex;
-        width: 100%;
-        align-items: center;
-       background-color: #c3043d;
-       height:30px;
-       color:white;
-        position: fixed;
-        z-index: 99999;
-        /* margin-top: 0px; */
-       
-    }
-    header a{
-        font-size: 12px;
-        margin-left: 20px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: lighter;
-        text-decoration: none;
-        color: white;
-        
-    }
-    header div{
-        
-        margin-left: 37%;
-        width: auto;
-
-        
-    }
-
-  
-    header p{
-        font-size: 13px;
-        margin-left:5%;
-        margin-top: 15px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: lighter;
-    }
-  
-   
-    .heading {
-        color:rgb(162, 157, 157);
-        font-size: 25px;
-        margin-left: 80px;
-        margin-top: 25px;
-    }
-    .rec-head{
-        color:rgb(162, 157, 157);
-        font-size: 25px;
-        
-        margin-top: 10px;
-    }
-    #container{
-        display: grid;
-        grid-template-columns: 0.8fr 1fr 1fr 1fr 0.9fr;
-        grid-template-rows: 0.5fr 1fr;
-        width: 90%;
-        margin: auto;
-        padding-right: 15px;
-        height: 800px;
-        gap: 15px;
-        margin-bottom: -40px ;
-    }
-    #sidebar{
-        margin-left: 20px;
-         grid-row-start: 1 ;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        height: 748px;
-        
-    }
-    #sidebar #menu{
-        padding-top: 10px;
-        height: 650px;
-        background-color: white;
-       
-    }
-    #sidebar #menu .menu-head{
-        font-size: 15px;
-        margin-top: 12PX;
-        margin-left: 13px;
-        margin-bottom: 10px;
-        color: rgb(161, 157, 157);
-    }
-    .catelogo{
-        width: 100%;
-        height: 35px;
-        font-size: 15px;
-        text-align: left;
-        background-color: white;
-        border: none;
-        
-    }
-    .catelogo a{
-        color: rgb(161, 157, 157);
-        text-decoration: none;
-    }
-    .catelogo img{
-        height: 100%;
-    }
-    .catelogo:hover{
-        background: #f5f1f1;
-        border-left: 2px solid red;
-    }
-    .more{
-        width: 100%;
-        height: 30px;
-        font-size: 14px;
-       
-        background-color: white;
-        border: none;
-        color: rgb(161, 157, 157);
-        text-align: left;
-    }
-    .more:hover{
-        background: #f5f1f1;
-        border-left: 2px solid red;
-    }
-    .recent-search{
-        
-        font-size: 14px;
-        text-align: left;
-        width: 100%;
-        height: 30px;
-        border: none;
-        color: rgb(161, 157, 157);
-        background-color: white;
-        
-    }
-    #main{
-        grid-row-start: 1 ;
-        grid-row-end: 2;
-        grid-column-start: 2;
-        grid-column-end: 5;
-        
-        height: 320px;
-        /* border: 2px solid; */
-        margin-bottom: 0px;
-        background-color:white;
-    }
-    #main img{
-        margin-top: 0px;
-        width: 100%;
-        height: 319px;
-    }
-  
-    #pin{
-        grid-column-start: 5;
-        grid-column-end: 6;
-        height: 319px;
-        background-color: white;
-        border-radius: 4px;
-    }
-    #pin img{
-        width: 100%;
-        height: 70%;
-        
-    }
-    #pin div{
-       
-        width: 100%;
-        height: 30%;
-
-    }
-    #pin #inp{
-      
-        margin-left: 6px;
-        margin-bottom: 10px;
-        height: 40px;
-        width:95%
-        
-    }
-    #pin #submit{
-        width: 60%;
-        height: 35px;
-        border: none;
-        margin-left: 5px;
-        background-color: rgb(62, 60, 60);
-        color: white;
-        border-radius: 3px;
-        font-size: 15px;
-    }
-    #pin #next{
-        width: 33%;
-        height: 35px;
-        border-radius: 3px;
-        font-size: 15px;
-        border: none;
-        color: rgb(161, 157, 157);
-        background-color: #faf5f5f8;
-    }
-    #rec{
-      
-        grid-row-start: 2;
-        grid-row-end: 3;
-        grid-column-start: 2;
-        grid-column-end: 6;
-        height: 500px;
-        margin-bottom: 0px;
-        
-    }
-   
-    
-    #item{
-        display: flex;
-        background-color: white;
-        height: 350px;
-    }
-    
-    #item .image{
-        width: 100%;
-        height: 70%;
-        margin: auto;
-        padding-left: 23px;
-        padding-top: 20px;
-       
-    }
-    #item .image img{
-        width: 90%;
-        height: 95%;
-       
-
-    }
-    #item .detail{
-        width: 95%;
-        height: 30%;
-        padding: 10px;
-        margin: auto;
-        font-size: small;
-       
-    }
-    .detail .des{
-        margin-top: -5px; 
-        color: #aeaaaa;
-    }
-   
-#barcode{
-    margin-top: 30px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-   
-}
-#barcode img{
-
-    width: 100%;
-    height: 100%;
-}
-
-/* footer a{
-    font-size: 22px;
-    font-weight: bold;
-} */
-/* footer span{
-        font-size: 20px;
-        
-        color: rgb(152, 150, 150);
-        margin-bottom: 0px;
-        
-    }
-    footer div{
-        margin: 0px;
-    } */
+        }
+        #pin #inp{
+            margin-left: 6px;
+            margin-bottom: 10px;
+            height: 40px;
+            width:95%  
+        }
+        #pin #submit{
+            width: 60%;
+            height: 35px;
+            border: none;
+            margin-left: 5px;
+            background-color: rgb(62, 60, 60);
+            color: white;
+            border-radius: 3px;
+            font-size: 15px;
+        }
+        #pin #next{
+            width: 33%;
+            height: 35px;
+            border-radius: 3px;
+            font-size: 15px;
+            border: none;
+            color: rgb(161, 157, 157);
+            background-color: #faf5f5f8;
+        }
+        #rec{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 6;
+            height: 500px;
+            margin-bottom: 0px; 
+        }
+        #item{
+            display: flex;
+            background-color: white;
+            height: 350px;
+        }
+        #item .image{
+            width: 100%;
+            height: 70%;
+            margin: auto;
+            padding-left: 23px;
+            padding-top: 20px;
+        }
+        #item .image img{
+            width: 90%;
+            height: 95%;
+        }
+        #item .detail{
+            width: 95%;
+            height: 30%;
+            padding: 10px;
+            margin: auto;
+            font-size: small;
+        }
+        .detail .des{
+            margin-top: -5px; 
+            color: #aeaaaa;
+        }
+        #barcode{
+            margin-top: 30px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        #barcode img{
+            width: 100%;
+            height: 100%;
+        }
 /* --------------------footer------------------------- */
 
-footer{
+        footer{
             width: 100%;
             margin: auto;
             box-sizing: border-box;
@@ -392,10 +336,11 @@ footer{
         }
         footer > div > p{
             margin-top: -15px;
+            color: rgb(133, 130, 130);
         }
         footer > div > p > a{
             text-decoration: none;
-            color: black;
+            color: rgb(112, 109, 109);
             font-weight: bold;
         }
         footer > div > p > a:hover{
@@ -404,6 +349,8 @@ footer{
         }
         #paragraph{
             text-align: justify;
+            color: rgb(133, 130, 130);
+
         }
         #copyright1{
             margin-top: 40px;
@@ -411,236 +358,215 @@ footer{
             /* background-color: white;
             width: 100%; */
             justify-content: space-between;
+            color: rgb(133, 130, 130);
         }
 
 /* ----------------------footer end------------------- */
 
+        .slider{
+            height: 300px;
+            margin: auto;
+            position: relative;
+            width: 90%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .slide-track{
+            display: flex;
+            width: calc(250px * 18);
+            animation: scroll 40s linear infinite;
+        }
 
+        .slide-track:hover{
+            animation-play-state: paused;
+        }
 
+        @keyframes scroll{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(calc(-250px * 9));
+            }
+        }
 
-.slider{
-    
-    height: 300px;
-    margin: auto;
-    position: relative;
-    width: 90%;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    margin-top: 40px;
-    margin-bottom: 40px;
-   
-}
-
-.slide-track{
-    display: flex;
-    width: calc(250px * 18);
-    animation: scroll 40s linear infinite;
-}
-
-.slide-track:hover{
-    animation-play-state: paused;
-}
-
-@keyframes scroll{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(calc(-250px * 9));
-    }
-}
-
-.slide-track .slide{
-    height: 269px;
-    width:100%;
-    display: flex; 
-    align-items: center;
-    padding: 15px;
-    perspective: 100px;
-    
-}
-
-.slide-track .slide img{
-    width: 100%;
-    
-    transition: transform 1s;
-}
-
-.slide-track .slide img:hover{
-    transform: translateZ(20px);
-}
-/* gradient shadows */
-.slider::before,
-.slider::after{
-    background: linear-gradient(to right, rgba(255,255,255,1 ) 0%, rgba(255,255,255,0) 100%);
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-    margin-left: -14px;
-    margin-right: -80px;
-}
-
-.slider::before{
-    left: 0;
-    top: 0;
-}
-
-.slider::after{
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-}
-
-
+        .slide-track .slide{
+            height: 269px;
+            width:100%;
+            display: flex; 
+            align-items: center;
+            padding: 15px;
+            perspective: 100px;  
+        }
+        .slide-track .slide img{
+            width: 100%; 
+            transition: transform 1s;
+        }
+        .slide-track .slide img:hover{
+            transform: translateZ(20px);
+        }
+        /* gradient shadows */
+        .slider::before,
+        .slider::after{
+            background: linear-gradient(to right, rgba(255,255,255,1 ) 0%, rgba(255,255,255,0) 100%);
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 15%;
+            z-index: 2;
+            margin-left: -14px;
+            margin-right: -80px;
+        }
+        .slider::before{
+            left: 0;
+            top: 0;
+        }
+        .slider::after{
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
 /* ----------------second part--------------------- */
-#second{
-    display: flex;
-    width: 95%;
-    margin: auto;
-    height: 450px;
-    background-color: white;
-}
-#second img{
-    height: 100%;
-    width: 100%;
-}
-
-#download-app{
-    padding-top: 100px; 
-    width: 400px;
-    margin-left: 100px;
-    margin-right: 30px;
-}
-#download-app button img{
-    width: 100%;
-    height: 35px;
-    border-radius: 5px;
-} 
-#download-app button{
-    border: none;
-    width: 130px;
-    background-color: white;
-    margin-top: 20px;
-    
-}
+        #second{
+            display: flex;
+            width: 95%;
+            margin: auto;
+            background-color: white;
+        }
+        #second img{
+            width: 100%;
+        }
+        #download-app{
+            padding-top: 100px; 
+            width: 400px;
+            margin-left: 100px;
+            margin-right: 30px;
+        }
+        #download-app button img{
+            width: 100%;
+            height: 35px;
+            border-radius: 5px;
+        } 
+        #download-app button{
+            border: none;
+            width: 130px;
+            background-color: white;
+            margin-top: 20px; 
+        }
+        
 /* --------------------------third part--------------------- */
 
-.third{
-    display: flex;
-    height: 200px;
-    margin-top: 50px;
-   background-color: white;
-   border-top: 1px solid rgb(177, 172, 172);
-    border-bottom: 1px solid rgb(177, 172, 172);
-}
-.third div{
-   padding-left: 120px;
-   
-}
-.third img{
-    border-left: 1px solid rgb(177, 172, 172);
-    border-right: 1px solid rgb(177, 172, 172);
-    width: 24%;
-    height: 100%;
-    margin-left: -6px;
-
-}
-
-.anchor{
-    
-    display: flex;
-   background-color: white;
-}
-.anchor .link{
-    width: 300px;
-    background-color: white;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-.link a{
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-    color: #aeaaaa;
-}
-.link p{
-    font-size: 16px;
-}
-.link input{
-    margin-right: -5px;
-}
-#subBtn{
-    color: white;
-    background-color: rgb(63, 62, 62);
-    margin-bottom: 20px;
-    border: none;
-    height: 32px;
-    font-size: 14px;
-}
-
-.last{
-    display: flex;
-    background-color: white;
-    height: 130px;
-    border-top: 1px solid rgb(177, 172, 172);
-    border-bottom: 1px solid rgb(177, 172, 172);
-}
-.last .payment{
-    width: 30%;
-    margin: auto;
-}
-.last .payment img{
-    width: 100%;
-}
-.last .social-media{
-    width: 40%;
-    margin: auto;
-}
-.last .social-media img{
-    width: 7%;
-    margin-left: -5px;
-}
-.last p{
-    font-size: 16px;
-    color: rgb(186, 181, 181);
-}
+        .third{
+            display: flex;
+            height: 200px;
+            margin-top: 50px;
+            background-color: white;
+            border-top: 1px solid rgb(177, 172, 172);
+            border-bottom: 1px solid rgb(177, 172, 172);
+        }
+        .third div{
+            padding-left: 120px;
+        }
+        .third img{
+            border-left: 1px solid rgb(177, 172, 172);
+            border-right: 1px solid rgb(177, 172, 172);
+            width: 24%;
+            height: 100%;
+            margin-left: -6px;
+        }
+        .anchor{
+            display: flex;
+            background-color: white;
+        }
+        .anchor .link{
+            width: 300px;
+            background-color: white;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        .link a{
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            color: #aeaaaa;
+        }
+        .link p{
+            font-size: 16px;
+        }
+        .link input{
+            margin-right: -5px;
+        }
+        #subBtn{
+            color: white;
+            background-color: rgb(63, 62, 62);
+            margin-bottom: 20px;
+            border: none;
+            height: 32px;
+            font-size: 14px;
+        }
+        .last{
+            display: flex;
+            background-color: white;
+            height: 130px;
+            border-top: 1px solid rgb(177, 172, 172);
+            border-bottom: 1px solid rgb(177, 172, 172);
+        }
+        .last .payment{
+            width: 30%;
+            margin: auto;
+        }
+        .last .payment img{
+            width: 100%;
+        }
+        .last .social-media{
+            width: 40%;
+            margin: auto;
+        }
+        .last .social-media img{
+            width: 7%;
+            margin-left: -5px;
+        }
+        .last p{
+            font-size: 16px;
+            color: rgb(186, 181, 181);
+        }
+        .men{
+            text-decoration: none;
+            color: rgb(167, 162, 162);
+        }
    </style>
 </head>
 
 <body>
     <header>
-       
-            <p>Brand Waali Quality, Bazaar Waali Deal!</p>
-        
-       
-      
+        <p>Brand Waali Quality, Bazaar Waali Deal!</p>
         <div>
-            <a href="">Impact@Snapzone</a>
-            <a href="" >Gift Cards</a>
-            <a href="" >Help Center</a>
-            <a href="" >Sell On Snapdeal</a>
-            <a href="" >Download App</a>
+            <a href="#">Impact@Snapzone</a>
+            <a href="#" >Gift Cards</a>
+            <a href="#" >Help Center</a>
+            <a href="#" >Sell On Snapdeal</a>
+            <a href="#" >Download App</a>
         </div>
-
-
     </header>
     <nav id="navbar">
-        <a href="./index.html"><img src="./logo/SnapZone_white_Transparent.png" alt=""></a>
+        <a href="./index.html"><img src="./logo/SnapZone_white_Transparent.png" alt="error"></a>
         <input type="text" id="search" placeholder="Search products & brand">
         <button>Search</button>
-        <a href="" id="cart">
+        <a href="cart.html" id="cart">
             <div>
-            <p>Cart</p>
-            <img src="./logo/cart logo.png" alt="">
+            <p><b>Cart</b></p>
+            <img src="./logo/cart logo.png" alt="error">
         </div>
         </a>
-       <a href="" id="sign-in">
+       <a href="sign-in.html" id="sign-in">
         <div>
-            <p>Sign In</p>
-            <img src="./logo/user logo.png" alt="">
+            <p><b>
+                Sign In
+            </b></p>
+            <img src="./logo/user logo.png" alt="error">
         </div>
        </a>
     </nav>
@@ -650,21 +576,21 @@ footer{
         
         <div id="sidebar">
             <div id="menu">
-                <p class="menu-head">TOP CATEGORY</p>
-                <button class="catelogo"> <img src="logo/Men fashion.png" alt=""> <a href="">Men's Fashion</a></button>
-                <button class="catelogo"> <img src="logo/women fashion.png" alt=""> <a href="">Women's Fashion</a> </button>
-                <button class="catelogo"> <img src="logo/home & kitchen.png" alt=""><a href="">Home & Kitchen</a></button>
-                <button class="catelogo"> <img src="logo/kids.png" alt=""><a href="">Toy's & Kid's</a></button>
-                <button class="catelogo"> <img src="logo/bueaty.png" alt=""><a href="">Beauty & Health</a></button>
-                <p class="menu-head">MORE CATEGORIES</p>
+                <p class="menu-head"><b>TOP CATEGORY</b></p>
+                <button class="catelogo"> <img src="logo/Men fashion.png" alt=""> <a href="Men's_Clothing_page.html" class="men">Men's Fashion</a></button>
+                <button class="catelogo"> <img src="logo/women fashion.png" alt=""><a href="Women's_Clothing_page.html" class="men"> Women's Fashion</a></button>
+                <button class="catelogo"> <img src="logo/home & kitchen.png" alt="">Home & Kitchen</button>
+                <button class="catelogo"> <img src="logo/kids.png" alt="">Toy's & Kid's</button>
+                <button class="catelogo"> <img src="logo/bueaty.png" alt="">Beauty & Health</button>
+                <p class="menu-head"> <b>MORE CATEGORIES</b> </p>
                 <button class="more">Automotives</button>
                 <button class="more">Mobile & Accessories</button>
                 <button class="more">Electronics</button>
-                <button class="more">Sports,Fitness& Outdoor</button>
+                <button class="more">Sports,Fitness</button>
                 <button class="more">Computer& Gaming</button>
                 <button class="more">Books,Media& Music</button>
                 <button class="more">Hobbies</button>
-                <p class="menu-head">TRENDING SEARCHS</p>
+                <p class="menu-head"><b> TRENDING SEARCHS</b></p>
                 <button class="recent-search">Kitchen</button>
                 <button class="recent-search">Shoes for men</button>
                 <button class="recent-search">Suits</button>
@@ -729,7 +655,7 @@ footer{
           <div id="item">
             <div > 
                <div class="image">
-                <img src="main slider/shirt-1.webp" alt="">
+                <img src="main slider/shirt-1.webp" alt="error">
                </div>
                <div  class="detail">
                <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
@@ -740,7 +666,7 @@ footer{
             </div>
             <div > 
                 <div class="image">
-                 <img src="main slider/shirt1.webp" alt="">
+                 <img src="main slider/shirt1.webp" alt="error">
                 </div>
                 <div class="detail">
                  <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
@@ -762,7 +688,7 @@ footer{
              </div>
              <div > 
                 <div class="image">
-                 <img src="main slider/shirt-2.webp" alt="">
+                 <img src="main slider/shirt-2.webp" alt="error">
                 </div>
                 <div  class="detail">
              <p class="des">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
@@ -867,46 +793,46 @@ footer{
 
 <div class="third">
     <div>
-        <a href=""> <img src="logo/secure pay.png" alt=""> </a>
-        <a href=""> <img src="logo/trustpay.png" alt=""> </a>
-        <a href=""> <img src="logo/help center.png" alt=""> </a>
-        <a href=""> <img src="logo/shop_on_the_go.png" alt=""> </a>
+        <a href="#"> <img src="logo/secure pay.png" alt=""> </a>
+        <a href="#"> <img src="logo/trustpay.png" alt=""> </a>
+        <a href="#"> <img src="logo/help center.png" alt=""> </a>
+        <a href="#"> <img src="logo/shop_on_the_go.png" alt=""> </a>
     </div>
 </div>
 
-<div class="anchor">
-    <div class="link">
+<div class="anchor" style="padding: 30px ;">
+    <div class="link" >
         <p>POLICY INFO</p>
-        <a href="">Privacy Policy</a>
-        <a href="">Terms Of Sale</a>
-        <a href="">Terms of Use</a>
-        <a href="">Report Abuse & Takedown Policy</a>
-        <a href="">FAQ</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms Of Sale</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Report Abuse & Takedown Policy</a>
+        <a href="#">FAQ</a>
     </div>
 
     <div class="link">
         <p>COMPANY</p>
-        <a href="">Impact@Snapdeal</a>
-        <a href="">Careers</a>
-        <a href="">Blogs</a>
-        <a href="">Sitemap</a>
-        <a href="">Contact Us</a>
+        <a href="#">Impact@Snapdeal</a>
+        <a href="#">Careers</a>
+        <a href="#">Blogs</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Contact Us</a>
     </div>
 
     <div class="link">
         <p>SNAPZONE BUSINESS</p>
-        <a href="">Shopping App</a>
-        <a href="">Sell on Snapdeal</a>
-        <a href="">Media Enquiries</a>
+        <a href="#">Shopping App</a>
+        <a href="#">Sell on Snapdeal</a>
+        <a href="#">Media Enquiries</a>
       
     </div>
 
     <div class="link">
         <p>POPULAR LINKS</p>
-        <a href="">Lehenga</a>
-        <a href="">Kid's Clothing</a>
-        <a href="">Sarees</a>
-        <a href="">Winter Wear</a>
+        <a href="#">Lehenga</a>
+        <a href="#">Kid's Clothing</a>
+        <a href="#">Sarees</a>
+        <a href="#">Winter Wear</a>
         
     </div>
     <div class="link">
@@ -920,40 +846,27 @@ footer{
 
 <div class="last">
     <div class="payment">
-        <p>PAYMENT</p>
+        <p style="color: rgb(27, 27, 27);">PAYMENT</p>
         <img src="logo/payment.png" alt="">
     </div>
     <div class="social-media">
-        <p>CONNCET</p>
-        <a href=""> <img src="logo/fb" alt=""> </a>
-        <a href=""> <img src="logo/twitter.png" alt=""> </a>
-        <a href=""> <img src="logo/insta.png" alt=""> </a>
-        <a href=""> <img src="logo/linked in.png" alt=""> </a>
-        <a href=""> <img src="logo/youTube.png" alt=""> </a>
-        <a href=""> <img src="logo/telegram.png" alt=""> </a>
-        <a href=""> <img src="logo/whatsapp.png" alt=""> </a>
+        <p style="color: rgb(27, 27, 27);">CONNCET</p>
+        <a href="https://www.facebook.com/Snapdeal"> <img src="logo/fb" alt="error" > </a>
+        <a href="https://twitter.com/snapdeal"> <img src="logo/twitter.png" alt="error" style=" margin-right: 20px;"> </a>
+        <a href="https://www.instagram.com/snapdeal/"> <img src="logo/insta.png" alt="error"  style=" margin-right: 20px;"> </a>
+        <a href="https://www.linkedin.com/company/snapdeal/"> <img src="logo/linked in.png" alt="error" style=" margin-right: 20px;"> </a>
+        <a href="https://www.youtube.com/user/snapdeal"> <img src="logo/youTube.png" alt="error" style=" margin-right: 20px;"> </a>
+        <a href="https://t.me/sdwapp"> <img src="logo/telegram.png" alt="error" style=" margin-right: 20px;"> </a>
+        <a href="https://api.whatsapp.com/send/?phone=918130222868&text=Hello+Snapdeal%2C+I+need+help&type=phone_number&app_absent=0"> <img src="logo/whatsapp.png" alt="error" style=" margin-right: 20px;"> </a>
     </div>
 
 </div>
 
 <!-- --------------------------------------------------------------------------------- -->
-
-    <!-- <footer>
-       <div>
-        <p> <a href="" > Men</a> <span>Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</span></p>
-    </div>
-    <div>
-        <h3>Women <span>Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</span></h3>
-    </div>
-        <h3>Footwear <span>Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</span></h3>
-        <h3>Home & Kitchen: <span>Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</span></h3>
-
-    </footer> -->
-
     <footer>
         <div>
             <p><a href="./Men's_Clothing_page.html">Men</a> : Shirts for Men / Casual Shirts for Men / Formal Shirts for Men / Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for Men / Trousers for Men / Jacket for Men / Formal Pants for Men / Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men / Blazer for Men / Sweater for Men</p>
-            <p><a href="#">Women</a> : Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</p>
+            <p><a href="./Women's_Clothing_page.html">Women</a> : Tops for Women / Kurti / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra / Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for Women / Skirts for Women / Ethnic wear for Women / Western Dresses for Women / Leggings for Women</p>
             <p><a href="#">Footwear</a> : Men's Footwear / Casual Shoes for Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots for Men / Sandals for Men / Footwear for Women / Heels for Women / Sandals for Women / Shoes for Women / Sandals for Women / Slippers for Women / Boots for Women / Jutti for Women / Sports Shoes for Women</p>
             <p><a href="#">Home & Kitchen</a> : Wall Painting / Wall Stickers / Dream Catcher / Rangoli Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp / Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase / Keychain / Rudraksha / Screwdriver</p>
             <p><a href="#">Watch</a> : Watch For Men / Womens Watches / Smart Watch / Boys Watch / Girls Watch</p>
@@ -976,4 +889,3 @@ footer{
 
 </body>
 </html>
-
