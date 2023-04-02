@@ -101,6 +101,49 @@
             width: 35px;
         }
 
+
+        #contanier {
+            border: 1px solid #d90646;
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+            padding: 5%;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+        }
+
+        table {
+            width: 100%;
+            ;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        #billBar {
+            display: flex;
+            width: 100%;
+
+        }
+
+        .image {
+            width: 30%;
+            background-color: #d90646;
+        }
+
+        p,
+        h3,
+        h4 {
+            padding: 3px;
+            margin: 0px;
+
+        }
+
         /* nav baar */
         @media screen and (max-width: 1050px) {
             #search {
@@ -161,6 +204,10 @@
         }
 
         @media screen and (max-width: 635px) {
+            #contanier {
+                width: 90%
+            }
+
             header {
                 justify-content: center;
             }
@@ -189,7 +236,7 @@
             }
 
             .box1 {
-                width: 45%;
+                /* width: 45%; */
                 padding: 0px 10px;
             }
 
@@ -218,49 +265,6 @@
         }
 
         /*  media query */
-
-
-        #contanier {
-            border: 1px solid #d90646;
-            width: 50%;
-            margin: auto;
-            margin-top: 50px;
-            padding: 5%;
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-
-        }
-
-        table {
-            width: 100%;
-            ;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
-        }
-
-        #billBar {
-            display: flex;
-            width: 100%;
-
-        }
-
-        .image {
-            width: 30%;
-            background-color: #d90646;
-        }
-
-        p,
-        h3,
-        h4 {
-            padding: 3px;
-            margin: 0px;
-
-        }
     </style>
 </head>
 
@@ -332,7 +336,7 @@
         <h4>Total cart price : <span id="cartTotal">0 Rs.</span></h4>
         <h4>Total cart price with discount: <span id="discountTotal">0 Rs.</span></h4>
 
-        <p>please shop above 10000 Rs. to get discount of 20%</p>
+        <p id="discountApply">please shop above 10000 Rs. to get discount of 20%</p>
         <div>
             <h4 style="margin-bottom: -15px;">Signature valid :</h4>
             <h5 style="margin-bottom: -15px;">Digitally signed by SnapZone authorities</h5>
@@ -359,6 +363,8 @@
     let discountTotal = document.getElementById("discountTotal")
     let discount = document.getElementById("discount")
 
+    let discountApply = document.getElementById("discountApply")
+
 
     const D = new Date();
 
@@ -366,6 +372,7 @@
     function showData(data) {
         let Serial = 1
         data.forEach((element, index) => {
+            // console.log(element)
 
             let row = document.createElement("tr")
 
@@ -379,19 +386,21 @@
             Name.innerText = element.title
             Category.innerText = element.gender
             Quantity.innerText = element.quantity;
-            Price.innerText = element.price * element.quantity;
+            Price.innerText = Number(element.price) * Number(element.quantity)
 
-            let sum = 0;
-            for (let i = 0; i < ProductData.length; i++) {
-                sum += ProductData[i].price
-            }
-            Total.innerText = sum + " Rs."
-            if (sum > 10000) {
-                discountTotal.innerText = (Math.floor(sum * 0.80)) + " Rs."
-                Total.innerText = sum + " Rs."
-                discount.innerText = "20 % discount has been applied"
+            // let sum = 0;
+            // for (let i = 0; i < ProductData.length; i++) {
+            //     console.log(+ProductData[i].price) * (ProductData[i].quantity)
+            //     // sum += (+ProductData[i].price) * (ProductData[i].quantity)
+            //     // console.log(typeof (+ProductData[i].price * ProductData[i].quantity))
+            // }
+            // Total.innerText = sum + " Rs."
+            // if (sum > 10000) {
+            //     discountTotal.innerText = (Math.floor(sum * 0.80)) + " Rs."
+            //     Total.innerText = sum + " Rs."
+            //     discount.innerText = "20 % discount has been applied"
 
-            }
+            // }
 
             row.append(Sr, Name, Category, Quantity, Price)
             Tbody.append(row)
@@ -400,6 +409,23 @@
         })
     }
     showData(ProductData)
+
+
+
+
+    let sum = 0;
+    for (let i = 0; i < ProductData.length; i++) {
+        sum = sum + (+ProductData[i].price * ProductData[i].quantity)
+        // sum += (+ProductData[i].price) * (ProductData[i].quantity)
+        // console.log(typeof (+ProductData[i].price * ProductData[i].quantity))
+    }
+    Total.innerText = sum + " Rs."
+    if (sum > 10000) {
+        discountTotal.innerText = (Math.floor(sum * 0.80)) + " Rs."
+        Total.innerText = sum + " Rs."
+        discountApply.innerText = "20 % discount has been applied"
+
+    }
 
 
     let Final = document.createElement("tr")
