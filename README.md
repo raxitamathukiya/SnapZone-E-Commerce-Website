@@ -1,14 +1,11 @@
 # SnapZone
 
-
 Our Team Members
-
-Raxita Mathukiya
-Himanshu Kalal
-Pankaj Kumar
-Praveen Kumar
-Sandip Bankar
-
+1. Raxita Mathukiya
+2. Himanshu Kalal
+3. Pankaj Kumar
+4. Praveen Kumar
+5. Sandip Bankar
 
 - Netlify Deploy Link : `https://busy-cough-2191-fp10-063.netlify.app/
 
